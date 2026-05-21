@@ -114,6 +114,7 @@
   <section class="risk-card strong">
     <h2>1. AI inventory and ownership gaps</h2>
     <p><span class="tag">Strongly recommended</span><span class="tag">Baseline governance</span></p>
+    <div class="row"><div class="label">Risk description</div><div>AI-enabled tools, models, or embedded platform features may be used without a complete inventory, named owner, approved purpose, or clear accountability route. This can leave Finance unable to explain which AI capabilities exist, who is responsible for them, and which governance path applies.</div></div>
     <div class="row"><div class="label">Why this appears</div><div>The workflow uses AI-enabled features, but ownership, approval route, model/service inventory, and accountable business owner are not yet confirmed.</div></div>
     <div class="row"><div class="label">Expected controls</div><div>AI use inventory, ownership assignment, intake/approval record, periodic review, and clear accountability for business process use.</div></div>
     <div class="row"><div class="label">Discovery questions</div><div>Who owns the AI use in Finance? Was it approved through a formal intake path? Is it listed in an AI, model, technology, or vendor inventory?</div></div>
@@ -124,6 +125,7 @@
   <section class="risk-card strong">
     <h2>2. Data quality and lineage weakness</h2>
     <p><span class="tag">Strongly recommended</span><span class="tag">Data management</span></p>
+    <div class="row"><div class="label">Risk description</div><div>AI-supported reporting may rely on incomplete, poorly reconciled, or weakly traceable source data. If inputs, transformations, prompts, retrieval sources, and generated outputs are not linked back to reliable records, reviewers may not be able to verify the basis for management reporting conclusions.</div></div>
     <div class="row"><div class="label">Why this appears</div><div>The AI-supported reporting workflow depends on source data, transformations, prompts or retrieval context, and generated explanations. Weak lineage could make outputs hard to verify.</div></div>
     <div class="row"><div class="label">Expected controls</div><div>Defined source systems, data-quality checks, transformation documentation, ownership of reference data, and documented handling of AI inputs/outputs.</div></div>
     <div class="row"><div class="label">Discovery questions</div><div>Which data sources feed the AI-supported process? How are data quality issues detected? Are prompts, uploads, outputs, and retrieval sources retained or reviewed?</div></div>
@@ -134,6 +136,7 @@
   <section class="risk-card strong">
     <h2>3. Human review over AI-generated explanations</h2>
     <p><span class="tag">Strongly recommended</span><span class="tag">Accountability</span></p>
+    <div class="row"><div class="label">Risk description</div><div>AI-generated classifications, summaries, or variance explanations may be accepted without enough human challenge. This can allow plausible but unsupported statements to enter reports, evidence packs, or decision material as if they had been independently verified.</div></div>
     <div class="row"><div class="label">Why this appears</div><div>The process may use AI to draft explanations or classify variances. If reviewers accept outputs without challenge, errors can become part of management reporting.</div></div>
     <div class="row"><div class="label">Expected controls</div><div>Defined review criteria, reviewer competence, exception handling, evidence of challenge, and clear rules for when AI output cannot be used without additional support.</div></div>
     <div class="row"><div class="label">Discovery questions</div><div>Who reviews AI-generated content? What evidence shows that reviewers challenged weak or unsupported outputs? Are there thresholds for manual rework?</div></div>
@@ -144,6 +147,7 @@
   <section class="risk-card recommended">
     <h2>4. Vendor or embedded AI dependency</h2>
     <p><span class="tag">Recommended</span><span class="tag">Third-party dependency</span></p>
+    <div class="row"><div class="label">Risk description</div><div>The AI capability may be delivered through a vendor platform, SaaS feature, or external model service rather than a system fully controlled by the organization. Responsibilities for data handling, model changes, logging, incident support, and assurance evidence may therefore sit partly outside Finance.</div></div>
     <div class="row"><div class="label">Why this appears</div><div>The AI capability may be embedded in a platform or external service. That creates questions about contractual responsibility, data processing, model changes, logging, and support.</div></div>
     <div class="row"><div class="label">Expected controls</div><div>Vendor due diligence, contractual AI/data terms, change notification, access control, monitoring responsibilities, and incident/support routes.</div></div>
     <div class="row"><div class="label">Discovery questions</div><div>Is the AI feature provided by a vendor? What data is sent to the service? Does the contract explain model changes, retention, confidentiality, and support responsibilities?</div></div>
@@ -154,6 +158,7 @@
   <section class="risk-card recommended">
     <h2>5. Monitoring and change-management gaps</h2>
     <p><span class="tag">Recommended</span><span class="tag">Lifecycle control</span></p>
+    <div class="row"><div class="label">Risk description</div><div>AI-supported workflows can change through model updates, vendor releases, prompt revisions, data drift, control changes, or process redesign. Without defined monitoring and change review, the workflow may continue to operate even when outputs, assumptions, or control expectations have shifted.</div></div>
     <div class="row"><div class="label">Why this appears</div><div>AI-supported workflows can change through model updates, vendor releases, prompt changes, data drift, or process redesign. Monitoring may be unclear before discovery.</div></div>
     <div class="row"><div class="label">Expected controls</div><div>Change log, release review, monitoring indicators, owner review cadence, incident route, and documented response to degraded or unexpected outputs.</div></div>
     <div class="row"><div class="label">Discovery questions</div><div>How are changes to the AI feature or its inputs reviewed? What monitoring shows that outputs remain reliable? What happens when the AI produces a poor explanation?</div></div>
