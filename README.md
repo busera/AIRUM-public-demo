@@ -36,7 +36,7 @@ A typical AIRUM preparation flow has four steps:
 3. **Group risks by audit use.** Separate baseline governance topics, direct process risks, specialist dependencies, lifecycle/future-stage considerations, and contextual watch items.
 4. **Challenge the output.** The auditor keeps, amends, escalates, defers, or removes risks based on discovery evidence and professional judgment.
 
-![AIRUM deterministic risk scoping workflow](assets/airum_deterministic_risk_scoping_workflow.png)
+![AIRUM 63 AI Risk universe summary](assets/airum_63_row_risk_universe_summary.png)
 
 ## Why deterministic scoping matters
 
