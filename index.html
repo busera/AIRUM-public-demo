@@ -22,6 +22,7 @@
     .card { background:white; border:1px solid var(--line); border-radius:18px; padding:24px; box-shadow:0 10px 30px rgba(18,32,51,.06); }
     .grid { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
     .grid3 { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+    .grid4 { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
     .figure { background:white; border:1px solid var(--line); border-radius:18px; padding:12px; margin:16px 0; }
     .figure img { width:100%; display:block; border-radius:12px; }
     .caption { color:var(--muted); font-size:14px; margin-top:8px; }
@@ -39,7 +40,8 @@
     .boundary { background:#101f33; color:white; }
     .boundary p, .boundary li { color:#dce8ff; }
     footer { color:var(--muted); border-top:1px solid var(--line); padding:20px 22px 34px; }
-    @media (max-width:760px) { h1 { font-size:36px; } .grid, .grid3, .linklist { grid-template-columns:1fr; } }
+    @media (max-width:900px) { .grid4 { grid-template-columns:repeat(2,1fr); } }
+    @media (max-width:760px) { h1 { font-size:36px; } .grid, .grid3, .grid4, .linklist { grid-template-columns:1fr; } }
   </style>
 </head>
 <body>
@@ -55,7 +57,8 @@
 
     <section class="card">
       <h2>What AIRUM is</h2>
-      <p>AIRUM stands for AI Risk Universe Matrix. It has two connected purposes. First, it is a curated AI Risk Universe for exploration, education, methodology development, and risk-based AI audit planning. Second, it is a deterministic Risk Scoping layer that turns structured audit context into candidate AI risks, expected controls, discovery questions, lifecycle assumptions, and specialist dependencies.</p>
+      <p>AIRUM stands for AI Risk Universe Matrix. It has two connected purposes. First, it is a curated AI Risk Universe for exploration, education, methodology development, and risk-based AI audit planning. The full working universe currently contains 63 source-backed AI Risks across seven families: strategy and value management, organization and culture, governance and risk, data management, engineering and lifecycle, security and malicious use, and societal and ethical impact.</p>
+      <p>Second, AIRUM is a deterministic Risk Scoping layer. It turns structured audit context into a reviewable pre-discovery preparation pack: candidate AI risks, baseline governance checks, process-specific considerations, expected controls, discovery questions, lifecycle assumptions, and specialist dependencies.</p>
       <p>The goal is not to automate audit judgment. The goal is to make the first version of the audit conversation stronger, more traceable, and easier to challenge.</p>
     </section>
 
@@ -75,10 +78,11 @@
       </div>
     </section>
 
-    <section class="grid3">
-      <div class="card"><h3>1. Start with context</h3><p>Define the process, AI use, lifecycle stage, data dependency, vendor role, governance maturity, and specialist overlays.</p></div>
+    <section class="grid4">
+      <div class="card"><h3>1. Start with context</h3><p>Define the process, known or suspected AI use, lifecycle stage, data dependency, vendor role, governance maturity, and specialist overlays.</p></div>
       <div class="card"><h3>2. Map likely risks</h3><p>Connect context to the AI Risk Universe, expected controls, discovery questions, and dependencies.</p></div>
-      <div class="card"><h3>3. Challenge the output</h3><p>Keep, amend, escalate, defer, or remove risks based on discovery evidence and auditor judgment.</p></div>
+      <div class="card"><h3>3. Group by audit use</h3><p>Separate baseline governance topics, direct process risks, specialist dependencies, lifecycle items, and contextual watch items.</p></div>
+      <div class="card"><h3>4. Challenge the output</h3><p>Keep, amend, escalate, defer, or remove risks based on discovery evidence and auditor judgment.</p></div>
     </section>
 
     <div class="figure">
@@ -87,9 +91,37 @@
     </div>
 
     <section class="card">
+      <h2>Why deterministic scoping matters</h2>
+      <p>AIRUM's current Risk Scoping approach is deterministic by design. For early audit planning, a black-box answer is not enough: the auditor needs to inspect why a risk appeared and decide whether it is a baseline governance topic, process-specific candidate risk, specialist dependency, lifecycle consideration, or conditional item.</p>
+      <p>AI or probabilistic methods may later support summarization, enrichment, or adjacent-risk suggestions. They should not replace the audit judgment layer. Determinism protects traceability and keeps the auditor in control.</p>
+    </section>
+
+    <section class="card">
+      <h2>How an auditor would use it</h2>
+      <p>AIRUM is used before discovery, not after the conclusion has already formed. The preparation pack helps the team walk into the first discussion with better assumptions to test.</p>
+      <ul>
+        <li>Where is AI used or planned?</li>
+        <li>Is it internally developed, vendor-provided, embedded in a platform, or informally adopted by users?</li>
+        <li>What data is used, who owns it, and which controls are expected?</li>
+        <li>Which risks are directly in scope, and which are dependencies or specialist topics?</li>
+        <li>What should be retained, escalated, deferred, or removed after the auditee explains the actual process?</li>
+      </ul>
+    </section>
+
+    <div class="figure">
+      <img src="assets/airum_selected_risk_audit_use_postures.png" alt="AIRUM selected risk audit use postures">
+      <div class="caption">AIRUM groups selected risks by audit use so the team can distinguish direct scope candidates from governance baselines, specialist dependencies, lifecycle items, and watch topics.</div>
+    </div>
+
+    <section class="card">
       <h2>Teaching and research use</h2>
       <p>AIRUM can support teaching in IT audit, AI governance, digital trust, risk management, responsible AI, and applied information systems. Students can work from a short AI use case, review a candidate risk shortlist, challenge unsupported assumptions, and draft discovery questions.</p>
-      <p>Research use could compare expert manual scoping with structured AIRUM-supported scoping, test risk coverage and rationale quality, or study how AI risks should map to audit-universe processes.</p>
+      <p>Research use could compare expert manual scoping with structured AIRUM-supported scoping, test risk coverage and rationale quality, study AI risk-to-audit-universe mapping, evaluate deterministic methods against LLM-assisted enrichment, or assess whether students and auditors better detect weak evidence after using the case.</p>
+    </section>
+
+    <section class="card">
+      <h2>Collaboration interest</h2>
+      <p>AIRUM is aimed at Internal Audit teams looking for a more disciplined way to prepare AI risk discovery, universities and researchers interested in empirical validation of AI risk-to-audit-universe mapping, and event or conference organizers looking for practitioner-led material on AI risk, audit methodology, and digital trust.</p>
     </section>
 
     <section class="card">
@@ -111,7 +143,8 @@
 
     <section class="card boundary">
       <h2>Boundary</h2>
-      <p>AIRUM is a working preparation concept and methodology prototype. It does not decide final audit scope, assess control effectiveness, calculate residual risk, provide legal or compliance conclusions, validate that an AI system is safe or well governed, or provide audit assurance.</p>
+      <p>AIRUM is a working preparation concept and methodology prototype. It does not decide final audit scope, assess control effectiveness, calculate residual risk, provide legal or compliance conclusions, validate that an AI system is safe, fair, secure, compliant, or well governed, or provide audit assurance.</p>
+      <p>Those decisions belong to auditors, specialists, management, and governance bodies after the facts are understood.</p>
       <p>This public version is intentionally reduced. It does not publish the full working implementation, internal rules, scoring logic, data mappings, private audit material, or complete methodology package.</p>
     </section>
   </main>
