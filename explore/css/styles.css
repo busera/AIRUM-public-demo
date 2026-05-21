@@ -282,8 +282,21 @@ button:hover, .demo-pack-link:hover { background: var(--blue-700); }
   color: var(--blue-900);
   text-align: center;
 }
-.mini-stat strong, .visible-count strong { font-size: 1.7rem; line-height: 1; }
-.mini-stat span, .visible-count span { color: var(--muted); font-size: 0.9rem; font-weight: 700; }
+.mini-stat strong, .visible-count strong {
+  display: block;
+  width: 100%;
+  font-size: 1.7rem;
+  line-height: 1;
+  text-align: center;
+}
+.mini-stat span, .visible-count span {
+  display: block;
+  width: 100%;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-align: center;
+}
 .section-kicker {
   margin: 0 0 8px;
   color: var(--blue-700);
