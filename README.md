@@ -6,9 +6,9 @@ This public repository is a reduced, publication-safe introduction to the idea. 
 
 ## Public links
 
-- Page 1 - AIRUM overview: <https://busera.github.io/AIRUM-public-demo/>
-- Page 2 - sample exploration and selection/filter options: <https://busera.github.io/AIRUM-public-demo/explore/>
-- Page 3 - example selection export: <https://busera.github.io/AIRUM-public-demo/examples/reduced-discovery-working-paper.html>
+- AIRUM overview: <https://busera.github.io/AIRUM-public-demo/>
+- Explore and select: <https://busera.github.io/AIRUM-public-demo/explore/>
+- Example export: <https://busera.github.io/AIRUM-public-demo/examples/reduced-discovery-working-paper.html>
 - GitHub source - secondary source-code view: <https://github.com/busera/AIRUM-public-demo/tree/main>
 
 ## What AIRUM is
@@ -106,7 +106,7 @@ It does not:
 
 Those decisions belong to auditors, specialists, management, and governance bodies after the facts are understood.
 
-## Page 3: example selection export
+## Example export
 
 A reduced public selection export is available here:
 
@@ -116,7 +116,7 @@ The sample shows how AIRUM can move from broad AI risk coverage to a concrete pr
 
 It does not include AIRUM's full rules, scoring logic, source mappings, private audit material, or operational build details.
 
-## Page 2: sample exploration and selection/filter options
+## Explore and select
 
 The reduced interactive page is available here:
 
