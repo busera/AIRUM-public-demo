@@ -99,13 +99,15 @@ It does not:
 
 Those decisions belong to auditors, specialists, management, and governance bodies after the facts are understood.
 
-## Reduced example output
+## Selection sample: reduced discovery working paper
 
-A reduced public example is available here:
+A reduced public selection sample is available here:
 
-- [AIRUM reduced discovery working paper example](examples/reduced-discovery-working-paper.html)
+- [AIRUM selection sample: reduced discovery working paper](examples/reduced-discovery-working-paper.html)
 
-The example shows the shape of an AIRUM discovery-preparation output without publishing the full working method. It uses a fictional ACME Finance AI-enabled reporting workflow and only five example AI Risks. It does not include AIRUM's full rules, scoring logic, source mappings, private audit material, or operational build details.
+The sample shows how AIRUM can move from broad AI risk coverage to a concrete pre-discovery working paper. It uses a fictional ACME Finance AI-enabled reporting workflow and only five selected example AI Risks. For each selected risk it shows why the risk appears, expected controls, discovery questions, evidence to request, and retain / escalate / defer / remove fields.
+
+It does not include AIRUM's full rules, scoring logic, source mappings, private audit material, or operational build details.
 
 ## Public demo status
 
