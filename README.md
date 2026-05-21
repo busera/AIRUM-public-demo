@@ -90,9 +90,9 @@ The value is not that AIRUM produces a final answer. The value is that it reduce
 
 ![AIRUM selected risk audit use postures](assets/airum_selected_risk_audit_use_postures.png)
 
-## Teaching and research use
+## Teaching, Internal Audit, and research use
 
-AIRUM can be used as a university or professional education case in IT audit, AI governance, digital trust, risk management, responsible AI, and applied information systems.
+AIRUM can be used as a university or professional education case in IT audit, AI governance, digital trust, risk management, responsible AI, and applied information systems. It is also relevant for Internal Audit organizations that want a more disciplined way to prepare AI risk discovery, challenge scope assumptions, and structure early conversations with auditees.
 
 Possible classroom use:
 
@@ -102,6 +102,13 @@ Possible classroom use:
 - Challenge unsupported assumptions.
 - Draft discovery questions and expected-control conversations.
 - Discuss which topics belong in the audit scope, which require specialist input, and which should remain as dependencies or watch items.
+
+Possible Internal Audit organization use:
+
+- Prepare AI audit discovery sessions with a broader starting risk universe.
+- Compare planned scope against baseline governance, process-specific, lifecycle, and specialist-dependency risks.
+- Make scoping assumptions more explicit before the first auditee conversation.
+- Use the reduced public demo to assess whether a fuller AIRUM-style approach could support audit methodology, training, or commercial collaboration.
 
 Possible research use:
 
