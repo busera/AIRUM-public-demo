@@ -112,7 +112,7 @@ A reduced public selection export is available here:
 
 - [AIRUM example selection export: reduced discovery working paper](examples/reduced-discovery-working-paper.html)
 
-The sample shows how AIRUM can move from broad AI risk coverage to a concrete pre-discovery working paper. It uses a fictional ACME Finance AI-enabled reporting workflow and only five selected example AI Risks. For each selected risk it shows why the risk appears, expected controls, discovery questions, evidence to request, and retain / escalate / defer / remove fields.
+The sample shows how AIRUM can move from broad AI risk coverage to a concrete pre-discovery working paper. It uses a fictional ACME Finance AI-enabled reporting workflow and the same 10 selected example AI Risks as the Explore page. For each selected risk it shows why the risk appears, expected controls, discovery questions, evidence to request, and retain / escalate / defer / remove fields.
 
 It does not include AIRUM's full rules, scoring logic, source mappings, private audit material, or operational build details.
 
