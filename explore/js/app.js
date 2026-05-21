@@ -403,9 +403,7 @@ async function loadDemo() {
     throw new Error(`data request returned ${response.status}`);
   }
   const data = await response.json();
-  const fullCount = fullDocumentedRisks(data.risks).length;
   document.querySelector('#risk-count').textContent = String(data.risks.length);
-  document.querySelector('#full-count').textContent = String(fullCount);
   document.querySelector('#universe-visible-count').textContent = String(data.risks.length);
   renderFamilyOptions(data.risks);
   renderUniverse(data.risks);
