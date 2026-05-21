@@ -81,7 +81,7 @@
     <section class="panel" aria-labelledby="context-title">
       <p class="section-kicker">Part 2 - Risk Scoping</p>
       <h2 id="context-title">Frame a demo audit context</h2>
-      <p class="muted">Risk Scoping uses the 10 source-backed demo rows below. It creates candidate discussion topics, not final audit-scope decisions.</p>
+      <p class="muted">Risk Scoping uses the 10 source-backed demo rows below. It creates candidate discussion topics, not final audit-scope decisions. In the full AIRUM solution, this step would combine a richer audit context with the complete AI Risk Universe, group selected risks by audit use, and prepare a reviewable discovery pack for the audit team.</p>
       <div class="reference-link implementation-reference">
         <details>
           <summary>Full implementation reference</summary>
@@ -119,8 +119,14 @@
             <option value="operate">Operate or monitor</option>
           </select>
         </label>
-        <button type="submit">Prepare demo pack</button>
+        <a class="demo-pack-link" href="../examples/reduced-discovery-working-paper.html">Open example export</a>
       </form>
+      <div class="reference-link demo-pack-note">
+        <h3>What the full solution would usually do here</h3>
+        <p>The public controls above only re-rank the reduced demo rows into candidate discovery-preparation topics. In the full AIRUM solution, this step would normally collect more audit context, apply the complete risk universe and internal selection logic, separate baseline governance checks from direct process risks and specialist dependencies, and produce an exportable discovery working paper.</p>
+        <p>The reduced public example shows the intended output shape: selected AI Risks, why each appears, expected controls, discovery questions, evidence to request, and retain / escalate / defer / remove fields.</p>
+        <p><a href="../examples/reduced-discovery-working-paper.html">Open the reduced discovery working paper</a></p>
+      </div>
     </section>
 
     <section class="panel" aria-labelledby="results-title">

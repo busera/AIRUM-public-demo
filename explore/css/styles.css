@@ -148,14 +148,26 @@ select, input, button {
   padding: 10px 12px;
   font: inherit;
 }
-button {
+button, .demo-pack-link {
   color: var(--white);
   background: var(--blue-900);
   border-color: var(--blue-900);
   cursor: pointer;
   font-weight: 800;
 }
-button:hover { background: var(--blue-700); }
+button:hover, .demo-pack-link:hover { background: var(--blue-700); }
+.demo-pack-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--blue-900);
+  border-radius: 12px;
+  text-align: center;
+  text-decoration: none;
+}
 
 .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
 .section-header {

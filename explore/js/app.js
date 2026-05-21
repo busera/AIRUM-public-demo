@@ -411,6 +411,9 @@ async function loadDemo() {
   for (const selector of ['#risk-search', '#family-filter']) {
     document.querySelector(selector).addEventListener('input', () => renderUniverse(data.risks));
   }
+  for (const selector of ['#audit-context', '#main-concern', '#lifecycle-stage']) {
+    document.querySelector(selector).addEventListener('input', () => renderResults(data.risks));
+  }
   document.querySelector('#demo-form').addEventListener('submit', (event) => {
     event.preventDefault();
     renderResults(data.risks);
