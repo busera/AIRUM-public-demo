@@ -186,7 +186,9 @@ function sourceLinksHtml(sourceLinks = []) {
     <div class="source-links">
       <p><strong>Source links</strong></p>
       <ul>
-        ${sourceLinks.map((source) => `<li><a href="${escapeHtml(source.url)}" target="_blank" rel="noreferrer">${escapeHtml(source.label)}</a></li>`).join('')}
+        ${sourceLinks.map((source) => source.url
+          ? `<li><a href="${escapeHtml(source.url)}" target="_blank" rel="noreferrer">${escapeHtml(source.label)}</a></li>`
+          : `<li>${escapeHtml(source.label)}</li>`).join('')}
       </ul>
     </div>`;
 }
