@@ -399,7 +399,7 @@ summary { cursor: pointer; color: var(--blue-900); font-weight: 800; }
 .card p { margin: 8px 0; }
 .candidate-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   gap: 12px;
 }
 .candidate-grid > div {
