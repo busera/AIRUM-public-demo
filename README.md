@@ -4,6 +4,12 @@ AIRUM stands for **AI Risk Universe Matrix**. It is a practitioner-built Interna
 
 This public repository is a reduced, publication-safe introduction to the idea. It explains the method, shows the main visuals, and describes how AIRUM can be used in audit, teaching, and research. It does **not** publish the full working implementation, internal rules, scoring logic, data mappings, private audit material, or the complete methodology package.
 
+## Public links
+
+- Rendered demo: <https://busera.github.io/AIRUM-public-demo/>
+- Selection sample: <https://busera.github.io/AIRUM-public-demo/examples/reduced-discovery-working-paper.html>
+- GitHub source: <https://github.com/busera/AIRUM-public-demo/tree/main>
+
 ## What AIRUM is
 
 AIRUM has two connected purposes.
