@@ -33,21 +33,20 @@
     .actions { margin-top:18px; display:flex; flex-wrap:wrap; gap:10px; }
     .button { display:inline-block; color:white; border:1px solid rgba(255,255,255,.55); background:rgba(255,255,255,.12); border-radius:999px; padding:9px 13px; font-weight:800; text-decoration:none; }
     .button.primary { background:white; color:#15376a; border-color:white; }
-    .linklist { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
-    .linkitem a { overflow-wrap:anywhere; word-break:break-word; }
+
     ul { padding-left:20px; margin:8px 0 0; }
     li { margin:5px 0; }
     .boundary { background:#101f33; color:white; }
     .boundary p, .boundary li { color:#dce8ff; }
     footer { color:var(--muted); border-top:1px solid var(--line); padding:20px 22px 34px; }
     @media (max-width:900px) { .grid4 { grid-template-columns:repeat(2,1fr); } }
-    @media (max-width:760px) { h1 { font-size:36px; } .grid, .grid3, .grid4, .linklist { grid-template-columns:1fr; } }
+    @media (max-width:760px) { h1 { font-size:36px; } .grid, .grid3, .grid4 { grid-template-columns:1fr; } }
   </style>
 </head>
 <body>
   <header>
     <div class="wrap">
-      <nav class="demo-nav" aria-label="AIRUM demo pages"><a aria-current="page" href="./">AIRUM overview</a><a href="explore/">Explore and select</a><a href="examples/reduced-discovery-working-paper.html">Example export</a></nav>
+      <nav class="demo-nav" aria-label="AIRUM demo pages"><a aria-current="page" href="./">AIRUM overview</a><a href="explore/">Explore and select</a><a href="examples/reduced-discovery-working-paper.html">Example export</a><a href="https://github.com/busera/AIRUM-public-demo/tree/main">GitHub</a></nav>
       <div class="kicker">AI Risk Universe Matrix</div>
       <h1>AIRUM prepares AI risk discovery before the audit starts.</h1>
       <p class="lead">A practitioner-built Internal Audit concept: a curated AI Risk Universe plus deterministic Risk Scoping for reviewable pre-discovery preparation.</p>
@@ -135,19 +134,9 @@
 
     <section class="card">
       <h2>Example export</h2>
-      <p>A fictional, ten-risk selection sample uses the same 10 risks as the Explore page and shows how AIRUM can move from broad AI risk coverage to a concrete pre-discovery working paper. It includes selected candidate AI Risks, why each risk appears, expected controls, discovery questions, evidence to request, and retain / escalate / defer / remove fields.</p>
+      <p>A fictional, ten-risk selection sample uses the same 10 risks as the Explore page and shows how AIRUM can move from broad AI risk coverage to a concrete pre-discovery working paper. It includes selected candidate AI Risks, why each risk appears, expected controls, discovery questions, and evidence to request.</p>
       <p>The sample is deliberately reduced. It demonstrates the output shape without publishing the full working method, internal scoring, source mappings, or private audit material.</p>
       <p><a href="examples/reduced-discovery-working-paper.html">Open example export</a></p>
-    </section>
-
-    <section class="card">
-      <h2>Navigation</h2>
-      <div class="linklist">
-        <div class="linkitem"><h3>AIRUM overview</h3><p><a href="https://busera.github.io/AIRUM-public-demo/">https://busera.github.io/AIRUM-public-demo/</a></p></div>
-        <div class="linkitem"><h3>Explore and select</h3><p><a href="explore/">https://busera.github.io/AIRUM-public-demo/explore/</a></p></div>
-        <div class="linkitem"><h3>Example export</h3><p><a href="examples/reduced-discovery-working-paper.html">https://busera.github.io/AIRUM-public-demo/examples/reduced-discovery-working-paper.html</a></p></div>
-        <div class="linkitem"><h3>GitHub source</h3><p><a href="https://github.com/busera/AIRUM-public-demo/tree/main">https://github.com/busera/AIRUM-public-demo/tree/main</a></p><p>Secondary source-code view; the rendered Pages links above are the primary sharing links.</p></div>
-      </div>
     </section>
 
     <section class="card boundary">
