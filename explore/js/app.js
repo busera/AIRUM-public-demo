@@ -107,7 +107,6 @@ function wrapRiskLabel(name) {
 function riskUniverseCardHtml(risk) {
   return `
     <article class="universe-card full-detail" data-family="${escapeHtml(risk.family)}" data-detail="full">
-      <span class="detail-pill full">Source-backed AIRUM row</span>
       <h3>${escapeHtml(risk.name)}</h3>
       <p class="family-label">${escapeHtml(risk.processName)} / ${escapeHtml(risk.subProcessName)}</p>
       <p>${escapeHtml(risk.description)}</p>
