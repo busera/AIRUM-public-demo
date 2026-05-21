@@ -135,6 +135,9 @@ button {
 button:hover { background: var(--blue-700); }
 
 .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+.public-link-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+.public-link-grid a { overflow-wrap: anywhere; word-break: break-word; font-weight: 800; color: var(--blue-700); }
+.public-link-grid h3 { margin-top: 0; }
 .section-header {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;

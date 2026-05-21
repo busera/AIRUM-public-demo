@@ -9,6 +9,7 @@ This public repository is a reduced, publication-safe introduction to the idea. 
 - Page 1 - AIRUM overview: <https://busera.github.io/AIRUM-public-demo/>
 - Page 2 - sample exploration and selection/filter options: <https://busera.github.io/AIRUM-public-demo/explore/>
 - Page 3 - example selection export: <https://busera.github.io/AIRUM-public-demo/examples/reduced-discovery-working-paper.html>
+- GitHub source - secondary source-code view: <https://github.com/busera/AIRUM-public-demo/tree/main>
 
 ## What AIRUM is
 
