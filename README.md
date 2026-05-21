@@ -23,6 +23,26 @@ The goal is not to automate audit judgment. The goal is to make the first versio
 
 ![AIRUM risk universe to discovery preparation](assets/airum_risk_universe_to_discovery_preparation.png)
 
+## Methodology at a glance
+
+AIRUM was built from a dual-path review of AI risk and control sources.
+
+First, known AI failure modes were identified directly from threat and risk repositories. Where sources explicitly describe issues such as prompt injection, automation bias, data leakage, model inversion, or weak accountability, these were mapped into broader AI Risk families and audit-relevant process areas.
+
+Second, control and governance sources were reviewed in reverse. For standards, maturity models, and management guidance, the question was: "What negative outcome is this control or requirement meant to prevent?" This helped translate expected controls into implied risks, such as missing ownership, weak human oversight, poor lifecycle governance, inadequate validation, or unmanaged third-party AI dependency.
+
+The result is a structured AI Risk Universe designed for audit preparation: broad enough to avoid early blind spots, but organized enough to support discovery questions, expected-control conversations, and scope challenge.
+
+Source families considered include:
+
+- AI management-system and governance standards
+- AI maturity and organizational-readiness models
+- AI risk repositories and incident-oriented research
+- LLM and machine-learning security threat taxonomies
+- Industry guidance on AI strategy, governance, trust, risk, and security management
+
+The public demo intentionally shows only a reduced version. It does not publish the full source mapping, scoring logic, internal rules, or complete methodology package.
+
 ## The problem AIRUM addresses
 
 AI risk is difficult for Internal Audit because it can sit inside formal models, vendor platforms, business processes, spreadsheet workflows, research activities, customer-facing tools, or informal productivity shortcuts.
