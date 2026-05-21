@@ -1,0 +1,1074 @@
+{
+  "version": "public-demo-v0.3",
+  "status": "reduced-source-backed-demo",
+  "boundary": "Reduced public demo data. The 24 visible risks use source-backed text from the AIRUM risk matrix rows shown in this repository, while the complete AIRUM data core and selection methodology are not published.",
+  "riskUniverse": {
+    "label": "AIRUM Part 1",
+    "documentedCount": 24,
+    "omittedRiskNote": "The complete AIRUM risk universe contains more risks than shown here; this repository intentionally publishes only this reduced source-backed subset."
+  },
+  "risks": [
+    {
+      "id": "demo-risk-01",
+      "originalRiskId": "risk-ai-ambition-feasibility-mismatch",
+      "family": "AI Strategy and Value Mgmt.",
+      "processName": "1. AI Strategy & Value Mgmt.",
+      "subProcessName": "Strategic Planning",
+      "name": "AI Ambition-Feasibility Mismatch",
+      "detailLevel": "full",
+      "description": "Pursuing disruptive AI ambitions without the requisite technology maturity, data readiness, or organizational buy-in, leading to project failure.",
+      "expectedControlName": "AI strategy feasibility and readiness review",
+      "expectedControlDescription": "Require each material AI ambition, roadmap item, or major use case to document business objective, feasibility assumptions, data/process readiness, capability gaps, funding, accountable owner, and decision gate before investment approval.",
+      "expectedControlObjective": "Confirm AI ambitions are achievable, resourced, and aligned to realistic organizational readiness before commitments are made.",
+      "controlSourceBasis": "Source-grounded: derived from the row references (Gartner: AI Roadmap; Gartner: AI Strategy; ISO/IEC 42001 (Context of Org); NIST AI RMF: MAP 1.1, MAP 1.2). Control wording is an Internal Audit interpretation of the cited source families, not verbatim source text.",
+      "sourcesAndReferences": "Gartner: AI Roadmap; Gartner: AI Strategy; ISO/IEC 42001 (Context of Org); NIST AI RMF: MAP 1.1, MAP 1.2",
+      "urlSourcesRaw": "Gartner - AI Roadmap Toolkit (public) | https://www.gartner.com/en/chief-information-officer/research/ai-maturity-model-toolkit || \nGartner - AI Strategy for Business (public) | https://www.gartner.com/en/articles/ai-strategy-for-business || \nISO/IEC 42001:2023 - Information technology - Artificial intelligence - Management syste (public) | https://www.iso.org/standard/42001 || \nNIST - AI Risk Management Framework (public) | https://www.nist.gov/itl/ai-risk-management-framework",
+      "sourceLinks": [
+        {
+          "label": "Gartner - AI Roadmap Toolkit (public)",
+          "url": "https://www.gartner.com/en/chief-information-officer/research/ai-maturity-model-toolkit"
+        },
+        {
+          "label": "Gartner - AI Strategy for Business (public)",
+          "url": "https://www.gartner.com/en/articles/ai-strategy-for-business"
+        },
+        {
+          "label": "ISO/IEC 42001:2023 - Information technology - Artificial intelligence - Management syste (public)",
+          "url": "https://www.iso.org/standard/42001"
+        },
+        {
+          "label": "NIST - AI Risk Management Framework (public)",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+        }
+      ],
+      "nistLifecycleStage": "1. Plan & Design",
+      "lifecycle": [
+        "plan"
+      ],
+      "contexts": [
+        "governance",
+        "strategy",
+        "business-audit",
+        "dedicated-ai"
+      ],
+      "posture": "Direct candidate"
+    },
+    {
+      "id": "demo-risk-02",
+      "originalRiskId": "risk-competitive-race-risk",
+      "family": "AI Strategy and Value Mgmt.",
+      "processName": "1. AI Strategy & Value Mgmt.",
+      "subProcessName": "Strategic Planning",
+      "name": "Competitive Race Risk",
+      "detailLevel": "full",
+      "description": "Rapidly deploying AI systems to maximize strategic advantage, prioritizing speed over safety or diligence (The \"AI Race\").",
+      "expectedControlName": "Responsible AI competition and escalation guardrail",
+      "expectedControlDescription": "Require leadership review of competitive-pressure decisions, including documented risk appetite, minimum control baseline, release criteria, and escalation where market pressure would bypass governance or validation.",
+      "expectedControlObjective": "Prevent speed-to-market pressure from overriding AI governance, validation, safety, privacy, or ethical safeguards.",
+      "controlSourceBasis": "Source-grounded: derived from the row references (MIT AI Risk Rep: 6.4 (Competitive Dynamics); Gartner: Risk Essentials; NIST AI RMF: GOVERN 1.2, MAP 1.5). Control wording is an Internal Audit interpretation of the cited source families, not verbatim source text.",
+      "sourcesAndReferences": "MIT AI Risk Rep: 6.4 (Competitive Dynamics); Gartner: Risk Essentials; NIST AI RMF: GOVERN 1.2, MAP 1.5",
+      "urlSourcesRaw": "MIT AI Risk Rep: 6.4 (Competitive Dynamics) | https://airisk.mit.edu/ || \nGartner: Risk Essentials | https://www.gartner.com/en/documents/6685934 || \nNIST AI RMF: GOVERN 1.2, MAP 1.5 | https://www.nist.gov/itl/ai-risk-management-framework",
+      "sourceLinks": [
+        {
+          "label": "MIT AI Risk Rep: 6.4 (Competitive Dynamics)",
+          "url": "https://airisk.mit.edu/"
+        },
+        {
+          "label": "Gartner: Risk Essentials",
+          "url": "https://www.gartner.com/en/documents/6685934"
+        },
+        {
+          "label": "NIST AI RMF: GOVERN 1.2, MAP 1.5",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+        }
+      ],
+      "nistLifecycleStage": "1. Plan & Design",
+      "lifecycle": [
+        "plan"
+      ],
+      "contexts": [
+        "governance",
+        "strategy",
+        "business-audit",
+        "dedicated-ai"
+      ],
+      "posture": "Conditional discovery"
+    },
+    {
+      "id": "demo-risk-03",
+      "originalRiskId": "risk-strategic-misalignment",
+      "family": "AI Strategy and Value Mgmt.",
+      "processName": "1. AI Strategy & Value Mgmt.",
+      "subProcessName": "Strategic Planning",
+      "name": "Strategic Misalignment",
+      "detailLevel": "full",
+      "description": "AI initiatives do not deliver on key strategic goals, fail to adapt to business priorities, or are disconnected from the broader business strategy.",
+      "expectedControlName": "AI portfolio alignment control",
+      "expectedControlDescription": "Maintain a reviewed AI portfolio linking each material AI initiative to strategy, business process, value hypothesis, risk owner, and approved success measures.",
+      "expectedControlObjective": "Ensure AI initiatives support defined business objectives and are governed as part of the enterprise portfolio.",
+      "controlSourceBasis": "Source-grounded: derived from the row references (Gartner: AI Strategy; MITRE: Strategy & Resources; ISO/IEC 42001 (Leadership); NIST AI RMF: GOVERN 1.1, GOVERN 1.3). Control wording is an Internal Audit interpretation of the cited source families, not verbatim source text.",
+      "sourcesAndReferences": "Gartner: AI Strategy; MITRE: Strategy & Resources; ISO/IEC 42001 (Leadership); NIST AI RMF: GOVERN 1.1, GOVERN 1.3",
+      "urlSourcesRaw": "Gartner: AI Strategy | https://www.gartner.com/en/documents/6676234 || \nMITRE: Strategy & Resources | https://www.mitre.org/news-insights/publication/mitre-ai-maturity-model-and-organizational-assessment-tool-guide || \nISO/IEC 42001 (Leadership) | https://www.iso.org/standard/42001 || \nNIST AI RMF: GOVERN 1.1, GOVERN 1.3 | https://www.nist.gov/itl/ai-risk-management-framework",
+      "sourceLinks": [
+        {
+          "label": "Gartner: AI Strategy",
+          "url": "https://www.gartner.com/en/documents/6676234"
+        },
+        {
+          "label": "MITRE: Strategy & Resources",
+          "url": "https://www.mitre.org/news-insights/publication/mitre-ai-maturity-model-and-organizational-assessment-tool-guide"
+        },
+        {
+          "label": "ISO/IEC 42001 (Leadership)",
+          "url": "https://www.iso.org/standard/42001"
+        },
+        {
+          "label": "NIST AI RMF: GOVERN 1.1, GOVERN 1.3",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+        }
+      ],
+      "nistLifecycleStage": "1. Plan & Design",
+      "lifecycle": [
+        "plan"
+      ],
+      "contexts": [
+        "governance",
+        "strategy",
+        "business-audit",
+        "dedicated-ai"
+      ],
+      "posture": "Direct candidate"
+    },
+    {
+      "id": "demo-risk-04",
+      "originalRiskId": "risk-lack-of-clear-accountability",
+      "family": "AI Organization and Culture",
+      "processName": "2. AI Organization & Culture",
+      "subProcessName": "Roles & Responsibilities",
+      "name": "Lack of Clear Accountability",
+      "detailLevel": "full",
+      "description": "Roles for AI development, oversight, and \"human-in-the-loop\" decision rights are not clearly defined, leading to responsibility gaps.",
+      "expectedControlName": "AI accountability and RACI control",
+      "expectedControlDescription": "Assign documented business, technical, risk, data, model, vendor, and control owners for each material AI system, including decision rights and escalation paths.",
+      "expectedControlObjective": "Make AI ownership, decision accountability, and control responsibility explicit and testable.",
+      "controlSourceBasis": "Source-grounded: derived from the row references (Gartner: AI Organization; MITRE: Org Structure; ISO/IEC 42001 (Roles A.3.2); NIST AI RMF: GOVERN 2.1, GOVERN 2.3). Control wording is an Internal Audit interpretation of the cited source families, not verbatim source text.",
+      "sourcesAndReferences": "Gartner: AI Organization; MITRE: Org Structure; ISO/IEC 42001 (Roles A.3.2); NIST AI RMF: GOVERN 2.1, GOVERN 2.3",
+      "urlSourcesRaw": "Gartner: AI Organization | https://www.gartner.com/en/documents/6570102 || \nMITRE: Org Structure | https://www.mitre.org/news-insights/publication/mitre-ai-maturity-model-and-organizational-assessment-tool-guide || \nISO/IEC 42001 (Roles A.3.2) | https://www.iso.org/standard/42001 || \nNIST AI RMF: GOVERN 2.1, GOVERN 2.3 | https://www.nist.gov/itl/ai-risk-management-framework",
+      "sourceLinks": [
+        {
+          "label": "Gartner: AI Organization",
+          "url": "https://www.gartner.com/en/documents/6570102"
+        },
+        {
+          "label": "MITRE: Org Structure",
+          "url": "https://www.mitre.org/news-insights/publication/mitre-ai-maturity-model-and-organizational-assessment-tool-guide"
+        },
+        {
+          "label": "ISO/IEC 42001 (Roles A.3.2)",
+          "url": "https://www.iso.org/standard/42001"
+        },
+        {
+          "label": "NIST AI RMF: GOVERN 2.1, GOVERN 2.3",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+        }
+      ],
+      "nistLifecycleStage": "1. Plan & Design",
+      "lifecycle": [
+        "plan"
+      ],
+      "contexts": [
+        "governance",
+        "business-audit",
+        "dedicated-ai"
+      ],
+      "posture": "Direct candidate"
+    },
+    {
+      "id": "demo-risk-05",
+      "originalRiskId": "risk-missing-ai-inventory",
+      "family": "AI Governance and Risk",
+      "processName": "3. AI Governance & Risk",
+      "subProcessName": "Policy & Framework",
+      "name": "Missing AI Inventory",
+      "detailLevel": "full",
+      "description": "Failure to maintain a complete, current inventory of AI systems, models, use cases, automations, and owners prevents risk classification, oversight, monitoring, and compliance.",
+      "expectedControlName": "AI system inventory control",
+      "expectedControlDescription": "Maintain a complete and periodically reconciled AI inventory capturing owner, purpose, process, data, vendor, classification, lifecycle stage, and control status for material AI use.",
+      "expectedControlObjective": "Ensure AI use is visible, owned, classified, and available for risk management and audit scoping.",
+      "controlSourceBasis": "Source-grounded: derived from the row references (Gartner: AI Governance (Inventory); ISO/IEC 5338; ISO/IEC 42001 (Resources A.4.2); NIST AI RMF: MAP 2.1, MANAGE 1.1). Control wording is an Internal Audit interpretation of the cited source families, not verbatim source text.",
+      "sourcesAndReferences": "Gartner: AI Governance (Inventory); ISO/IEC 5338; ISO/IEC 42001 (Resources A.4.2); NIST AI RMF: MAP 2.1, MANAGE 1.1",
+      "urlSourcesRaw": "Gartner: AI Governance (Inventory) | https://www.gartner.com/en/documents/6885067 || \nISO/IEC 5338 | https://www.iso.org/standard/81118.html || \nISO/IEC 42001 (Resources A.4.2) | https://www.iso.org/standard/42001 || \nNIST AI RMF: MAP 2.1, MANAGE 1.1 | https://www.nist.gov/itl/ai-risk-management-framework",
+      "sourceLinks": [
+        {
+          "label": "Gartner: AI Governance (Inventory)",
+          "url": "https://www.gartner.com/en/documents/6885067"
+        },
+        {
+          "label": "ISO/IEC 5338",
+          "url": "https://www.iso.org/standard/81118.html"
+        },
+        {
+          "label": "ISO/IEC 42001 (Resources A.4.2)",
+          "url": "https://www.iso.org/standard/42001"
+        },
+        {
+          "label": "NIST AI RMF: MAP 2.1, MANAGE 1.1",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+        }
+      ],
+      "nistLifecycleStage": "1. Plan & Design",
+      "lifecycle": [
+        "plan"
+      ],
+      "contexts": [
+        "governance",
+        "third-party",
+        "business-audit",
+        "dedicated-ai"
+      ],
+      "posture": "Baseline governance"
+    },
+    {
+      "id": "demo-risk-06",
+      "originalRiskId": "risk-sensitive-data-disclosure-and-inference",
+      "family": "AI Data Management",
+      "processName": "4. AI Data Management",
+      "subProcessName": "Privacy & Security",
+      "name": "Sensitive Data Disclosure & Inference",
+      "detailLevel": "full",
+      "description": "Exposure of PII/IP via Model Inversion, Membership Inference, or memorization of sensitive training data.",
+      "expectedControlName": "Sensitive-data protection for AI control",
+      "expectedControlDescription": "Apply data minimization, access control, masking, prompt/output safeguards, inference-risk review, logging, and privacy/security testing for AI systems handling sensitive or confidential data.",
+      "expectedControlObjective": "Prevent unauthorized disclosure, leakage, or inference of sensitive information through AI systems.",
+      "controlSourceBasis": "Source-grounded: derived from the row references (OWASP LLM Top 10: LLM06; OWASP ML Top 10: ML03, ML04; ISO/IEC 42001 (Privacy B.7.2); NIST AI RMF: MEASURE 2.7, MANAGE 2.4). Control wording is an Internal Audit interpretation of the cited source families, not verbatim source text.",
+      "sourcesAndReferences": "OWASP LLM Top 10: LLM06; OWASP ML Top 10: ML03, ML04; ISO/IEC 42001 (Privacy B.7.2); NIST AI RMF: MEASURE 2.7, MANAGE 2.4",
+      "urlSourcesRaw": "OWASP LLM Top 10: LLM06 | https://genai.owasp.org/llm-top-10/ || \nOWASP ML Top 10: ML03, ML04 | https://owasp.org/www-project-machine-learning-security-top-10/ || \nISO/IEC 42001 (Privacy B.7.2) | https://www.iso.org/standard/42001 || \nNIST AI RMF: MEASURE 2.7, MANAGE 2.4 | https://www.nist.gov/itl/ai-risk-management-framework",
+      "sourceLinks": [
+        {
+          "label": "OWASP LLM Top 10: LLM06",
+          "url": "https://genai.owasp.org/llm-top-10/"
+        },
+        {
+          "label": "OWASP ML Top 10: ML03, ML04",
+          "url": "https://owasp.org/www-project-machine-learning-security-top-10/"
+        },
+        {
+          "label": "ISO/IEC 42001 (Privacy B.7.2)",
+          "url": "https://www.iso.org/standard/42001"
+        },
+        {
+          "label": "NIST AI RMF: MEASURE 2.7, MANAGE 2.4",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+        }
+      ],
+      "nistLifecycleStage": "2. Collect & Process Data",
+      "lifecycle": [
+        "data"
+      ],
+      "contexts": [
+        "data",
+        "privacy",
+        "security",
+        "business-audit",
+        "dedicated-ai"
+      ],
+      "posture": "Specialist overlay"
+    },
+    {
+      "id": "demo-risk-07",
+      "originalRiskId": "risk-inadequate-verification-and-validation",
+      "family": "AI Engineering and Lifecycle",
+      "processName": "5. AI Engineering & Lifecycle",
+      "subProcessName": "Development & Deployment",
+      "name": "Inadequate Verification & Validation",
+      "detailLevel": "full",
+      "description": "Failure to rigorously test AI models for accuracy, robustness, bias, and security prior to deployment, leading to performance failures.",
+      "expectedControlName": "AI verification and validation control",
+      "expectedControlDescription": "Define and execute independent validation before release, including acceptance criteria, test data, performance, robustness, bias, security, limitations, and approval evidence.",
+      "expectedControlObjective": "Confirm AI systems meet intended requirements and risk tolerances before operational reliance.",
+      "controlSourceBasis": "Source-grounded: derived from the row references (ISO/IEC 5338 (Verification); ISO/IEC 42001 (Control A.6.2.4); MITRE: Test & Evaluation; NIST AI RMF: MEASURE 1.1, MEASURE 2.6). Control wording is an Internal Audit interpretation of the cited source families, not verbatim source text.",
+      "sourcesAndReferences": "ISO/IEC 5338 (Verification); ISO/IEC 42001 (Control A.6.2.4); MITRE: Test & Evaluation; NIST AI RMF: MEASURE 1.1, MEASURE 2.6",
+      "urlSourcesRaw": "ISO/IEC 5338 (Verification) | https://www.iso.org/standard/81118.html || \nISO/IEC 42001 (Control A.6.2.4) | https://www.iso.org/standard/42001 || \nMITRE: Test & Evaluation | https://www.mitre.org/news-insights/publication/mitre-ai-maturity-model-and-organizational-assessment-tool-guide || \nNIST AI RMF: MEASURE 1.1, MEASURE 2.6 | https://www.nist.gov/itl/ai-risk-management-framework",
+      "sourceLinks": [
+        {
+          "label": "ISO/IEC 5338 (Verification)",
+          "url": "https://www.iso.org/standard/81118.html"
+        },
+        {
+          "label": "ISO/IEC 42001 (Control A.6.2.4)",
+          "url": "https://www.iso.org/standard/42001"
+        },
+        {
+          "label": "MITRE: Test & Evaluation",
+          "url": "https://www.mitre.org/news-insights/publication/mitre-ai-maturity-model-and-organizational-assessment-tool-guide"
+        },
+        {
+          "label": "NIST AI RMF: MEASURE 1.1, MEASURE 2.6",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+        }
+      ],
+      "nistLifecycleStage": "4. Verify & Validate",
+      "lifecycle": [
+        "validate"
+      ],
+      "contexts": [
+        "lifecycle",
+        "technology",
+        "dedicated-ai"
+      ],
+      "posture": "Lifecycle or future-stage item"
+    },
+    {
+      "id": "demo-risk-08",
+      "originalRiskId": "risk-prompt-injection-and-input-manipulation",
+      "family": "AI Security and Malicious Use",
+      "processName": "6. AI Security & Malicious Use",
+      "subProcessName": "Adversarial Threats",
+      "name": "Prompt Injection & Input Manipulation",
+      "detailLevel": "full",
+      "description": "Crafting adversarial inputs to manipulate model behavior, bypass filters, or execute unauthorized actions.",
+      "expectedControlName": "Prompt-injection and input-manipulation defense control",
+      "expectedControlDescription": "Test and mitigate prompt injection and malicious input scenarios using input validation, instruction hierarchy, retrieval/tool isolation, output constraints, monitoring, and user education.",
+      "expectedControlObjective": "Reduce the likelihood that hostile inputs override AI instructions, expose data, or trigger unauthorized actions.",
+      "controlSourceBasis": "Source-grounded: derived from the row references (OWASP LLM Top 10: LLM01; OWASP ML Top 10: ML01; Gartner: AI Governance; NIST AI RMF: MANAGE 2.5, MEASURE 2.6). Control wording is an Internal Audit interpretation of the cited source families, not verbatim source text.",
+      "sourcesAndReferences": "OWASP LLM Top 10: LLM01; OWASP ML Top 10: ML01; Gartner: AI Governance; NIST AI RMF: MANAGE 2.5, MEASURE 2.6",
+      "urlSourcesRaw": "OWASP LLM Top 10: LLM01 | https://genai.owasp.org/llm-top-10/ || \nOWASP ML Top 10: ML01 | https://owasp.org/www-project-machine-learning-security-top-10/ || \nGartner: AI Governance | https://www.gartner.com/en/documents/6885067 || \nNIST AI RMF: MANAGE 2.5, MEASURE 2.6 | https://www.nist.gov/itl/ai-risk-management-framework",
+      "sourceLinks": [
+        {
+          "label": "OWASP LLM Top 10: LLM01",
+          "url": "https://genai.owasp.org/llm-top-10/"
+        },
+        {
+          "label": "OWASP ML Top 10: ML01",
+          "url": "https://owasp.org/www-project-machine-learning-security-top-10/"
+        },
+        {
+          "label": "Gartner: AI Governance",
+          "url": "https://www.gartner.com/en/documents/6885067"
+        },
+        {
+          "label": "NIST AI RMF: MANAGE 2.5, MEASURE 2.6",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+        }
+      ],
+      "nistLifecycleStage": "5. Operate & Monitor",
+      "lifecycle": [
+        "operate"
+      ],
+      "contexts": [
+        "security",
+        "technology",
+        "dedicated-ai"
+      ],
+      "posture": "Specialist overlay"
+    },
+    {
+      "id": "demo-risk-09",
+      "originalRiskId": "risk-ineffective-use-case-prioritization",
+      "family": "AI Strategy and Value Mgmt.",
+      "processName": "1. AI Strategy & Value Mgmt.",
+      "subProcessName": "Portfolio Management",
+      "name": "Ineffective Use Case Prioritization",
+      "detailLevel": "full",
+      "description": "The process for selecting AI projects does not align with strategic goals, value potential, or feasibility (e.g., failing to distinguish between \"Defend,\" \"Extend,\" and \"Upend\").",
+      "expectedControlName": "AI use-case prioritization and intake control",
+      "expectedControlDescription": "Apply a documented intake and prioritization process that scores AI use cases for strategic value, feasibility, risk, data readiness, control needs, and expected benefits before funding or build approval.",
+      "expectedControlObjective": "Direct resources to AI use cases with justified value, feasible delivery, and proportionate control coverage.",
+      "controlSourceBasis": "Source-grounded: derived from the row references (Gartner: AI Value; Gartner: AI Roadmap; MITRE: Strategy; NIST AI RMF: MAP 1.3, MAP 1.4). Control wording is an Internal Audit interpretation of the cited source families, not verbatim source text.",
+      "sourcesAndReferences": "Gartner: AI Value; Gartner: AI Roadmap; MITRE: Strategy; NIST AI RMF: MAP 1.3, MAP 1.4",
+      "urlSourcesRaw": "Gartner: AI Value | https://www.gartner.com/en/articles/ai-value || \nGartner: AI Roadmap | https://www.gartner.com/en/chief-information-officer/research/ai-maturity-model-toolkit || \nMITRE: Strategy | https://www.mitre.org/news-insights/publication/mitre-ai-maturity-model-and-organizational-assessment-tool-guide || \nNIST AI RMF: MAP 1.3, MAP 1.4 | https://www.nist.gov/itl/ai-risk-management-framework",
+      "sourceLinks": [
+        {
+          "label": "Gartner: AI Value",
+          "url": "https://www.gartner.com/en/articles/ai-value"
+        },
+        {
+          "label": "Gartner: AI Roadmap",
+          "url": "https://www.gartner.com/en/chief-information-officer/research/ai-maturity-model-toolkit"
+        },
+        {
+          "label": "MITRE: Strategy",
+          "url": "https://www.mitre.org/news-insights/publication/mitre-ai-maturity-model-and-organizational-assessment-tool-guide"
+        },
+        {
+          "label": "NIST AI RMF: MAP 1.3, MAP 1.4",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+        }
+      ],
+      "nistLifecycleStage": "1. Plan & Design",
+      "lifecycle": [
+        "plan"
+      ],
+      "contexts": [
+        "governance",
+        "strategy",
+        "business-audit",
+        "dedicated-ai"
+      ],
+      "posture": "Direct candidate"
+    },
+    {
+      "id": "demo-risk-10",
+      "originalRiskId": "risk-value-elusiveness",
+      "family": "AI Strategy and Value Mgmt.",
+      "processName": "1. AI Strategy & Value Mgmt.",
+      "subProcessName": "Value Realization",
+      "name": "Value Elusiveness",
+      "detailLevel": "full",
+      "description": "Inability to measure tangible benefits due to a lack of clear metrics, productivity leaks, or failure to reinvest time saved.",
+      "expectedControlName": "AI benefits baseline and value-tracking control",
+      "expectedControlDescription": "Require approved value hypotheses, baseline metrics, benefit owners, measurement cadence, and post-implementation benefit review for material AI initiatives.",
+      "expectedControlObjective": "Verify whether AI investments create measurable value and enable corrective action where benefits are not realized.",
+      "controlSourceBasis": "Source-grounded: derived from the row references (Gartner: AI Value (Metrics); Gartner: AI Roadmap; Gartner: AI People & Culture; NIST AI RMF: MEASURE 1.1, MANAGE 4.2). Control wording is an Internal Audit interpretation of the cited source families, not verbatim source text.",
+      "sourcesAndReferences": "Gartner: AI Value (Metrics); Gartner: AI Roadmap; Gartner: AI People & Culture; NIST AI RMF: MEASURE 1.1, MANAGE 4.2",
+      "urlSourcesRaw": "Gartner: AI Value (Metrics) | https://www.gartner.com/en/documents/7311330 || \nGartner: AI Roadmap | https://www.gartner.com/en/chief-information-officer/research/ai-maturity-model-toolkit || \nGartner: AI People & Culture | https://www.gartner.com/en/documents/6761234 || \nNIST AI RMF: MEASURE 1.1, MANAGE 4.2 | https://www.nist.gov/itl/ai-risk-management-framework",
+      "sourceLinks": [
+        {
+          "label": "Gartner: AI Value (Metrics)",
+          "url": "https://www.gartner.com/en/documents/7311330"
+        },
+        {
+          "label": "Gartner: AI Roadmap",
+          "url": "https://www.gartner.com/en/chief-information-officer/research/ai-maturity-model-toolkit"
+        },
+        {
+          "label": "Gartner: AI People & Culture",
+          "url": "https://www.gartner.com/en/documents/6761234"
+        },
+        {
+          "label": "NIST AI RMF: MEASURE 1.1, MANAGE 4.2",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+        }
+      ],
+      "nistLifecycleStage": "1. Plan & Design",
+      "lifecycle": [
+        "plan"
+      ],
+      "contexts": [
+        "governance",
+        "strategy",
+        "business-audit",
+        "dedicated-ai"
+      ],
+      "posture": "Direct candidate"
+    },
+    {
+      "id": "demo-risk-11",
+      "originalRiskId": "risk-uncontrolled-operational-costs-dos",
+      "family": "AI Strategy and Value Mgmt.",
+      "processName": "1. AI Strategy & Value Mgmt.",
+      "subProcessName": "Financial Management",
+      "name": "Uncontrolled Operational Costs (DoS)",
+      "detailLevel": "full",
+      "description": "Excessive costs from AI services (API calls, compute) or malicious Model Denial of Service attacks causing resource exhaustion.",
+      "expectedControlName": "AI consumption and cost-management control",
+      "expectedControlDescription": "Monitor model, compute, token, storage, and integration usage against budgets and anomaly thresholds, with rate limits, alerts, and approval gates for material cost increases.",
+      "expectedControlObjective": "Prevent uncontrolled AI operating cost growth and cost-amplification abuse.",
+      "controlSourceBasis": "Source-grounded: derived from the row references (Gartner: AI Value (FinOps); OWASP LLM Top 10: LLM04; ISO/IEC 42001; NIST AI RMF: GOVERN 1.3, MANAGE 4.3). Control wording is an Internal Audit interpretation of the cited source families, not verbatim source text.",
+      "sourcesAndReferences": "Gartner: AI Value (FinOps); OWASP LLM Top 10: LLM04; ISO/IEC 42001; NIST AI RMF: GOVERN 1.3, MANAGE 4.3",
+      "urlSourcesRaw": "Gartner: AI Value (FinOps) | https://www.gartner.com/en/webinar/755866 || \nOWASP LLM Top 10: LLM04 | https://genai.owasp.org/llm-top-10/ || \nISO/IEC 42001 | https://www.iso.org/standard/42001 || \nNIST AI RMF: GOVERN 1.3, MANAGE 4.3 | https://www.nist.gov/itl/ai-risk-management-framework",
+      "sourceLinks": [
+        {
+          "label": "Gartner: AI Value (FinOps)",
+          "url": "https://www.gartner.com/en/webinar/755866"
+        },
+        {
+          "label": "OWASP LLM Top 10: LLM04",
+          "url": "https://genai.owasp.org/llm-top-10/"
+        },
+        {
+          "label": "ISO/IEC 42001",
+          "url": "https://www.iso.org/standard/42001"
+        },
+        {
+          "label": "NIST AI RMF: GOVERN 1.3, MANAGE 4.3",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+        }
+      ],
+      "nistLifecycleStage": "1. Plan & Design",
+      "lifecycle": [
+        "plan"
+      ],
+      "contexts": [
+        "governance",
+        "strategy",
+        "business-audit",
+        "dedicated-ai"
+      ],
+      "posture": "Direct candidate"
+    },
+    {
+      "id": "demo-risk-12",
+      "originalRiskId": "risk-pseudoscience-scientific-invalidity",
+      "family": "AI Strategy and Value Mgmt.",
+      "processName": "1. AI Strategy & Value Mgmt.",
+      "subProcessName": "Strategic Planning",
+      "name": "Pseudoscience / Scientific Invalidity",
+      "detailLevel": "full",
+      "description": "The AI is tasked with predicting something that cannot scientifically be predicted (e.g., physiognomy, predicting criminality from facial features), leading to fundamentally invalid results.",
+      "expectedControlName": "Scientific validity and evidence challenge control",
+      "expectedControlDescription": "Require documented scientific rationale, method validation, limitations, peer or expert challenge, and evidence review before relying on AI outputs for scientific or technical claims.",
+      "expectedControlObjective": "Ensure AI-supported claims and decisions rest on valid methods and evidence rather than unsupported or pseudoscientific reasoning.",
+      "controlSourceBasis": "Source-grounded: derived from the row references (NIST AI RMF: MEASURE 2.2 (Validity), MAP 1.2 (Scientific Integrity); Princeton AI Snake Oil). Control wording is an Internal Audit interpretation of the cited source families, not verbatim source text.",
+      "sourcesAndReferences": "NIST AI RMF: MEASURE 2.2 (Validity), MAP 1.2 (Scientific Integrity); Princeton AI Snake Oil",
+      "urlSourcesRaw": "NIST AI RMF: MEASURE 2.2 (Validity), MAP 1.2 (Scientific Integrity) | https://www.nist.gov/itl/ai-risk-management-framework || \nPrinceton AI Snake Oil | https://press.princeton.edu/books/hardcover/9780691249131/ai-snake-oil",
+      "sourceLinks": [
+        {
+          "label": "NIST AI RMF: MEASURE 2.2 (Validity), MAP 1.2 (Scientific Integrity)",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+        },
+        {
+          "label": "Princeton AI Snake Oil",
+          "url": "https://press.princeton.edu/books/hardcover/9780691249131/ai-snake-oil"
+        }
+      ],
+      "nistLifecycleStage": "1. Plan & Design",
+      "lifecycle": [
+        "plan"
+      ],
+      "contexts": [
+        "governance",
+        "strategy",
+        "business-audit",
+        "dedicated-ai"
+      ],
+      "posture": "Direct candidate"
+    },
+    {
+      "id": "demo-risk-13",
+      "originalRiskId": "risk-organizational-readiness-gap",
+      "family": "AI Organization and Culture",
+      "processName": "2. AI Organization & Culture",
+      "subProcessName": "Organizational Design",
+      "name": "Organizational Readiness Gap",
+      "detailLevel": "full",
+      "description": "The rapid evolution of AI capabilities outpaces the organization's ability to adopt them due to siloed structures or lack of cross-functional collaboration.",
+      "expectedControlName": "AI operating readiness assessment",
+      "expectedControlDescription": "Assess governance, people, process, data, technology, legal, security, and support readiness before scaling material AI use cases, with gaps tracked to accountable owners.",
+      "expectedControlObjective": "Confirm the organization can operate and control AI safely before adoption or scale-up.",
+      "controlSourceBasis": "Source-grounded: derived from the row references (Gartner: AI Roadmap; Gartner: AI Strategy; MITRE: Organization; NIST AI RMF: GOVERN 1.2, GOVERN 2.2). Control wording is an Internal Audit interpretation of the cited source families, not verbatim source text.",
+      "sourcesAndReferences": "Gartner: AI Roadmap; Gartner: AI Strategy; MITRE: Organization; NIST AI RMF: GOVERN 1.2, GOVERN 2.2",
+      "urlSourcesRaw": "Gartner: AI Roadmap | https://www.gartner.com/en/chief-information-officer/research/ai-maturity-model-toolkit || \nGartner: AI Strategy | https://www.gartner.com/en/documents/6676234 || \nMITRE: Organization | https://www.mitre.org/news-insights/publication/mitre-ai-maturity-model-and-organizational-assessment-tool-guide || \nNIST AI RMF: GOVERN 1.2, GOVERN 2.2 | https://www.nist.gov/itl/ai-risk-management-framework",
+      "sourceLinks": [
+        {
+          "label": "Gartner: AI Roadmap",
+          "url": "https://www.gartner.com/en/chief-information-officer/research/ai-maturity-model-toolkit"
+        },
+        {
+          "label": "Gartner: AI Strategy",
+          "url": "https://www.gartner.com/en/documents/6676234"
+        },
+        {
+          "label": "MITRE: Organization",
+          "url": "https://www.mitre.org/news-insights/publication/mitre-ai-maturity-model-and-organizational-assessment-tool-guide"
+        },
+        {
+          "label": "NIST AI RMF: GOVERN 1.2, GOVERN 2.2",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+        }
+      ],
+      "nistLifecycleStage": "1. Plan & Design",
+      "lifecycle": [
+        "plan"
+      ],
+      "contexts": [
+        "governance",
+        "business-audit",
+        "dedicated-ai"
+      ],
+      "posture": "Direct candidate"
+    },
+    {
+      "id": "demo-risk-14",
+      "originalRiskId": "risk-lack-of-specialized-ai-talent",
+      "family": "AI Organization and Culture",
+      "processName": "2. AI Organization & Culture",
+      "subProcessName": "Talent Management",
+      "name": "Lack of Specialized AI Talent",
+      "detailLevel": "full",
+      "description": "The inability to hire, develop, or retain talent with necessary niche technical skills (e.g., data scientists, prompt engineers) hinders strategy execution.",
+      "expectedControlName": "AI specialist capability and escalation model",
+      "expectedControlDescription": "Maintain an AI capability model identifying required specialist roles, minimum qualifications, external support triggers, and escalation paths for high-risk AI assurance topics.",
+      "expectedControlObjective": "Ensure AI work and assurance are supported by people with appropriate technical, risk, and domain expertise.",
+      "controlSourceBasis": "Source-grounded: derived from the row references (Gartner: AI Organization; Gartner: AI Engineering (Skills); NIST AI RMF: GOVERN 2.2). Control wording is an Internal Audit interpretation of the cited source families, not verbatim source text.",
+      "sourcesAndReferences": "Gartner: AI Organization; Gartner: AI Engineering (Skills); NIST AI RMF: GOVERN 2.2",
+      "urlSourcesRaw": "Gartner: AI Organization | https://www.gartner.com/en/documents/6570102 || \nGartner: AI Engineering (Skills) | https://www.gartner.com/en/documents/5747215 || \nNIST AI RMF: GOVERN 2.2 | https://www.nist.gov/itl/ai-risk-management-framework",
+      "sourceLinks": [
+        {
+          "label": "Gartner: AI Organization",
+          "url": "https://www.gartner.com/en/documents/6570102"
+        },
+        {
+          "label": "Gartner: AI Engineering (Skills)",
+          "url": "https://www.gartner.com/en/documents/5747215"
+        },
+        {
+          "label": "NIST AI RMF: GOVERN 2.2",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+        }
+      ],
+      "nistLifecycleStage": "1. Plan & Design",
+      "lifecycle": [
+        "plan"
+      ],
+      "contexts": [
+        "governance",
+        "business-audit",
+        "dedicated-ai"
+      ],
+      "posture": "Direct candidate"
+    },
+    {
+      "id": "demo-risk-15",
+      "originalRiskId": "risk-skills-and-literacy-gap",
+      "family": "AI Organization and Culture",
+      "processName": "2. AI Organization & Culture",
+      "subProcessName": "Workforce Transformation",
+      "name": "Skills & Literacy Gap",
+      "detailLevel": "full",
+      "description": "Insufficient AI literacy across the general workforce prevents effective adoption, leads to poor decision-making, or results in accidental misuse.",
+      "expectedControlName": "AI literacy and role-based training control",
+      "expectedControlDescription": "Provide role-based AI literacy, risk, policy, and escalation training for users, owners, developers, risk managers, and auditors, with completion tracked and refreshed periodically.",
+      "expectedControlObjective": "Ensure personnel understand AI limitations, responsibilities, and control expectations relevant to their role.",
+      "controlSourceBasis": "Source-grounded: derived from the row references (Gartner: AI Literacy Roadmap; ISO/IEC 42001 (Competence 7.2); MITRE: Workforce; NIST AI RMF: GOVERN 2.2). Control wording is an Internal Audit interpretation of the cited source families, not verbatim source text.",
+      "sourcesAndReferences": "Gartner: AI Literacy Roadmap; ISO/IEC 42001 (Competence 7.2); MITRE: Workforce; NIST AI RMF: GOVERN 2.2",
+      "urlSourcesRaw": "Gartner: AI Literacy Roadmap | https://www.gartner.com/en/documents/5809615 || \nISO/IEC 42001 (Competence 7.2) | https://www.iso.org/standard/42001 || \nMITRE: Workforce | https://www.mitre.org/news-insights/publication/mitre-ai-maturity-model-and-organizational-assessment-tool-guide || \nNIST AI RMF: GOVERN 2.2 | https://www.nist.gov/itl/ai-risk-management-framework",
+      "sourceLinks": [
+        {
+          "label": "Gartner: AI Literacy Roadmap",
+          "url": "https://www.gartner.com/en/documents/5809615"
+        },
+        {
+          "label": "ISO/IEC 42001 (Competence 7.2)",
+          "url": "https://www.iso.org/standard/42001"
+        },
+        {
+          "label": "MITRE: Workforce",
+          "url": "https://www.mitre.org/news-insights/publication/mitre-ai-maturity-model-and-organizational-assessment-tool-guide"
+        },
+        {
+          "label": "NIST AI RMF: GOVERN 2.2",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+        }
+      ],
+      "nistLifecycleStage": "1. Plan & Design",
+      "lifecycle": [
+        "plan"
+      ],
+      "contexts": [
+        "governance",
+        "business-audit",
+        "dedicated-ai"
+      ],
+      "posture": "Direct candidate"
+    },
+    {
+      "id": "demo-risk-16",
+      "originalRiskId": "risk-overreliance-and-loss-of-agency",
+      "family": "AI Organization and Culture",
+      "processName": "2. AI Organization & Culture",
+      "subProcessName": "Workforce Transformation",
+      "name": "Overreliance & Loss of Agency",
+      "detailLevel": "full",
+      "description": "Users accepting AI results without verification or delegating too much control, leading to loss of human agency or Anthropomorphism.",
+      "expectedControlName": "Human oversight and reliance control",
+      "expectedControlDescription": "Define where human review is required, what independent evidence must be checked, how exceptions are escalated, and how overreliance indicators are monitored.",
+      "expectedControlObjective": "Preserve meaningful human judgement and prevent blind acceptance of AI outputs.",
+      "controlSourceBasis": "Source-grounded: derived from the row references (OWASP LLM Top 10: LLM09; MIT AI Risk Rep: 5.2; Gartner: AI People & Culture; NIST AI RMF: MAP 1.1, MANAGE 3.2). Control wording is an Internal Audit interpretation of the cited source families, not verbatim source text.",
+      "sourcesAndReferences": "OWASP LLM Top 10: LLM09; MIT AI Risk Rep: 5.2; Gartner: AI People & Culture; NIST AI RMF: MAP 1.1, MANAGE 3.2",
+      "urlSourcesRaw": "OWASP LLM Top 10: LLM09 | https://genai.owasp.org/llm-top-10/ || \nMIT AI Risk Rep: 5.2 | https://airisk.mit.edu/ || \nGartner: AI People & Culture | https://www.gartner.com/en/documents/6761234 || \nNIST AI RMF: MAP 1.1, MANAGE 3.2 | https://www.nist.gov/itl/ai-risk-management-framework",
+      "sourceLinks": [
+        {
+          "label": "OWASP LLM Top 10: LLM09",
+          "url": "https://genai.owasp.org/llm-top-10/"
+        },
+        {
+          "label": "MIT AI Risk Rep: 5.2",
+          "url": "https://airisk.mit.edu/"
+        },
+        {
+          "label": "Gartner: AI People & Culture",
+          "url": "https://www.gartner.com/en/documents/6761234"
+        },
+        {
+          "label": "NIST AI RMF: MAP 1.1, MANAGE 3.2",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+        }
+      ],
+      "nistLifecycleStage": "6. Use",
+      "lifecycle": [
+        "operate"
+      ],
+      "contexts": [
+        "governance",
+        "business-audit",
+        "dedicated-ai"
+      ],
+      "posture": "Direct candidate"
+    },
+    {
+      "id": "demo-risk-17",
+      "originalRiskId": "risk-inadequate-or-missing-ai-governance-framework",
+      "family": "AI Governance and Risk",
+      "processName": "3. AI Governance & Risk",
+      "subProcessName": "Policy & Framework",
+      "name": "Inadequate or Missing AI Governance Framework",
+      "detailLevel": "full",
+      "description": "The organization lacks a formalized AI risk and compliance framework (or the existing one is insufficient) to manage obligations.",
+      "expectedControlName": "AI governance framework control",
+      "expectedControlDescription": "Establish and periodically review an AI governance framework covering policy, roles, risk appetite, lifecycle controls, inventory, classification, monitoring, incidents, and reporting.",
+      "expectedControlObjective": "Provide a coherent management system for governing AI risks across the organization.",
+      "controlSourceBasis": "Source-grounded: derived from the row references (Gartner: AI Governance; MITRE: Governance; ISO/IEC 42001 (Clause 4.4, A.2); NIST AI RMF: GOVERN 1.1, GOVERN 2.1). Control wording is an Internal Audit interpretation of the cited source families, not verbatim source text.",
+      "sourcesAndReferences": "Gartner: AI Governance; MITRE: Governance; ISO/IEC 42001 (Clause 4.4, A.2); NIST AI RMF: GOVERN 1.1, GOVERN 2.1",
+      "urlSourcesRaw": "Gartner: AI Governance | https://www.gartner.com/en/documents/6885067 || \nMITRE: Governance | https://www.mitre.org/news-insights/publication/mitre-ai-maturity-model-and-organizational-assessment-tool-guide || \nISO/IEC 42001 (Clause 4.4, A.2) | https://www.iso.org/standard/42001 || \nNIST AI RMF: GOVERN 1.1, GOVERN 2.1 | https://www.nist.gov/itl/ai-risk-management-framework",
+      "sourceLinks": [
+        {
+          "label": "Gartner: AI Governance",
+          "url": "https://www.gartner.com/en/documents/6885067"
+        },
+        {
+          "label": "MITRE: Governance",
+          "url": "https://www.mitre.org/news-insights/publication/mitre-ai-maturity-model-and-organizational-assessment-tool-guide"
+        },
+        {
+          "label": "ISO/IEC 42001 (Clause 4.4, A.2)",
+          "url": "https://www.iso.org/standard/42001"
+        },
+        {
+          "label": "NIST AI RMF: GOVERN 1.1, GOVERN 2.1",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+        }
+      ],
+      "nistLifecycleStage": "1. Plan & Design",
+      "lifecycle": [
+        "plan"
+      ],
+      "contexts": [
+        "governance",
+        "third-party",
+        "business-audit",
+        "dedicated-ai"
+      ],
+      "posture": "Baseline governance"
+    },
+    {
+      "id": "demo-risk-18",
+      "originalRiskId": "risk-ineffective-ai-system-classification",
+      "family": "AI Governance and Risk",
+      "processName": "3. AI Governance & Risk",
+      "subProcessName": "Policy & Framework",
+      "name": "Ineffective AI System Classification",
+      "detailLevel": "full",
+      "description": "Failure to accurately classify AI systems by risk level (e.g., High, Limited, Minimal) leads to inappropriate controls or regulatory non-compliance.",
+      "expectedControlName": "AI risk classification and impact assessment control",
+      "expectedControlDescription": "Classify AI systems using defined criteria such as impact, autonomy, data sensitivity, external exposure, regulatory relevance, and technical complexity, with review at material change points.",
+      "expectedControlObjective": "Apply proportionate governance, validation, and oversight based on AI risk characteristics.",
+      "controlSourceBasis": "Source-grounded: derived from the row references (ISO/IEC 42001 (Impact Assessment A.5.2); Gartner: AI Governance; MITRE: Ethical Use; NIST AI RMF: MAP 1.5, MAP 2.2). Control wording is an Internal Audit interpretation of the cited source families, not verbatim source text.",
+      "sourcesAndReferences": "ISO/IEC 42001 (Impact Assessment A.5.2); Gartner: AI Governance; MITRE: Ethical Use; NIST AI RMF: MAP 1.5, MAP 2.2",
+      "urlSourcesRaw": "ISO/IEC 42001 (Impact Assessment A.5.2) | https://www.iso.org/standard/42001 || \nGartner: AI Governance | https://www.gartner.com/en/documents/6885067 || \nMITRE: Ethical Use | https://www.mitre.org/news-insights/publication/mitre-ai-maturity-model-and-organizational-assessment-tool-guide || \nNIST AI RMF: MAP 1.5, MAP 2.2 | https://www.nist.gov/itl/ai-risk-management-framework",
+      "sourceLinks": [
+        {
+          "label": "ISO/IEC 42001 (Impact Assessment A.5.2)",
+          "url": "https://www.iso.org/standard/42001"
+        },
+        {
+          "label": "Gartner: AI Governance",
+          "url": "https://www.gartner.com/en/documents/6885067"
+        },
+        {
+          "label": "MITRE: Ethical Use",
+          "url": "https://www.mitre.org/news-insights/publication/mitre-ai-maturity-model-and-organizational-assessment-tool-guide"
+        },
+        {
+          "label": "NIST AI RMF: MAP 1.5, MAP 2.2",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+        }
+      ],
+      "nistLifecycleStage": "1. Plan & Design",
+      "lifecycle": [
+        "plan"
+      ],
+      "contexts": [
+        "governance",
+        "third-party",
+        "business-audit",
+        "dedicated-ai"
+      ],
+      "posture": "Baseline governance"
+    },
+    {
+      "id": "demo-risk-19",
+      "originalRiskId": "risk-unmanaged-ai-acquisition-and-use",
+      "family": "AI Governance and Risk",
+      "processName": "3. AI Governance & Risk",
+      "subProcessName": "Policy & Framework",
+      "name": "Unmanaged AI Acquisition & Use",
+      "detailLevel": "full",
+      "description": "Business units acquiring, enabling, or using AI tools and services outside approved governance, security, procurement, or architecture processes, creating unmanaged data, control, and contractual risks.",
+      "expectedControlName": "AI acquisition and shadow-use approval control",
+      "expectedControlDescription": "Require approval, risk review, security/privacy assessment, and inventory registration before acquiring, building, or materially using AI tools, including third-party and end-user tools.",
+      "expectedControlObjective": "Prevent unmanaged AI adoption and ensure AI use enters the control framework before material reliance.",
+      "controlSourceBasis": "Source-grounded: derived from the row references (Gartner: AI Roadmap; Gartner: AI Governance; ISO/IEC 42001; Gartner: Risk Essentials; NIST AI RMF: GOVERN 1.1, MANAGE 1.3). Control wording is an Internal Audit interpretation of the cited source families, not verbatim source text.",
+      "sourcesAndReferences": "Gartner: AI Roadmap; Gartner: AI Governance; ISO/IEC 42001; Gartner: Risk Essentials; NIST AI RMF: GOVERN 1.1, MANAGE 1.3",
+      "urlSourcesRaw": "Gartner: AI Roadmap | https://www.gartner.com/en/chief-information-officer/research/ai-maturity-model-toolkit || \nGartner: AI Governance | https://www.gartner.com/en/documents/6885067 || \nISO/IEC 42001 | https://www.iso.org/standard/42001 || \nGartner: Risk Essentials | https://www.gartner.com/en/documents/6685934 || \nNIST AI RMF: GOVERN 1.1, MANAGE 1.3 | https://www.nist.gov/itl/ai-risk-management-framework",
+      "sourceLinks": [
+        {
+          "label": "Gartner: AI Roadmap",
+          "url": "https://www.gartner.com/en/chief-information-officer/research/ai-maturity-model-toolkit"
+        },
+        {
+          "label": "Gartner: AI Governance",
+          "url": "https://www.gartner.com/en/documents/6885067"
+        },
+        {
+          "label": "ISO/IEC 42001",
+          "url": "https://www.iso.org/standard/42001"
+        },
+        {
+          "label": "Gartner: Risk Essentials",
+          "url": "https://www.gartner.com/en/documents/6685934"
+        },
+        {
+          "label": "NIST AI RMF: GOVERN 1.1, MANAGE 1.3",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+        }
+      ],
+      "nistLifecycleStage": "1. Plan & Design",
+      "lifecycle": [
+        "plan"
+      ],
+      "contexts": [
+        "governance",
+        "third-party",
+        "business-audit",
+        "dedicated-ai"
+      ],
+      "posture": "Baseline governance"
+    },
+    {
+      "id": "demo-risk-20",
+      "originalRiskId": "risk-ai-supply-chain-and-third-party-risk",
+      "family": "AI Governance and Risk",
+      "processName": "3. AI Governance & Risk",
+      "subProcessName": "Legal & Compliance",
+      "name": "AI Supply Chain & Third-Party Risk",
+      "detailLevel": "full",
+      "description": "Vulnerabilities in the AI supply chain, including compromised third-party models, training data, or ambiguity in vendor contracts.",
+      "expectedControlName": "AI third-party risk management control",
+      "expectedControlDescription": "Assess AI vendors, models, datasets, plugins, APIs, and service providers for security, privacy, resilience, transparency, contractual, and monitoring requirements before and during use.",
+      "expectedControlObjective": "Control AI-related dependencies and supplier risks across the lifecycle.",
+      "controlSourceBasis": "Source-grounded: derived from the row references (OWASP LLM Top 10: LLM05; OWASP ML Top 10: ML06; ISO/IEC 42001 (Suppliers A.10.3); NIST AI RMF: MANAGE 1.3, MAP 2.3). Control wording is an Internal Audit interpretation of the cited source families, not verbatim source text.",
+      "sourcesAndReferences": "OWASP LLM Top 10: LLM05; OWASP ML Top 10: ML06; ISO/IEC 42001 (Suppliers A.10.3); NIST AI RMF: MANAGE 1.3, MAP 2.3",
+      "urlSourcesRaw": "OWASP LLM Top 10: LLM05 | https://genai.owasp.org/llm-top-10/ || \nOWASP ML Top 10: ML06 | https://owasp.org/www-project-machine-learning-security-top-10/ || \nISO/IEC 42001 (Suppliers A.10.3) | https://www.iso.org/standard/42001 || \nNIST AI RMF: MANAGE 1.3, MAP 2.3 | https://www.nist.gov/itl/ai-risk-management-framework",
+      "sourceLinks": [
+        {
+          "label": "OWASP LLM Top 10: LLM05",
+          "url": "https://genai.owasp.org/llm-top-10/"
+        },
+        {
+          "label": "OWASP ML Top 10: ML06",
+          "url": "https://owasp.org/www-project-machine-learning-security-top-10/"
+        },
+        {
+          "label": "ISO/IEC 42001 (Suppliers A.10.3)",
+          "url": "https://www.iso.org/standard/42001"
+        },
+        {
+          "label": "NIST AI RMF: MANAGE 1.3, MAP 2.3",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+        }
+      ],
+      "nistLifecycleStage": "2. Collect & Process Data",
+      "lifecycle": [
+        "data"
+      ],
+      "contexts": [
+        "governance",
+        "third-party",
+        "business-audit",
+        "dedicated-ai"
+      ],
+      "posture": "Baseline governance"
+    },
+    {
+      "id": "demo-risk-21",
+      "originalRiskId": "risk-contextual-data-failure",
+      "family": "AI Data Management",
+      "processName": "4. AI Data Management",
+      "subProcessName": "Data Quality",
+      "name": "Contextual Data Failure",
+      "detailLevel": "full",
+      "description": "Using data that is technically accurate but essentially \"wrong\" for the specific AI use case or context, leading to misleading outputs.",
+      "expectedControlName": "Contextual data fitness assessment",
+      "expectedControlDescription": "Evaluate whether data used by AI is fit for the intended context, including relevance, completeness, representativeness, timeliness, limitations, and approved use constraints.",
+      "expectedControlObjective": "Ensure AI outputs are based on data appropriate to the business context and decision.",
+      "controlSourceBasis": "Source-grounded: derived from the row references (Gartner: AI Data Guide; ISO/IEC 5338; MITRE: Data; NIST AI RMF: MAP 2.3, MEASURE 2.2). Control wording is an Internal Audit interpretation of the cited source families, not verbatim source text.",
+      "sourcesAndReferences": "Gartner: AI Data Guide; ISO/IEC 5338; MITRE: Data; NIST AI RMF: MAP 2.3, MEASURE 2.2",
+      "urlSourcesRaw": "Gartner: AI Data Guide | https://www.gartner.com/en/documents/6486471 || \nISO/IEC 5338 | https://www.iso.org/standard/81118.html || \nMITRE: Data | https://www.mitre.org/news-insights/publication/mitre-ai-maturity-model-and-organizational-assessment-tool-guide || \nNIST AI RMF: MAP 2.3, MEASURE 2.2 | https://www.nist.gov/itl/ai-risk-management-framework",
+      "sourceLinks": [
+        {
+          "label": "Gartner: AI Data Guide",
+          "url": "https://www.gartner.com/en/documents/6486471"
+        },
+        {
+          "label": "ISO/IEC 5338",
+          "url": "https://www.iso.org/standard/81118.html"
+        },
+        {
+          "label": "MITRE: Data",
+          "url": "https://www.mitre.org/news-insights/publication/mitre-ai-maturity-model-and-organizational-assessment-tool-guide"
+        },
+        {
+          "label": "NIST AI RMF: MAP 2.3, MEASURE 2.2",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+        }
+      ],
+      "nistLifecycleStage": "2. Collect & Process Data",
+      "lifecycle": [
+        "data"
+      ],
+      "contexts": [
+        "data",
+        "privacy",
+        "security",
+        "business-audit",
+        "dedicated-ai"
+      ],
+      "posture": "Specialist overlay"
+    },
+    {
+      "id": "demo-risk-22",
+      "originalRiskId": "risk-metadata-and-lineage-management-failure",
+      "family": "AI Data Management",
+      "processName": "4. AI Data Management",
+      "subProcessName": "Data Quality",
+      "name": "Metadata & Lineage Management Failure",
+      "detailLevel": "full",
+      "description": "Failure to manage technical metadata, lineage, and data/model documentation as operational infrastructure, weakening traceability, reproducibility, explainability, and internal governance over data and model dependencies.",
+      "expectedControlName": "Data lineage and provenance control",
+      "expectedControlDescription": "Capture and maintain data origin, transformations, ownership, quality checks, access history, and lineage for datasets used in material AI systems.",
+      "expectedControlObjective": "Make AI data traceable, explainable, and auditable across collection, preparation, use, and change.",
+      "controlSourceBasis": "Source-grounded: derived from the row references (Gartner: AI Data Guide; ISO/IEC 5338; ISO/IEC 42001 (Provenance A.7.5); NIST AI RMF: MAP 2.3). Control wording is an Internal Audit interpretation of the cited source families, not verbatim source text.",
+      "sourcesAndReferences": "Gartner: AI Data Guide; ISO/IEC 5338; ISO/IEC 42001 (Provenance A.7.5); NIST AI RMF: MAP 2.3",
+      "urlSourcesRaw": "Gartner: AI Data Guide | https://www.gartner.com/en/documents/6486471 || \nISO/IEC 5338 | https://www.iso.org/standard/81118.html || \nISO/IEC 42001 (Provenance A.7.5) | https://www.iso.org/standard/42001 || \nNIST AI RMF: MAP 2.3 | https://www.nist.gov/itl/ai-risk-management-framework",
+      "sourceLinks": [
+        {
+          "label": "Gartner: AI Data Guide",
+          "url": "https://www.gartner.com/en/documents/6486471"
+        },
+        {
+          "label": "ISO/IEC 5338",
+          "url": "https://www.iso.org/standard/81118.html"
+        },
+        {
+          "label": "ISO/IEC 42001 (Provenance A.7.5)",
+          "url": "https://www.iso.org/standard/42001"
+        },
+        {
+          "label": "NIST AI RMF: MAP 2.3",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+        }
+      ],
+      "nistLifecycleStage": "2. Collect & Process Data",
+      "lifecycle": [
+        "data"
+      ],
+      "contexts": [
+        "data",
+        "privacy",
+        "security",
+        "business-audit",
+        "dedicated-ai"
+      ],
+      "posture": "Specialist overlay"
+    },
+    {
+      "id": "demo-risk-23",
+      "originalRiskId": "risk-model-drift-and-decay",
+      "family": "AI Engineering and Lifecycle",
+      "processName": "5. AI Engineering & Lifecycle",
+      "subProcessName": "Operations & Maintenance",
+      "name": "Model Drift & Decay",
+      "detailLevel": "full",
+      "description": "The degradation of model performance over time as real-world data diverges from training data (Data/Concept Drift).",
+      "expectedControlName": "Model drift monitoring control",
+      "expectedControlDescription": "Monitor model input, output, performance, data distribution, and business-context drift against thresholds, with documented triggers for investigation, recalibration, rollback, or retirement.",
+      "expectedControlObjective": "Detect and respond to degradation in AI performance or relevance during operation.",
+      "controlSourceBasis": "Source-grounded: derived from the row references (Gartner: AI Engineering; MITRE: Solution Monitoring; OWASP ML Top 10: ML08; NIST AI RMF: MANAGE 4.2, MEASURE 2.12). Control wording is an Internal Audit interpretation of the cited source families, not verbatim source text.",
+      "sourcesAndReferences": "Gartner: AI Engineering; MITRE: Solution Monitoring; OWASP ML Top 10: ML08; NIST AI RMF: MANAGE 4.2, MEASURE 2.12",
+      "urlSourcesRaw": "Gartner: AI Engineering | https://www.gartner.com/en/documents/6592003 || \nMITRE: Solution Monitoring | https://www.mitre.org/news-insights/publication/mitre-ai-maturity-model-and-organizational-assessment-tool-guide || \nOWASP ML Top 10: ML08 | https://owasp.org/www-project-machine-learning-security-top-10/ || \nNIST AI RMF: MANAGE 4.2, MEASURE 2.12 | https://www.nist.gov/itl/ai-risk-management-framework",
+      "sourceLinks": [
+        {
+          "label": "Gartner: AI Engineering",
+          "url": "https://www.gartner.com/en/documents/6592003"
+        },
+        {
+          "label": "MITRE: Solution Monitoring",
+          "url": "https://www.mitre.org/news-insights/publication/mitre-ai-maturity-model-and-organizational-assessment-tool-guide"
+        },
+        {
+          "label": "OWASP ML Top 10: ML08",
+          "url": "https://owasp.org/www-project-machine-learning-security-top-10/"
+        },
+        {
+          "label": "NIST AI RMF: MANAGE 4.2, MEASURE 2.12",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+        }
+      ],
+      "nistLifecycleStage": "5. Operate & Monitor",
+      "lifecycle": [
+        "operate"
+      ],
+      "contexts": [
+        "lifecycle",
+        "technology",
+        "dedicated-ai"
+      ],
+      "posture": "Lifecycle or future-stage item"
+    },
+    {
+      "id": "demo-risk-24",
+      "originalRiskId": "risk-hallucinations-confabulation",
+      "family": "Societal and Ethical Impact",
+      "processName": "7. Societal & Ethical Impact",
+      "subProcessName": "Reliability & Trust",
+      "name": "Hallucinations (Confabulation)",
+      "detailLevel": "full",
+      "description": "The model produces factually incorrect results that users accept as truth, compromising decision-making and eroding trust.",
+      "expectedControlName": "AI output accuracy and grounding control",
+      "expectedControlDescription": "Require grounding, source citation where feasible, confidence/limitation disclosure, human review for material outputs, and testing of hallucination-prone workflows.",
+      "expectedControlObjective": "Reduce reliance on fabricated, inaccurate, or unsupported AI outputs.",
+      "controlSourceBasis": "Source-grounded: derived from the row references (Gartner: AI Governance; MITRE: Robust & Reliable; MIT AI Risk Rep: 3.1; NIST AI RMF: MEASURE 2.3). Control wording is an Internal Audit interpretation of the cited source families, not verbatim source text.",
+      "sourcesAndReferences": "Gartner: AI Governance; MITRE: Robust & Reliable; MIT AI Risk Rep: 3.1; NIST AI RMF: MEASURE 2.3",
+      "urlSourcesRaw": "Gartner: AI Governance | https://www.gartner.com/en/documents/6885067 || \nMITRE: Robust & Reliable | https://www.mitre.org/news-insights/publication/mitre-ai-maturity-model-and-organizational-assessment-tool-guide || \nMIT AI Risk Rep: 3.1 | https://airisk.mit.edu/ || \nNIST AI RMF: MEASURE 2.3 | https://www.nist.gov/itl/ai-risk-management-framework",
+      "sourceLinks": [
+        {
+          "label": "Gartner: AI Governance",
+          "url": "https://www.gartner.com/en/documents/6885067"
+        },
+        {
+          "label": "MITRE: Robust & Reliable",
+          "url": "https://www.mitre.org/news-insights/publication/mitre-ai-maturity-model-and-organizational-assessment-tool-guide"
+        },
+        {
+          "label": "MIT AI Risk Rep: 3.1",
+          "url": "https://airisk.mit.edu/"
+        },
+        {
+          "label": "NIST AI RMF: MEASURE 2.3",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+        }
+      ],
+      "nistLifecycleStage": "6. Use",
+      "lifecycle": [
+        "operate"
+      ],
+      "contexts": [
+        "governance",
+        "business-audit",
+        "dedicated-ai"
+      ],
+      "posture": "Direct candidate"
+    }
+  ]
+}

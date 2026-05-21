@@ -26,6 +26,9 @@
     .figure img { width:100%; display:block; border-radius:12px; }
     .caption { color:var(--muted); font-size:14px; margin-top:8px; }
     .tag { display:inline-block; border:1px solid #bdd0ef; background:#f5f8ff; color:#25466f; border-radius:999px; padding:6px 10px; margin:4px 4px 0 0; font-size:13px; font-weight:700; }
+    .demo-nav { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:22px; }
+    .demo-nav a { color:white; border:1px solid rgba(255,255,255,.55); background:rgba(255,255,255,.12); border-radius:999px; padding:9px 13px; font-weight:800; text-decoration:none; }
+    .demo-nav a[aria-current="page"] { background:white; color:#15376a; border-color:white; }
     .actions { margin-top:18px; display:flex; flex-wrap:wrap; gap:10px; }
     .button { display:inline-block; color:white; border:1px solid rgba(255,255,255,.55); background:rgba(255,255,255,.12); border-radius:999px; padding:9px 13px; font-weight:800; text-decoration:none; }
     .button.primary { background:white; color:#15376a; border-color:white; }
@@ -42,6 +45,7 @@
 <body>
   <header>
     <div class="wrap">
+      <nav class="demo-nav" aria-label="AIRUM demo pages"><a aria-current="page" href="./">Page 1: AIRUM overview</a><a href="explore/">Page 2: Explore and select</a><a href="examples/reduced-discovery-working-paper.html">Page 3: Example export</a></nav>
       <div class="kicker">AI Risk Universe Matrix</div>
       <h1>AIRUM prepares AI risk discovery before the audit starts.</h1>
       <p class="lead">A practitioner-built Internal Audit concept: a curated AI Risk Universe plus deterministic Risk Scoping for reviewable pre-discovery preparation.</p>
@@ -49,6 +53,16 @@
     </div>
   </header>
   <main class="wrap">
+
+    <section class="card">
+      <h2>Three demo pages</h2>
+      <div class="linklist">
+        <div class="linkitem"><h3>Page 1: AIRUM overview</h3><p>This page explains the concept, boundary, and teaching/research use.</p><p><a href="./">https://busera.github.io/AIRUM-public-demo/</a></p></div>
+        <div class="linkitem"><h3>Page 2: Explore and select</h3><p>Interactive reduced demo showing sample exploration, family filters, search, and deterministic candidate selection controls.</p><p><a href="explore/">https://busera.github.io/AIRUM-public-demo/explore/</a></p></div>
+        <div class="linkitem"><h3>Page 3: Example export</h3><p>Reduced discovery working paper showing the export shape: selected risks, rationale, expected controls, questions, evidence, and disposition fields.</p><p><a href="examples/reduced-discovery-working-paper.html">https://busera.github.io/AIRUM-public-demo/examples/reduced-discovery-working-paper.html</a></p></div>
+      </div>
+    </section>
+
     <section class="card">
       <h2>What AIRUM is</h2>
       <p>AIRUM stands for AI Risk Universe Matrix. It has two connected purposes. First, it is a curated AI Risk Universe for exploration, education, methodology development, and risk-based AI audit planning. Second, it is a deterministic Risk Scoping layer that turns structured audit context into candidate AI risks, expected controls, discovery questions, lifecycle assumptions, and specialist dependencies.</p>
@@ -89,7 +103,7 @@
     </section>
 
     <section class="card">
-      <h2>Selection sample: reduced discovery working paper</h2>
+      <h2>Page 3: selection sample - reduced discovery working paper</h2>
       <p>A fictional, five-risk selection sample shows how AIRUM can move from broad AI risk coverage to a concrete pre-discovery working paper. It includes selected candidate AI Risks, why each risk appears, expected controls, discovery questions, evidence to request, and retain / escalate / defer / remove fields.</p>
       <p>The sample is deliberately reduced. It demonstrates the output shape without publishing the full working method, internal scoring, source mappings, or private audit material.</p>
       <p><a href="examples/reduced-discovery-working-paper.html">Open the AIRUM selection sample</a></p>
@@ -98,9 +112,9 @@
     <section class="card">
       <h2>Public links</h2>
       <div class="linklist">
-        <div class="linkitem"><h3>Main public page</h3><p><a href="https://busera.github.io/AIRUM-public-demo/">https://busera.github.io/AIRUM-public-demo/</a></p></div>
-        <div class="linkitem"><h3>Selection sample</h3><p><a href="examples/reduced-discovery-working-paper.html">Open the AIRUM selection sample</a></p></div>
-        <div class="linkitem"><h3>Repository note</h3><p>Use the rendered public page above for reading and sharing, not the source tree view.</p></div>
+        <div class="linkitem"><h3>Page 1: overview</h3><p><a href="https://busera.github.io/AIRUM-public-demo/">https://busera.github.io/AIRUM-public-demo/</a></p></div>
+        <div class="linkitem"><h3>Page 2: explore and select</h3><p><a href="explore/">https://busera.github.io/AIRUM-public-demo/explore/</a></p></div>
+        <div class="linkitem"><h3>Page 3: example export</h3><p><a href="examples/reduced-discovery-working-paper.html">https://busera.github.io/AIRUM-public-demo/examples/reduced-discovery-working-paper.html</a></p></div>
       </div>
     </section>
 

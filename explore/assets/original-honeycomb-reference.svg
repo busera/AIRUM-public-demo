@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520" role="img" aria-labelledby="title desc">
+  <title id="title">Original-style AIRUM honeycomb reference</title>
+  <desc id="desc">A stylized honeycomb reference using category colors and compact numeric markers. It does not publish the complete AIRUM risk universe or internal labels.</desc>
+  <rect width="900" height="520" fill="#f6fbff"/>
+  <text x="48" y="54" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800" fill="#0f3557">Original-style honeycomb reference</text>
+  <text x="48" y="84" font-family="Inter, Arial, sans-serif" font-size="15" fill="#596879">Sanitized visual reference: category colors, compact markers, no internal risk labels.</text>
+  <g transform="translate(108 112)">
+    <defs>
+      <filter id="shadow" height="140%"><feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="#0f3557" flood-opacity="0.18"/></filter>
+      <polygon id="hex" points="28,0 84,0 112,48 84,96 28,96 0,48"/>
+    </defs>
+    <g font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800" text-anchor="middle" fill="#0f3557">
+      <g transform="translate(0 0)"><use href="#hex" fill="#2E8B57" filter="url(#shadow)"/><circle cx="56" cy="48" r="17" fill="rgba(255,255,255,.88)"/><text x="56" y="53">01</text></g>
+      <g transform="translate(86 48)"><use href="#hex" fill="#4682B4" filter="url(#shadow)"/><circle cx="56" cy="48" r="17" fill="rgba(255,255,255,.88)"/><text x="56" y="53">02</text></g>
+      <g transform="translate(172 0)"><use href="#hex" fill="#DAA520" filter="url(#shadow)"/><circle cx="56" cy="48" r="17" fill="rgba(255,255,255,.88)"/><text x="56" y="53">03</text></g>
+      <g transform="translate(258 48)"><use href="#hex" fill="#CD853F" filter="url(#shadow)"/><circle cx="56" cy="48" r="17" fill="rgba(255,255,255,.88)"/><text x="56" y="53">04</text></g>
+      <g transform="translate(344 0)"><use href="#hex" fill="#9370DB" filter="url(#shadow)"/><circle cx="56" cy="48" r="17" fill="rgba(255,255,255,.88)"/><text x="56" y="53">05</text></g>
+      <g transform="translate(430 48)"><use href="#hex" fill="#DC143C" filter="url(#shadow)"/><circle cx="56" cy="48" r="17" fill="rgba(255,255,255,.88)"/><text x="56" y="53">06</text></g>
+      <g transform="translate(516 0)"><use href="#hex" fill="#FF6347" filter="url(#shadow)"/><circle cx="56" cy="48" r="17" fill="rgba(255,255,255,.88)"/><text x="56" y="53">07</text></g>
+      <g transform="translate(43 144)"><use href="#hex" fill="#2E8B57" opacity=".42" stroke="#0f3557" stroke-width="3" stroke-dasharray="6 5" filter="url(#shadow)"/><circle cx="56" cy="48" r="17" fill="rgba(255,255,255,.88)"/><text x="56" y="53">08</text></g>
+      <g transform="translate(129 96)"><use href="#hex" fill="#4682B4" opacity=".42" stroke="#0f3557" stroke-width="3" stroke-dasharray="6 5" filter="url(#shadow)"/><circle cx="56" cy="48" r="17" fill="rgba(255,255,255,.88)"/><text x="56" y="53">09</text></g>
+      <g transform="translate(215 144)"><use href="#hex" fill="#DAA520" opacity=".42" stroke="#0f3557" stroke-width="3" stroke-dasharray="6 5" filter="url(#shadow)"/><circle cx="56" cy="48" r="17" fill="rgba(255,255,255,.88)"/><text x="56" y="53">10</text></g>
+      <g transform="translate(301 96)"><use href="#hex" fill="#CD853F" opacity=".42" stroke="#0f3557" stroke-width="3" stroke-dasharray="6 5" filter="url(#shadow)"/><circle cx="56" cy="48" r="17" fill="rgba(255,255,255,.88)"/><text x="56" y="53">11</text></g>
+      <g transform="translate(387 144)"><use href="#hex" fill="#9370DB" opacity=".42" stroke="#0f3557" stroke-width="3" stroke-dasharray="6 5" filter="url(#shadow)"/><circle cx="56" cy="48" r="17" fill="rgba(255,255,255,.88)"/><text x="56" y="53">12</text></g>
+      <g transform="translate(473 96)"><use href="#hex" fill="#DC143C" opacity=".42" stroke="#0f3557" stroke-width="3" stroke-dasharray="6 5" filter="url(#shadow)"/><circle cx="56" cy="48" r="17" fill="rgba(255,255,255,.88)"/><text x="56" y="53">13</text></g>
+    </g>
+  </g>
+  <g transform="translate(56 430)" font-family="Inter, Arial, sans-serif" font-size="14" fill="#0f3557">
+    <rect x="0" y="-22" width="18" height="12" rx="6" fill="#2E8B57"/><text x="28" y="-11">Risk family color</text>
+    <rect x="180" y="-22" width="18" height="12" rx="6" fill="#4682B4"/><text x="208" y="-11">Documented profile</text>
+    <rect x="380" y="-22" width="18" height="12" rx="6" fill="#9370DB" opacity=".42" stroke="#0f3557" stroke-dasharray="4 3"/><text x="408" y="-11">Withheld full-universe entry</text>
+  </g>
+</svg>

@@ -6,8 +6,9 @@ This public repository is a reduced, publication-safe introduction to the idea. 
 
 ## Public links
 
-- Main public page: <https://busera.github.io/AIRUM-public-demo/>
-- Selection sample: <https://busera.github.io/AIRUM-public-demo/examples/reduced-discovery-working-paper.html>
+- Page 1 - AIRUM overview: <https://busera.github.io/AIRUM-public-demo/>
+- Page 2 - sample exploration and selection/filter options: <https://busera.github.io/AIRUM-public-demo/explore/>
+- Page 3 - example selection export: <https://busera.github.io/AIRUM-public-demo/examples/reduced-discovery-working-paper.html>
 
 ## What AIRUM is
 
@@ -104,26 +105,28 @@ It does not:
 
 Those decisions belong to auditors, specialists, management, and governance bodies after the facts are understood.
 
-## Selection sample: reduced discovery working paper
+## Page 3: example selection export
 
-A reduced public selection sample is available here:
+A reduced public selection export is available here:
 
-- [AIRUM selection sample: reduced discovery working paper](examples/reduced-discovery-working-paper.html)
+- [AIRUM example selection export: reduced discovery working paper](examples/reduced-discovery-working-paper.html)
 
 The sample shows how AIRUM can move from broad AI risk coverage to a concrete pre-discovery working paper. It uses a fictional ACME Finance AI-enabled reporting workflow and only five selected example AI Risks. For each selected risk it shows why the risk appears, expected controls, discovery questions, evidence to request, and retain / escalate / defer / remove fields.
 
 It does not include AIRUM's full rules, scoring logic, source mappings, private audit material, or operational build details.
 
-## Public demo status
+## Page 2: sample exploration and selection/filter options
 
-This repository is the first public project version. It intentionally focuses on explanation, visuals, collaboration positioning, and a reduced example output.
+The reduced interactive page is available here:
 
-A reduced interactive demo may be added later. If added, it should show the two AIRUM purposes clearly:
+- [AIRUM sample exploration and selection demo](explore/)
 
-1. AI Risk Universe exploration.
-2. Deterministic Risk Scoping for pre-discovery preparation.
+It shows two AIRUM purposes clearly:
 
-The public demo should remain reduced and publication-safe. It should not publish the full internal rules, scoring logic, source captures, private mappings, or operational build details.
+1. AI Risk Universe exploration with search and family filtering.
+2. Deterministic Risk Scoping for pre-discovery preparation using reduced public demo data.
+
+The public demo remains intentionally reduced. It does not publish the full internal rules, scoring logic, source captures, private mappings, or operational build details.
 
 ## Collaboration interest
 
