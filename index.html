@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AIRUM - AI Risk Universe Matrix</title>
+  <style>
+    :root { --ink:#132033; --muted:#5a6878; --line:#d8e2ee; --blue:#1f5eff; --soft:#f4f8ff; --bg:#f7f9fc; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Arial,sans-serif; color:var(--ink); background:var(--bg); line-height:1.5; }
+    header { background:linear-gradient(135deg,#101f33,#183a70); color:white; padding:58px 22px 46px; }
+    .wrap { max-width:1040px; margin:0 auto; }
+    .kicker { text-transform:uppercase; letter-spacing:.14em; font-size:12px; color:#9fc2ff; font-weight:800; }
+    h1 { font-size:48px; line-height:1.02; margin:12px 0; letter-spacing:-.04em; }
+    h2 { font-size:25px; line-height:1.15; margin:0 0 12px; letter-spacing:-.02em; }
+    h3 { margin:0 0 8px; }
+    p { margin:0 0 14px; }
+    a { color:#0b57d0; }
+    .lead { font-size:19px; max-width:850px; color:#dce8ff; }
+    main { padding:28px 22px 48px; }
+    section { margin:18px auto; }
+    .card { background:white; border:1px solid var(--line); border-radius:18px; padding:24px; box-shadow:0 10px 30px rgba(18,32,51,.06); }
+    .grid { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+    .grid3 { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+    .figure { background:white; border:1px solid var(--line); border-radius:18px; padding:12px; margin:16px 0; }
+    .figure img { width:100%; display:block; border-radius:12px; }
+    .caption { color:var(--muted); font-size:14px; margin-top:8px; }
+    .tag { display:inline-block; border:1px solid #bdd0ef; background:#f5f8ff; color:#25466f; border-radius:999px; padding:6px 10px; margin:4px 4px 0 0; font-size:13px; font-weight:700; }
+    ul { padding-left:20px; margin:8px 0 0; }
+    li { margin:5px 0; }
+    .boundary { background:#101f33; color:white; }
+    .boundary p, .boundary li { color:#dce8ff; }
+    footer { color:var(--muted); border-top:1px solid var(--line); padding:20px 22px 34px; }
+    @media (max-width:760px) { h1 { font-size:36px; } .grid, .grid3 { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="kicker">AI Risk Universe Matrix</div>
+      <h1>AIRUM prepares AI risk discovery before the audit starts.</h1>
+      <p class="lead">A practitioner-built Internal Audit concept: a curated AI Risk Universe plus deterministic Risk Scoping for reviewable pre-discovery preparation.</p>
+      <div><span class="tag">Internal Audit</span><span class="tag">AI governance</span><span class="tag">Digital trust</span><span class="tag">Risk scoping</span><span class="tag">Teaching and research</span></div>
+    </div>
+  </header>
+  <main class="wrap">
+    <section class="card">
+      <h2>What AIRUM is</h2>
+      <p>AIRUM stands for AI Risk Universe Matrix. It has two connected purposes. First, it is a curated AI Risk Universe for exploration, education, methodology development, and risk-based AI audit planning. Second, it is a deterministic Risk Scoping layer that turns structured audit context into candidate AI risks, expected controls, discovery questions, lifecycle assumptions, and specialist dependencies.</p>
+      <p>The goal is not to automate audit judgment. The goal is to make the first version of the audit conversation stronger, more traceable, and easier to challenge.</p>
+    </section>
+
+    <div class="figure">
+      <img src="assets/airum_risk_universe_to_discovery_preparation.png" alt="AIRUM from risk universe to discovery preparation">
+      <div class="caption">AIRUM turns broad AI risk knowledge into a better first discovery conversation, not a final audit decision.</div>
+    </div>
+
+    <section class="grid">
+      <div class="card">
+        <h2>The problem</h2>
+        <p>AI can sit inside models, vendor platforms, business processes, spreadsheet workflows, research activities, customer-facing tools, or informal productivity shortcuts. Audit teams can scope too narrowly and miss how AI is used, or scope too broadly and create noise.</p>
+      </div>
+      <div class="card">
+        <h2>The method</h2>
+        <p>AIRUM keeps the risk universe broad enough to avoid blind spots, then applies structured scoping so auditors can focus on the risks, controls, questions, and dependencies that matter for the audit context.</p>
+      </div>
+    </section>
+
+    <section class="grid3">
+      <div class="card"><h3>1. Start with context</h3><p>Define the process, AI use, lifecycle stage, data dependency, vendor role, governance maturity, and specialist overlays.</p></div>
+      <div class="card"><h3>2. Map likely risks</h3><p>Connect context to the AI Risk Universe, expected controls, discovery questions, and dependencies.</p></div>
+      <div class="card"><h3>3. Challenge the output</h3><p>Keep, amend, escalate, defer, or remove risks based on discovery evidence and auditor judgment.</p></div>
+    </section>
+
+    <div class="figure">
+      <img src="assets/airum_deterministic_risk_scoping_workflow.png" alt="AIRUM deterministic risk scoping workflow">
+      <div class="caption">The deterministic workflow is deliberately framed as preparation: frame context, map to source-backed risks, group by audit use, and prepare discovery.</div>
+    </div>
+
+    <section class="card">
+      <h2>Teaching and research use</h2>
+      <p>AIRUM can support teaching in IT audit, AI governance, digital trust, risk management, responsible AI, and applied information systems. Students can work from a short AI use case, review a candidate risk shortlist, challenge unsupported assumptions, and draft discovery questions.</p>
+      <p>Research use could compare expert manual scoping with structured AIRUM-supported scoping, test risk coverage and rationale quality, or study how AI risks should map to audit-universe processes.</p>
+    </section>
+
+    <section class="card boundary">
+      <h2>Boundary</h2>
+      <p>AIRUM is a working preparation concept and methodology prototype. It does not decide final audit scope, assess control effectiveness, calculate residual risk, provide legal or compliance conclusions, validate that an AI system is safe or well governed, or provide audit assurance.</p>
+      <p>This public version is intentionally reduced. It does not publish the full working implementation, internal rules, scoring logic, data mappings, private audit material, or complete methodology package.</p>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap">Andre Buser. Views are my own. This repository describes conceptual design patterns and lessons from personal project work.</div>
+  </footer>
+</body>
+</html>

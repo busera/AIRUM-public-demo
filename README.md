@@ -1,0 +1,125 @@
+# AIRUM: AI Risk Universe Matrix
+
+AIRUM stands for **AI Risk Universe Matrix**. It is a practitioner-built Internal Audit concept for preparing AI risk discovery before an audit starts.
+
+This public repository is a reduced, publication-safe introduction to the idea. It explains the method, shows the main visuals, and describes how AIRUM can be used in audit, teaching, and research. It does **not** publish the full working implementation, internal rules, scoring logic, data mappings, private audit material, or the complete methodology package.
+
+## What AIRUM is
+
+AIRUM has two connected purposes.
+
+First, it is a curated AI Risk Universe: a structured collection of source-backed AI risks that auditors can use for exploration, education, methodology development, and risk-based AI audit planning. The full AIRUM v3 working universe currently contains 63 source-backed AI Risks across seven broad families: AI strategy and value management, organization and culture, governance and risk, data management, engineering and lifecycle, security and malicious use, and societal and ethical impact.
+
+Second, it is a deterministic Risk Scoping layer for AI audits. This layer turns structured audit context into a reviewable pre-discovery preparation pack: candidate AI risks, baseline AI governance checks, process-specific considerations, expected controls, discovery questions, lifecycle assumptions, specialist dependencies, and material an auditor can use before the first serious scoping conversation.
+
+The goal is not to automate audit judgment. The goal is to make the first version of the audit conversation stronger, more traceable, and easier to challenge.
+
+![AIRUM risk universe to discovery preparation](assets/airum_risk_universe_to_discovery_preparation.png)
+
+## The problem AIRUM addresses
+
+AI risk is difficult for Internal Audit because it can sit inside formal models, vendor platforms, business processes, spreadsheet workflows, research activities, customer-facing tools, or informal productivity shortcuts.
+
+That breadth creates two common scoping failures:
+
+1. The audit team scopes too narrowly and misses how AI is actually being used.
+2. The audit team scopes too broadly and arrives at discovery with a generic AI risk list that is too wide to guide a serious conversation.
+
+AIRUM is designed to bridge that gap. It keeps the risk universe broad enough to avoid blind spots, then applies structured scoping so auditors can focus on the risks, controls, questions, and dependencies that are most relevant for the audit context.
+
+## How AIRUM works at a high level
+
+A typical AIRUM preparation flow has four steps:
+
+1. **Start with the audit context.** Define the business process or domain, known or suspected AI use, lifecycle stage, data dependency, vendor involvement, governance maturity, and specialist overlays.
+2. **Map to the AI Risk Universe.** Use the curated risk universe to identify candidate AI Risks, expected controls, discovery questions, and dependencies.
+3. **Group risks by audit use.** Separate baseline governance topics, direct process risks, specialist dependencies, lifecycle/future-stage considerations, and contextual watch items.
+4. **Challenge the output.** The auditor keeps, amends, escalates, defers, or removes risks based on discovery evidence and professional judgment.
+
+![AIRUM deterministic risk scoping workflow](assets/airum_deterministic_risk_scoping_workflow.png)
+
+## Why deterministic scoping matters
+
+AIRUM's current Risk Scoping approach is deterministic by design. For early audit planning, that matters.
+
+A black-box answer is not very useful if the auditor cannot inspect why a risk appeared. AIRUM should make the rationale visible enough to challenge: whether a risk is a baseline governance topic, a process-specific candidate risk, a specialist dependency, a lifecycle consideration, or a conditional item that depends on what the auditee confirms.
+
+AI and probabilistic methods may later support summarization, enrichment, or adjacent-risk suggestions. They should not replace the audit judgment layer. In the current version, determinism protects traceability and keeps the auditor in control.
+
+## How an auditor would use it
+
+An auditor would use AIRUM before discovery, not after the audit conclusion has already formed.
+
+The preparation pack helps the team walk into the first discussion with better assumptions to test:
+
+- Where is AI used or planned?
+- Is the AI internally developed, vendor-provided, embedded in a platform, or informally adopted by users?
+- What data is used, and who owns it?
+- Which controls are expected to exist before the risk can be managed?
+- Which risks are directly in scope, and which are dependencies or specialist topics?
+- What should be retained, escalated, deferred, or removed after the auditee explains the actual process?
+
+The value is not that AIRUM produces a final answer. The value is that it reduces ad hoc scoping and makes weak assumptions easier to find.
+
+![AIRUM selected risk audit use postures](assets/airum_selected_risk_audit_use_postures.png)
+
+## Teaching and research use
+
+AIRUM can be used as a university or professional education case in IT audit, AI governance, digital trust, risk management, responsible AI, and applied information systems.
+
+Possible classroom use:
+
+- Give students a short AI use case.
+- Ask them to identify relevant AI risk families.
+- Review a candidate risk shortlist.
+- Challenge unsupported assumptions.
+- Draft discovery questions and expected-control conversations.
+- Discuss which topics belong in the audit scope, which require specialist input, and which should remain as dependencies or watch items.
+
+Possible research use:
+
+- Compare expert manual scoping with structured AIRUM-supported scoping.
+- Test whether risk coverage, rationale quality, and auditor confidence improve.
+- Study how AI risks should be mapped to audit-universe processes.
+- Evaluate when deterministic methods are preferable to LLM-assisted enrichment.
+- Assess whether students or auditors better detect weak evidence after using the case.
+
+## Boundary
+
+AIRUM is a working preparation concept and methodology prototype.
+
+It does not:
+
+- decide final audit scope;
+- assess control effectiveness;
+- calculate residual risk;
+- provide legal or compliance conclusions;
+- validate that an AI system is safe, fair, secure, compliant, or well governed;
+- provide audit assurance.
+
+Those decisions belong to auditors, specialists, management, and governance bodies after the facts are understood.
+
+## Public demo status
+
+This repository is the first public project version. It intentionally focuses on explanation, visuals, and collaboration positioning.
+
+A reduced interactive demo may be added later. If added, it should show the two AIRUM purposes clearly:
+
+1. AI Risk Universe exploration.
+2. Deterministic Risk Scoping for pre-discovery preparation.
+
+The public demo should remain reduced and publication-safe. It should not publish the full internal rules, scoring logic, source captures, private mappings, or operational build details.
+
+## Collaboration interest
+
+AIRUM is aimed at three audiences:
+
+- Internal Audit teams looking for a more disciplined way to prepare AI risk discovery.
+- Universities and researchers interested in empirical validation of AI risk-to-audit-universe mapping and audit planning methods.
+- Event and conference organizers looking for practitioner-led material on AI risk, audit methodology, and digital trust.
+
+## Author
+
+Andre Buser
+
+Views are my own. This repository describes conceptual design patterns and lessons from personal project work. It does not disclose employer or client information, provide legal advice, provide audit assurance, or represent an endorsement by any organization.
