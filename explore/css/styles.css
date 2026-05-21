@@ -197,7 +197,7 @@ button:hover { background: var(--blue-700); }
   margin-top: 18px;
 }
 .honeycomb {
-  min-height: 560px;
+  min-height: 360px;
   padding: 14px;
   overflow-x: auto;
   border: 1px solid var(--line);
