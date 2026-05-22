@@ -1,4 +1,4 @@
-# Public-safe AIRUM demo repository
+# AIRUM public demo repository
 
 This repository is intentionally a reduced public introduction. It does not contain the private AIRUM implementation, full risk matrix, internal rules, scoring logic, private mappings, source captures, build database, operational exports, or audit working material.
 
