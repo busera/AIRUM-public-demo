@@ -377,7 +377,7 @@ function hexagonPoints(x, y) {
 
 function honeycombDetailHtml(risk) {
   return `
-    <p class="detail-pill full">Source-backed AIRUM row</p>
+    <p class="detail-pill full">Source-backed AIRUM risk</p>
     <h3>${escapeHtml(risk.name)}</h3>
     <p class="family-label">${escapeHtml(risk.processName)} / ${escapeHtml(risk.subProcessName)}</p>
     <p>${escapeHtml(risk.description)}</p>
