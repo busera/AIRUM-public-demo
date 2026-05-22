@@ -112,7 +112,7 @@ function riskUniverseCardHtml(risk) {
       <p>${escapeHtml(risk.description)}</p>
       <details>
         <summary>Show original control text and sources</summary>
-        ${originalRowSectionsHtml(risk)}
+        ${sourceBackedRiskSectionsHtml(risk)}
       </details>
     </article>`;
 }
@@ -163,7 +163,7 @@ function candidateCardHtml(item, index) {
     </article>`;
 }
 
-function originalRowSectionsHtml(risk) {
+function sourceBackedRiskSectionsHtml(risk) {
   return `
     <dl class="source-backed-fields">
       <dt>Risk ID</dt><dd>${escapeHtml(risk.originalRiskId)}</dd>
