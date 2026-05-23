@@ -15,7 +15,7 @@ This public repository is a reduced, publication-safe introduction to the idea. 
 
 AIRUM has two connected purposes.
 
-First, it is a curated AI Risk Universe: a structured collection of source-backed AI risks that auditors can use for exploration, education, methodology development, and risk-based AI audit planning. The full AIRUM v3 working universe currently contains 63 source-backed AI Risks across seven broad families: AI strategy and value management, organization and culture, governance and risk, data management, engineering and lifecycle, security and malicious use, and societal and ethical impact.
+First, it is a curated AI Risk Universe: a structured collection of source-backed AI risks that auditors can use for exploration, education, methodology development, and risk-based AI audit planning. The full AIRUM v3.1 working universe currently contains 65 source-backed AI Risks across seven broad families: AI strategy and value management, organization and culture, governance and risk, data management, engineering and lifecycle, security and malicious use, and societal and ethical impact.
 
 Second, it is a deterministic Risk Scoping layer for AI audits. This layer turns structured audit context into a reviewable pre-discovery preparation pack: candidate AI risks, baseline AI governance checks, process-specific considerations, expected controls, discovery questions, lifecycle assumptions, specialist dependencies, and material an auditor can use before the first serious scoping conversation.
 
@@ -63,7 +63,7 @@ A typical AIRUM preparation flow has four steps:
 3. **Group risks by audit use.** Separate baseline governance topics, direct process risks, specialist dependencies, lifecycle/future-stage considerations, and contextual watch items.
 4. **Challenge the output.** The auditor keeps, amends, escalates, defers, or removes risks based on discovery evidence and professional judgment.
 
-![AIRUM 63 AI Risk universe summary](assets/airum_63_row_risk_universe_summary.png)
+![AIRUM 65 AI Risk universe summary](assets/airum_65_row_risk_universe_summary.png)
 
 ## Why deterministic scoping matters
 
