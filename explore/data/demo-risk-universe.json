@@ -1,11 +1,11 @@
 {
-  "version": "public-demo-v0.5-10-risk-subset-airum-v3.1-65",
-  "status": "reduced-source-backed-10-risk-demo",
-  "boundary": "Reduced public demo data. The 10 visible risks use source-backed text from selected AIRUM risks shown in this repository, while the complete AIRUM data core and selection methodology are not published.",
+  "version": "public-demo-v0.6-reduced-risk-subset-airum-v3.1",
+  "status": "reduced-source-backed-risk-demo",
+  "boundary": "Reduced public demo data. The visible risks use source-backed text from selected AIRUM risks shown in this repository, while the complete AIRUM data core and selection methodology are not published.",
   "riskUniverse": {
     "label": "AIRUM Part 1",
     "documentedCount": 10,
-    "omittedRiskNote": "The complete AIRUM v3.1 risk universe contains 65 source-backed AI Risks; this repository intentionally publishes only this 10-risk source-backed subset."
+    "omittedRiskNote": "The complete AIRUM v3.1 risk universe is not published; this repository intentionally publishes only this reduced source-backed subset."
   },
   "risks": [
     {
