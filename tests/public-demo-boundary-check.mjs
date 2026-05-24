@@ -62,7 +62,8 @@ test('reduced risk data includes structured audit procedure planning fields', ()
   const data = JSON.parse(read('explore/data/demo-risk-universe.json'));
   assert.equal(data.riskUniverse.documentedCount, 10);
   for (const risk of data.risks) {
-    assert.match(risk.auditProcedureName, /^Assess controls over /);
+    assert.match(risk.auditProcedureName, /^(Evaluate|Review|Validate|Test|Examine|Analyze)\b/);
+    assert.doesNotMatch(risk.auditProcedureDescription, /Assess whether the organization has designed|Assess whether the organization has defined/i);
     assert.notEqual(risk.auditProcedureDescription.trim(), '');
     assert.match(risk.testOfDesign, /Overall test objective\/purpose:[\s\S]*Detailed Test Steps:[\s\S]*Recommended Artifacts:/);
     assert.match(risk.testOfEffectiveness, /Overall test objective\/purpose:[\s\S]*Recommended Sampling Strategy:[\s\S]*Recommended Sample Size:[\s\S]*Detailed Test Steps:[\s\S]*Recommended Artifacts:/);

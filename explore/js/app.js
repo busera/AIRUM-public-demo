@@ -181,19 +181,38 @@ function sourceBackedRiskSectionsHtml(risk) {
     ${sourceLinksHtml(risk.sourceLinks)}`;
 }
 
+function procedureTextHtml(value) {
+  return String(value || '')
+    .split('\n')
+    .map((line) => {
+      const trimmed = line.trim();
+      if (/^(Overall test objective\/purpose|Recommended Sampling Strategy|Recommended Sample Size|Detailed Test Steps|Recommended Artifacts):$/.test(trimmed)) {
+        return `<div class="audit-procedure-line"><strong>${escapeHtml(trimmed)}</strong></div>`;
+      }
+      return `<div class="audit-procedure-line">${escapeHtml(line || ' ' )}</div>`;
+    })
+    .join('');
+}
+
 function auditProcedureSectionsHtml(risk) {
   if (!risk.auditProcedureName && !risk.auditProcedureDescription && !risk.testOfDesign && !risk.testOfEffectiveness) {
     return '';
   }
   return `
     <div class="audit-procedure-fields">
-      <p><strong>Audit procedure:</strong> ${escapeHtml(risk.auditProcedureName)}</p>
-      <p><strong>Procedure description:</strong> ${escapeHtml(risk.auditProcedureDescription)}</p>
-      <details>
-        <summary>Show ToD and ToE planning guidance</summary>
-        <pre>${escapeHtml(risk.testOfDesign)}</pre>
-        <pre>${escapeHtml(risk.testOfEffectiveness)}</pre>
-      </details>
+      <section class="audit-procedure-box audit-procedure-summary">
+        <h4>Audit Procedure</h4>
+        <p><strong>Name:</strong> ${escapeHtml(risk.auditProcedureName)}</p>
+        <p><strong>Description:</strong> ${escapeHtml(risk.auditProcedureDescription)}</p>
+      </section>
+      <section class="audit-procedure-box audit-procedure-tod">
+        <h4>Test of Design (ToD)</h4>
+        <div class="audit-procedure-text">${procedureTextHtml(risk.testOfDesign)}</div>
+      </section>
+      <section class="audit-procedure-box audit-procedure-toe">
+        <h4>Test of Effectiveness (ToE)</h4>
+        <div class="audit-procedure-text">${procedureTextHtml(risk.testOfEffectiveness)}</div>
+      </section>
     </div>`;
 }
 
