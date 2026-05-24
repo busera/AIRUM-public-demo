@@ -15,7 +15,7 @@ This public repository is a reduced, publication-safe introduction to the idea. 
 
 AIRUM has two connected purposes.
 
-First, it is a curated AI Risk Universe: a structured collection of source-backed AI risks that auditors can use for exploration, education, methodology development, and risk-based AI audit planning. The internal AIRUM v3.1 working universe contains 65 source-backed AI Risks, incorporates additional ISACA AI Audit Toolkit 2024 control-library grounding, and is organized across seven broad families: AI strategy and value management, organization and culture, governance and risk, data management, engineering and lifecycle, security and malicious use, and societal and ethical impact.
+First, it is a curated AI Risk Universe: a structured collection of source-backed AI risks that auditors can use for exploration, education, methodology development, and risk-based AI audit planning. The internal AIRUM v3.1 working universe contains 65 source-backed AI Risks, 75 consolidated controls, 206 risk-control mappings, additional ISACA AI Audit Toolkit 2024 control-library grounding, and structured risk/control audit procedure planning guidance. It is organized across seven broad families: AI strategy and value management, organization and culture, governance and risk, data management, engineering and lifecycle, security and malicious use, and societal and ethical impact.
 
 Second, it is a deterministic Risk Scoping layer for AI audits. This layer turns structured audit context into a reviewable pre-discovery preparation pack: candidate AI risks, baseline AI governance checks, process-specific considerations, expected controls, discovery questions, lifecycle assumptions, specialist dependencies, and material an auditor can use before the first serious scoping conversation.
 
@@ -41,7 +41,7 @@ Source families considered include:
 - LLM and machine-learning security threat taxonomies
 - Industry guidance on AI strategy, governance, trust, risk, and security management
 
-The public demo intentionally shows only a reduced version. It does not publish the full 65-risk data core, normalized control mappings, source mapping, scoring logic, internal rules, or complete methodology package.
+The public demo intentionally shows only a reduced version. It does not publish the full 65-risk data core, full normalized control mappings, source mapping, scoring logic, internal rules, or complete methodology package. The reduced explorer may show generic audit procedure planning guidance for visible rows, but it does not provide engagement-specific workpapers, testing conclusions, or sample selections.
 
 ## The problem AIRUM addresses
 

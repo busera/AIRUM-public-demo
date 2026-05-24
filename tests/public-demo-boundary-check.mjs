@@ -36,9 +36,8 @@ function walk(relativePath = '.') {
   });
 }
 
-test('public files do not disclose exact full internal AIRUM universe counts', () => {
-  assert.doesNotMatch(publicText, /full AIRUM[^.]{0,160}\b\d+\s+source-backed AI Risks/i);
-  assert.doesNotMatch(publicText, /complete AIRUM[^.]{0,160}\b\d+\s+source-backed AI Risks/i);
+test('public files disclose only the approved v3.1 public count, not internal file paths or unpublished row artifacts', () => {
+  assert.match(publicText, /complete AIRUM v3\.1 risk universe contains 65 source-backed AI Risks/i);
   assert.doesNotMatch(publicText, /\b\d+[-\s]?row AIRUM Risk Universe/i);
   assert.doesNotMatch(publicText, /\b\d+ AI Risks across \d+ families/i);
 
@@ -57,6 +56,17 @@ test('overview exposes the reduced-demo public boundary above the first explanat
   assert.match(intro, /Reduced public demo/i);
   assert.match(intro, /No private audit material/i);
   assert.match(intro, /does not publish the full AIRUM methodology/i);
+});
+
+test('reduced risk data includes structured audit procedure planning fields', () => {
+  const data = JSON.parse(read('explore/data/demo-risk-universe.json'));
+  assert.equal(data.riskUniverse.documentedCount, 10);
+  for (const risk of data.risks) {
+    assert.match(risk.auditProcedureName, /^Assess controls over /);
+    assert.notEqual(risk.auditProcedureDescription.trim(), '');
+    assert.match(risk.testOfDesign, /Overall test objective\/purpose:[\s\S]*Detailed Test Steps:[\s\S]*Recommended Artifacts:/);
+    assert.match(risk.testOfEffectiveness, /Overall test objective\/purpose:[\s\S]*Recommended Sampling Strategy:[\s\S]*Recommended Sample Size:[\s\S]*Detailed Test Steps:[\s\S]*Recommended Artifacts:/);
+  }
 });
 
 test('interactive navigation and disclosure controls meet minimum touch target sizing', () => {

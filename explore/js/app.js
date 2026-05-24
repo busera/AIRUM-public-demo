@@ -155,9 +155,10 @@ function candidateCardHtml(item, index) {
         <dt>Source basis</dt><dd>${escapeHtml(item.risk.sourcesAndReferences)}</dd>
       </dl>
       <details>
-        <summary>Show control description and source links</summary>
+        <summary>Show control description, audit procedure, and source links</summary>
         <p><strong>Control description:</strong> ${escapeHtml(item.risk.expectedControlDescription)}</p>
         <p><strong>Control source basis:</strong> ${escapeHtml(item.risk.controlSourceBasis)}</p>
+        ${auditProcedureSectionsHtml(item.risk)}
         ${sourceLinksHtml(item.risk.sourceLinks)}
       </details>
     </article>`;
@@ -171,10 +172,29 @@ function sourceBackedRiskSectionsHtml(risk) {
       <dt>Expected Control Description</dt><dd>${escapeHtml(risk.expectedControlDescription)}</dd>
       <dt>Expected Control Objective</dt><dd>${escapeHtml(risk.expectedControlObjective)}</dd>
       <dt>Control Source Basis</dt><dd>${escapeHtml(risk.controlSourceBasis)}</dd>
+      <dt>Audit Procedure Name</dt><dd>${escapeHtml(risk.auditProcedureName)}</dd>
+      <dt>Audit Procedure Description</dt><dd>${escapeHtml(risk.auditProcedureDescription)}</dd>
       <dt>Sources and References</dt><dd>${escapeHtml(risk.sourcesAndReferences)}</dd>
       <dt>NIST AI Lifecycle Stage</dt><dd>${escapeHtml(risk.nistLifecycleStage)}</dd>
     </dl>
+    ${auditProcedureSectionsHtml(risk)}
     ${sourceLinksHtml(risk.sourceLinks)}`;
+}
+
+function auditProcedureSectionsHtml(risk) {
+  if (!risk.auditProcedureName && !risk.auditProcedureDescription && !risk.testOfDesign && !risk.testOfEffectiveness) {
+    return '';
+  }
+  return `
+    <div class="audit-procedure-fields">
+      <p><strong>Audit procedure:</strong> ${escapeHtml(risk.auditProcedureName)}</p>
+      <p><strong>Procedure description:</strong> ${escapeHtml(risk.auditProcedureDescription)}</p>
+      <details>
+        <summary>Show ToD and ToE planning guidance</summary>
+        <pre>${escapeHtml(risk.testOfDesign)}</pre>
+        <pre>${escapeHtml(risk.testOfEffectiveness)}</pre>
+      </details>
+    </div>`;
 }
 
 function sourceLinksHtml(sourceLinks = []) {
