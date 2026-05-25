@@ -448,9 +448,9 @@ summary {
   border-radius: 14px;
   background: rgba(42, 95, 141, 0.06);
 }
-.audit-procedure-box h4 {
-  margin: 0 0 0.45rem;
+.audit-procedure-box summary {
   color: var(--blue-900);
+  font-weight: 850;
 }
 .audit-procedure-box p {
   margin: 0.35rem 0;
@@ -466,6 +466,9 @@ summary {
 .audit-procedure-line strong {
   color: var(--blue-900);
   font-weight: 850;
+}
+.audit-procedure-section-break {
+  margin-top: 0.9rem;
 }
 .source-links ul { margin: 0.35rem 0 0; padding-left: 1.1rem; }
 .source-links li { margin: 0.25rem 0; overflow-wrap: anywhere; }

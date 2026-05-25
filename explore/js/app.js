@@ -187,7 +187,10 @@ function procedureTextHtml(value) {
     .map((line) => {
       const trimmed = line.trim();
       if (/^(Overall test objective\/purpose|Recommended Sampling Strategy|Recommended Sample Size|Detailed Test Steps|Recommended Artifacts):$/.test(trimmed)) {
-        return `<div class="audit-procedure-line"><strong>${escapeHtml(trimmed)}</strong></div>`;
+        const sectionBreakClass = /^(Recommended Sampling Strategy|Recommended Sample Size|Detailed Test Steps|Recommended Artifacts):$/.test(trimmed)
+          ? ' audit-procedure-section-break'
+          : '';
+        return `<div class="audit-procedure-line${sectionBreakClass}"><strong>${escapeHtml(trimmed)}</strong></div>`;
       }
       return `<div class="audit-procedure-line">${escapeHtml(line || ' ' )}</div>`;
     })
@@ -200,19 +203,19 @@ function auditProcedureSectionsHtml(risk) {
   }
   return `
     <div class="audit-procedure-fields">
-      <section class="audit-procedure-box audit-procedure-summary">
-        <h4>Audit Procedure</h4>
+      <details class="audit-procedure-box audit-procedure-summary">
+        <summary>Audit Procedure</summary>
         <p><strong>Name:</strong> ${escapeHtml(risk.auditProcedureName)}</p>
         <p><strong>Description:</strong> ${escapeHtml(risk.auditProcedureDescription)}</p>
-      </section>
-      <section class="audit-procedure-box audit-procedure-tod">
-        <h4>Test of Design (ToD)</h4>
+      </details>
+      <details class="audit-procedure-box audit-procedure-tod">
+        <summary>Test of Design (ToD)</summary>
         <div class="audit-procedure-text">${procedureTextHtml(risk.testOfDesign)}</div>
-      </section>
-      <section class="audit-procedure-box audit-procedure-toe">
-        <h4>Test of Effectiveness (ToE)</h4>
+      </details>
+      <details class="audit-procedure-box audit-procedure-toe">
+        <summary>Test of Effectiveness (ToE)</summary>
         <div class="audit-procedure-text">${procedureTextHtml(risk.testOfEffectiveness)}</div>
-      </section>
+      </details>
     </div>`;
 }
 

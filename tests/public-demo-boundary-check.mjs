@@ -79,9 +79,22 @@ test('interactive navigation and disclosure controls meet minimum touch target s
 test('browse risk examples renders one risk per row', () => {
   const exploreHtml = read('explore/index.html');
   const styles = read('explore/css/styles.css');
-  assert.match(exploreHtml, /styles\.css\?v=20260525-one-risk-row/);
+  assert.match(exploreHtml, /styles\.css\?v=20260525-procedure-disclosures/);
+  assert.match(exploreHtml, /app\.js\?v=20260525-procedure-disclosures/);
   assert.match(styles, /\.universe-grid\s*\{[^}]*grid-template-columns\s*:\s*1fr\s*;/is);
   assert.doesNotMatch(styles, /\.universe-grid\s*\{[^}]*repeat\(2,\s*minmax\(0,\s*1fr\)\)/is);
+});
+
+test('browse risk examples keeps risk audit guidance collapsed with spaced procedure subsections', () => {
+  const exploreJs = read('explore/js/app.js');
+  const styles = read('explore/css/styles.css');
+  assert.match(exploreJs, /<details class="audit-procedure-box audit-procedure-summary">[\s\S]*<summary>Audit Procedure<\/summary>/);
+  assert.match(exploreJs, /<details class="audit-procedure-box audit-procedure-tod">[\s\S]*<summary>Test of Design \(ToD\)<\/summary>/);
+  assert.match(exploreJs, /<details class="audit-procedure-box audit-procedure-toe">[\s\S]*<summary>Test of Effectiveness \(ToE\)<\/summary>/);
+  assert.doesNotMatch(exploreJs, /<details class="audit-procedure-box audit-procedure-(summary|tod|toe)"\s+open/);
+  assert.match(exploreJs, /audit-procedure-section-break/);
+  assert.match(styles, /\.audit-procedure-section-break\s*\{[^}]*margin-top\s*:\s*0\.9rem\s*;/is);
+  assert.match(styles, /\.audit-procedure-box\s+summary\s*\{[^}]*font-weight\s*:\s*850\s*;/is);
 });
 
 test('AIRUM design context files exist for future design passes', () => {
