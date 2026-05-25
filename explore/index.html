@@ -4,16 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AIRUM - exploration and selection demo</title>
-  <link rel="stylesheet" href="css/styles.css?v=20260525-procedure-disclosures">
+  <link rel="stylesheet" href="css/styles.css?v=20260525-numbered-test-steps">
   <link rel="preload" href="data/demo-risk-universe.json" as="fetch" type="application/json" crossorigin>
 </head>
 <body>
   <header class="hero">
     <div class="hero-inner">
-      <nav class="demo-nav" aria-label="AIRUM demo pages"><a href="../">AIRUM overview</a><a aria-current="page" href="./">Explore and select</a><a href="../examples/reduced-discovery-working-paper.html">Example export</a></nav>
+      <nav class="demo-nav" aria-label="AIRUM demo pages"><a href="../">AIRUM overview</a><a aria-current="page" href="./">Explore and select</a><a href="sampling-methodology.html">Sampling methodology</a><a href="../examples/reduced-discovery-working-paper.html">Example export</a></nav>
       <p class="eyebrow">AIRUM demo</p>
-      <h1>Explore AI risks, then test selection and filter options</h1>
-      <p class="lede">This reduced interactive page shows how AIRUM can be used first as a risk-universe explorer and then as a deterministic pre-discovery selection aid.</p>
+      <h1>Explore AI risks, applicable controls, and audit procedure guidance</h1>
+      <p class="lede">This reduced interactive page shows how AIRUM can be used first as a risk-universe explorer, then as a deterministic pre-discovery selection aid, and finally as a starting point for applicable-control audit procedure planning.</p>
     </div>
   </header>
 
@@ -30,6 +30,7 @@
           <span>demo risks shown</span>
         </div>
         <div class="mini-stat"><strong id="subset-status">reduced</strong><span>source-backed subset</span></div>
+        <div class="mini-stat"><strong id="applicable-control-count">0</strong><span>applicable controls included</span></div>
       </div>
     </section>
 
@@ -57,14 +58,14 @@
         <aside id="honeycomb-detail" class="honeycomb-detail" aria-live="polite">
           <p class="detail-pill full">Select a hexagon</p>
           <h3>Reduced AIRUM universe</h3>
-          <p>Each hexagon represents one public-demo AI risk. Select a hexagon to see the original risk description, expected-control name, and source references for that risk.</p>
+          <p>Each hexagon represents one public-demo AI risk. Select a hexagon to see the risk description and the applicable controls now linked to dedicated Applicable Control Details pages.</p>
         </aside>
       </div>
     </section>
 
     <section class="panel" aria-labelledby="explorer-title">
       <h2 id="explorer-title">Browse risk examples</h2>
-      <p class="muted">The 10 visible risks use the same source-backed AIRUM risk text for risk description, expected control, control objective, source basis, references, lifecycle stage, and source links.</p>
+      <p class="muted">The 10 visible risks use reduced AIRUM risk text plus the mapped applicable controls, control objectives, control source labels, and dedicated audit procedure detail links.</p>
       <div class="controls explorer-controls">
         <label>
           Search risk titles
@@ -125,14 +126,15 @@
       <div class="reference-link demo-pack-note">
         <h3>What the full solution would usually do here</h3>
         <p>The public controls above only re-rank the reduced demo risks into candidate discovery-preparation topics. In the full AIRUM solution, this step would normally collect more audit context, apply the complete risk universe and internal selection logic, separate baseline governance checks from direct process risks and specialist dependencies, and produce an exportable discovery working paper.</p>
-        <p>The reduced public example shows the intended output shape: selected AI Risks, why each appears, expected controls, discovery questions, and evidence to request.</p>
+        <p>The reduced public example shows the intended output shape: selected AI Risks, why each appears, applicable controls, control-level audit procedure guidance, discovery questions, and evidence to request.</p>
+        <p><a href="sampling-methodology.html">Open the sampling methodology matrix</a></p>
         <p><a href="../examples/reduced-discovery-working-paper.html">Open the reduced discovery working paper</a></p>
       </div>
     </section>
 
     <section class="panel" aria-labelledby="results-title">
       <h2 id="results-title">Candidate discovery-preparation topics</h2>
-      <p class="muted">The demo pack now mirrors the shape of AIRUM Risk Scoping more closely: prioritized candidate topics, why they were selected, discovery focus, expected-control conversation, lifecycle context, and source basis. It remains a reduced demo, not the full AIRUM method.</p>
+      <p class="muted">The demo pack now mirrors the newer AIRUM planning shape more closely: prioritized candidate topics, why they were selected, discovery focus, applicable controls, control-level audit procedure links, lifecycle context, and source basis. It remains a reduced demo, not the full AIRUM method.</p>
       <div id="results-summary" class="results-summary" aria-live="polite"></div>
       <div id="results" class="cards candidate-cards" aria-live="polite"></div>
     </section>
@@ -150,9 +152,9 @@
   </main>
 
   <footer>
-    <p>AIRUM public links: <a href="../">AIRUM overview</a> | <a href="./">Explore and select</a> | <a href="../examples/reduced-discovery-working-paper.html">Example export</a> | <a href="https://github.com/busera/AIRUM-public-demo/tree/main">GitHub source</a></p>
+    <p>AIRUM public links: <a href="../">AIRUM overview</a> | <a href="./">Explore and select</a> | <a href="sampling-methodology.html">Sampling methodology</a> | <a href="../examples/reduced-discovery-working-paper.html">Example export</a> | <a href="https://github.com/busera/AIRUM-public-demo/tree/main">GitHub source</a></p>
   </footer>
 
-  <script type="module" src="js/app.js?v=20260525-procedure-disclosures"></script>
+  <script type="module" src="js/app.js?v=20260525-numbered-test-steps"></script>
 </body>
 </html>

@@ -20,14 +20,15 @@ The visual system should feel like audit preparation: structured, calm, evidence
    - Use whitespace and type rhythm to separate concept, method, and output.
    - Use visual structure to show audit flow: context -> candidate risks -> challenge -> discovery pack.
 
-4. Public-safe specificity
-   - The visible demo can show a reduced subset count where needed.
-   - It must not disclose exact full internal universe counts or use file names that reveal them.
+4. Publication boundary specificity
+   - The visible demo can show the reduced subset count and approved high-level v3.2 counts where needed.
+   - It must not disclose local file paths, private source captures, unpublished row artifacts, or detailed internal methodology mechanics.
    - Images should be checked for embedded text before publication.
 
 5. Accessible interaction
    - Links, buttons, selectors, and disclosure summaries need minimum 44px touch targets.
    - Narrow screens should stack controls and avoid horizontal dependence where possible.
+   - Avoid adding extra top-level selectors unless they drive a clear user decision; keep sector/AU context inside the Risk Scoping workflow rather than the main explorer filter bar.
    - Keyboard focus must remain visible and logical.
 
 ## Current accepted exceptions
@@ -39,7 +40,7 @@ The visual system should feel like audit preparation: structured, calm, evidence
 
 ## Design QA checklist before publication
 
-- No exact full AIRUM count in page copy, image text, alt text, or public file names.
+- No local file paths, private source captures, unpublished row artifacts, or unapproved detailed methodology mechanics in public page copy, image text, alt text, or public file names.
 - Public boundary visible near the top of each public entry point.
 - Mobile layout reviewed at 390px and 768px widths.
 - Touch targets checked for nav links, buttons, selects, search inputs, and details summaries.

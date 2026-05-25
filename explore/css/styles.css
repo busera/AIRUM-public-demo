@@ -481,3 +481,178 @@ summary {
   .panel { padding: 20px; }
   .honeycomb { min-height: 520px; }
 }
+
+
+.compact-control-list,
+.control-source-list,
+.procedure-list {
+  margin: 0.45rem 0 0;
+  padding-left: 1.2rem;
+}
+.compact-control-list li,
+.control-source-list li,
+.procedure-list li {
+  margin: 0.3rem 0;
+}
+.compact-control-list a,
+.control-details-link {
+  color: var(--blue-700);
+  font-weight: 800;
+}
+.applicable-control-list,
+.detail-stack {
+  display: grid;
+  gap: 14px;
+  margin-top: 14px;
+}
+.applicable-control-card {
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--white);
+}
+.applicable-control-card h4 {
+  margin: 8px 0;
+  color: var(--blue-900);
+  font-size: 1.02rem;
+}
+.applicable-control-topline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+.control-source-details {
+  margin-top: 12px;
+}
+.detail-shell {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 22px;
+}
+.detail-nav {
+  margin: 0 0 18px;
+}
+.detail-nav a {
+  border-color: var(--line);
+  background: var(--white);
+  color: var(--blue-900);
+}
+.detail-nav a[aria-current="page"] {
+  background: var(--blue-900);
+  color: var(--white);
+}
+.detail-hero h1 {
+  color: var(--blue-900);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  letter-spacing: -.035em;
+}
+.detail-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  margin-top: 18px;
+}
+.detail-meta-grid div {
+  display: grid;
+  gap: 4px;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--blue-050);
+}
+.detail-meta-grid span {
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+.detail-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.7fr);
+  gap: 18px;
+}
+.field-block {
+  margin: 0 0 16px;
+}
+.field-block strong,
+.sampling-guidance strong {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--blue-900);
+  font-weight: 850;
+}
+.procedure-card h2,
+.detail-context-card h2 {
+  margin-bottom: 12px;
+}
+.procedure-box {
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--blue-050);
+}
+.procedure-box h3 {
+  margin: 14px 0 8px;
+  font-size: 1.05rem;
+}
+.procedure-box h3:first-child {
+  margin-top: 0;
+}
+.procedure-objective {
+  margin-top: 0;
+  font-weight: 650;
+}
+.sampling-guidance {
+  margin: 12px 0;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--white);
+}
+.table-wrap {
+  overflow-x: auto;
+}
+.sampling-table {
+  width: 100%;
+  min-width: 680px;
+  border-collapse: collapse;
+}
+.sampling-table th,
+.sampling-table td {
+  padding: 12px;
+  border: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+.sampling-table thead th {
+  background: var(--blue-900);
+  color: var(--white);
+}
+.sampling-table tbody th {
+  color: var(--blue-900);
+  background: var(--blue-050);
+}
+.dark-text {
+  color: var(--ink);
+}
+@media (max-width: 820px) {
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+  .detail-shell {
+    padding: 16px;
+  }
+}
+
+
+.audit-procedure-numbered-list {
+  margin: 0.4rem 0 0.85rem 1.35rem;
+  padding-left: 1.1rem;
+}
+
+.audit-procedure-numbered-list li {
+  margin: 0.35rem 0;
+  padding-left: 0.2rem;
+}

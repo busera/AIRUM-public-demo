@@ -43,13 +43,18 @@
     ul { padding-left:20px; margin:8px 0 0; }
     li { margin:5px 0; }
     footer { color:var(--muted); border-top:1px solid var(--line); padding:20px 22px 34px; }
+
+    .control-summary-box, .audit-procedure-preview { border:1px solid var(--line); background:#fff; border-radius:14px; padding:12px 14px; margin:8px 0; }
+    .control-summary-box h3, .audit-procedure-preview h3 { margin:0 0 8px; color:#15376a; font-size:17px; }
+    .control-summary-box p, .audit-procedure-preview p { margin:0 0 10px; }
+    .detail-link { display:inline-flex; align-items:center; min-height:44px; color:#0b57d0; font-weight:800; }
     @media (max-width:760px) { h1 { font-size:36px; } .grid, .grid3 { grid-template-columns:1fr; } .row { grid-template-columns:1fr; } }
   </style>
 </head>
 <body>
   <header>
     <div class="wrap">
-      <nav class="demo-nav" aria-label="AIRUM demo pages"><a href="../">AIRUM overview</a><a href="../explore/">Explore and select</a><a aria-current="page" href="./reduced-discovery-working-paper.html">Example export</a></nav>
+      <nav class="demo-nav" aria-label="AIRUM demo pages"><a href="../">AIRUM overview</a><a href="../explore/">Explore and select</a><a href="../explore/sampling-methodology.html">Sampling methodology</a><a aria-current="page" href="./reduced-discovery-working-paper.html">Example export</a></nav>
       <div class="kicker">AI Risk Universe Matrix</div>
       <h1>Example selection export: AI Risk Discovery Session Working Paper</h1>
       <p class="lead">A reduced public example showing how AIRUM turns broad AI risk coverage and a selection step into a pre-discovery working paper.</p>
@@ -96,6 +101,22 @@
     <div class="row"><div class="label">Why this appears</div><div>The demo selection includes this risk because it is part of the same 10-risk source-backed subset used on the Explore page and can be tested against the fictional Finance AI-enabled reporting workflow during pre-discovery.</div></div>
     <div class="row"><div class="label">Expected controls</div><div><strong>AI strategy feasibility and readiness review:</strong> Require each material AI ambition, roadmap item, or major use case to document business objective, feasibility assumptions, data/process readiness, capability gaps, funding, accountable owner, and decision gate before investment approval.</div></div>
     <div class="row"><div class="label">Control objective</div><div>Confirm AI ambitions are achievable, resourced, and aligned to realistic organizational readiness before commitments are made.</div></div>
+    <div class="row"><div class="label">Control summary</div><div>
+      <div class="control-summary-box">
+        <h3>AI strategy feasibility and readiness review</h3>
+        <p><strong>Objective:</strong> Confirm material AI ambitions, roadmap items, and major use cases are achievable, resourced, and aligned to organizational readiness before funding or commitment.</p>
+        <p><strong>Description:</strong> Require each material AI ambition or major AI initiative to document business objective, intended purpose, feasibility assumptions, technology and data readiness, organizational buy-in, capability/resourcing gaps, accountable owner, funding model, risk assumptions, decision rights, and approval gate before investment approval.</p>
+      </div>
+    </div></div>
+    <div class="row"><div class="label">Applicable control audit procedure</div><div>
+      <div class="audit-procedure-preview">
+        <h3>Evaluate AI strategy feasibility and readiness review</h3>
+        <p>Trace the control for AI strategy feasibility and readiness review from the event, decision, or cadence that triggers it through execution, review, exception handling, and retained evidence. Use the control objective as the reference point.</p>
+        <p><a class="detail-link" href="../explore/control-info.html?controlId=ctl-ai-strategy-feasibility-readiness-review&riskId=demo-risk-01">Open full Applicable Control Details</a></p>
+      </div>
+    </div></div>
+
+
     <div class="row"><div class="label">Discovery questions</div><div>Is this risk relevant to the ACME Finance AI-enabled reporting workflow? Who owns the related control or decision? What evidence would show that the expected control is designed and operating? What exceptions, incidents, or open decisions should be followed up?</div></div>
     <div class="row"><div class="label">Evidence to request</div><div>AI strategy or use-case approval, feasibility/readiness assessment, funding or resourcing decision, business case, and decision-gate evidence.</div></div>
     <div class="row"><div class="label">Source basis</div><div>Gartner; ISO/IEC 42001 (Context of Org); NIST AI RMF: MAP 1.1, MAP 1.2</div></div>
@@ -109,6 +130,22 @@
     <div class="row"><div class="label">Why this appears</div><div>The demo selection includes this risk because it is part of the same 10-risk source-backed subset used on the Explore page and can be tested against the fictional Finance AI-enabled reporting workflow during pre-discovery.</div></div>
     <div class="row"><div class="label">Expected controls</div><div><strong>AI accountability and RACI control:</strong> Assign documented business, technical, risk, data, model, vendor, and control owners for each material AI system, including decision rights and escalation paths.</div></div>
     <div class="row"><div class="label">Control objective</div><div>Make AI ownership, decision accountability, and control responsibility explicit and testable.</div></div>
+    <div class="row"><div class="label">Control summary</div><div>
+      <div class="control-summary-box">
+        <h3>AI accountability, RACI, and decision-rights control</h3>
+        <p><strong>Objective:</strong> Make AI ownership, decision accountability, and control responsibility explicit, communicated, and testable for material AI systems.</p>
+        <p><strong>Description:</strong> Define, approve, communicate, and maintain accountable owners, responsible parties, consulted/informed stakeholders, escalation paths, and decision rights for material AI systems across business decisions, technical/model operation, AI risk management, data quality, human oversight, vendor management, control execution, monitoring, and issue remediation.</p>
+      </div>
+    </div></div>
+    <div class="row"><div class="label">Applicable control audit procedure</div><div>
+      <div class="audit-procedure-preview">
+        <h3>Analyze AI accountability, RACI, and decision-rights control</h3>
+        <p>Trace the control for AI accountability, RACI, and decision-rights control from the event, decision, or cadence that triggers it through execution, review, exception handling, and retained evidence. Use the control objective as the reference point.</p>
+        <p><a class="detail-link" href="../explore/control-info.html?controlId=ctl-ai-accountability-raci-decision-rights&riskId=demo-risk-02">Open full Applicable Control Details</a></p>
+      </div>
+    </div></div>
+
+
     <div class="row"><div class="label">Discovery questions</div><div>Is this risk relevant to the ACME Finance AI-enabled reporting workflow? Who owns the related control or decision? What evidence would show that the expected control is designed and operating? What exceptions, incidents, or open decisions should be followed up?</div></div>
     <div class="row"><div class="label">Evidence to request</div><div>RACI, role descriptions, approval route, escalation path, training evidence, governance forum minutes, and accountability sign-off.</div></div>
     <div class="row"><div class="label">Source basis</div><div>Gartner; MITRE: Org Structure; ISO/IEC 42001 (Roles A.3.2); NIST AI RMF: GOVERN 2.1, GOVERN 2.3</div></div>
@@ -122,6 +159,22 @@
     <div class="row"><div class="label">Why this appears</div><div>The demo selection includes this risk because it is part of the same 10-risk source-backed subset used on the Explore page and can be tested against the fictional Finance AI-enabled reporting workflow during pre-discovery.</div></div>
     <div class="row"><div class="label">Expected controls</div><div><strong>AI system inventory control:</strong> Maintain a complete and periodically reconciled AI inventory capturing owner, purpose, process, data, vendor, classification, lifecycle stage, and control status for material AI use.</div></div>
     <div class="row"><div class="label">Control objective</div><div>Ensure AI use is visible, owned, classified, and available for risk management and audit scoping.</div></div>
+    <div class="row"><div class="label">Control summary</div><div>
+      <div class="control-summary-box">
+        <h3>AI system inventory and reconciliation control</h3>
+        <p><strong>Objective:</strong> Ensure AI systems, models, use cases, automations, owners, lifecycle stages, vendors, data/resource dependencies, classifications, and governance/control status are visible, current, and available for risk management, oversight, and audit scoping.</p>
+        <p><strong>Description:</strong> Maintain a complete, current, periodically reconciled AI inventory/catalog covering material AI use, including AIS name, version, license/cost where relevant, deployment/access method, purpose/intended use, frequency of use, stakeholders, accountable owner, business/process owner, model/use-case linkage, data/tooling/system/human resources, vendor/third-party details, classification/risk status, lifecycle stage, approval/control status, monitoring status, and decommissioning status. Refresh at least annually and when intake, procurement, architecture, project, release, technical-discovery, survey, or interview evidence indicates new or changed AI use.</p>
+      </div>
+    </div></div>
+    <div class="row"><div class="label">Applicable control audit procedure</div><div>
+      <div class="audit-procedure-preview">
+        <h3>Review AI system inventory and reconciliation control</h3>
+        <p>Trace the control for AI system inventory and reconciliation control from the event, decision, or cadence that triggers it through execution, review, exception handling, and retained evidence. Use the control objective as the reference point.</p>
+        <p><a class="detail-link" href="../explore/control-info.html?controlId=ctl-ai-system-inventory-and-reconciliation&riskId=demo-risk-03">Open full Applicable Control Details</a></p>
+      </div>
+    </div></div>
+
+
     <div class="row"><div class="label">Discovery questions</div><div>Is this risk relevant to the ACME Finance AI-enabled reporting workflow? Who owns the related control or decision? What evidence would show that the expected control is designed and operating? What exceptions, incidents, or open decisions should be followed up?</div></div>
     <div class="row"><div class="label">Evidence to request</div><div>AI governance framework, AI inventory extract, vendor/control assessment, policy mapping, ownership record, and review forum minutes.</div></div>
     <div class="row"><div class="label">Source basis</div><div>Gartner; ISO/IEC 5338; ISO/IEC 42001 (Resources A.4.2); NIST AI RMF: MAP 2.1, MANAGE 1.1</div></div>
@@ -135,6 +188,22 @@
     <div class="row"><div class="label">Why this appears</div><div>The demo selection includes this risk because it is part of the same 10-risk source-backed subset used on the Explore page and can be tested against the fictional Finance AI-enabled reporting workflow during pre-discovery.</div></div>
     <div class="row"><div class="label">Expected controls</div><div><strong>Sensitive-data protection for AI control:</strong> Apply data minimization, access control, masking, prompt/output safeguards, inference-risk review, logging, and privacy/security testing for AI systems handling sensitive or confidential data.</div></div>
     <div class="row"><div class="label">Control objective</div><div>Prevent unauthorized disclosure, leakage, or inference of sensitive information through AI systems.</div></div>
+    <div class="row"><div class="label">Control summary</div><div>
+      <div class="control-summary-box">
+        <h3>AI sensitive-data protection and disclosure prevention</h3>
+        <p><strong>Objective:</strong> Prevent unauthorized disclosure, retention, reproduction, or exposure of sensitive, confidential, or personal data through AI training, tuning, retrieval, prompts, outputs, logs, and connected data sources.</p>
+        <p><strong>Description:</strong> Define and operate AI data-use rules covering data classification, approved data purposes, minimization, masking/tokenization/redaction, least-privilege access to training/retrieval/runtime data, restrictions on sensitive prompt/output content, retention/deletion expectations, logging without sensitive-data sprawl, and exception handling for systems that process PII, IP, trade secrets, credentials, health/financial records, or other confidential data.</p>
+      </div>
+    </div></div>
+    <div class="row"><div class="label">Applicable control audit procedure</div><div>
+      <div class="audit-procedure-preview">
+        <h3>Examine AI sensitive-data protection and disclosure prevention</h3>
+        <p>Trace the control for AI sensitive-data protection and disclosure prevention from the event, decision, or cadence that triggers it through execution, review, exception handling, and retained evidence. Use the control objective as the reference point.</p>
+        <p><a class="detail-link" href="../explore/control-info.html?controlId=ctl-ai-sensitive-data-protection&riskId=demo-risk-04">Open full Applicable Control Details</a></p>
+      </div>
+    </div></div>
+
+
     <div class="row"><div class="label">Discovery questions</div><div>Is this risk relevant to the ACME Finance AI-enabled reporting workflow? Who owns the related control or decision? What evidence would show that the expected control is designed and operating? What exceptions, incidents, or open decisions should be followed up?</div></div>
     <div class="row"><div class="label">Evidence to request</div><div>Data lineage diagram, data-quality checks, source-system owner confirmation, access/retention settings, AI input/output handling evidence, and exception reports.</div></div>
     <div class="row"><div class="label">Source basis</div><div>OWASP LLM Top 10: LLM06; OWASP ML Top 10: ML03, ML04; ISO/IEC 42001 (Privacy B.7.2); NIST AI RMF: MEASURE 2.7, MANAGE 2.4</div></div>
@@ -148,6 +217,22 @@
     <div class="row"><div class="label">Why this appears</div><div>The demo selection includes this risk because it is part of the same 10-risk source-backed subset used on the Explore page and can be tested against the fictional Finance AI-enabled reporting workflow during pre-discovery.</div></div>
     <div class="row"><div class="label">Expected controls</div><div><strong>AI verification and validation control:</strong> Define and execute independent validation before release, including acceptance criteria, test data, performance, robustness, bias, security, limitations, and approval evidence.</div></div>
     <div class="row"><div class="label">Control objective</div><div>Confirm AI systems meet intended requirements and risk tolerances before operational reliance.</div></div>
+    <div class="row"><div class="label">Control summary</div><div>
+      <div class="control-summary-box">
+        <h3>AI verification, validation, and release acceptance control</h3>
+        <p><strong>Objective:</strong> Confirm AI systems meet documented requirements, trustworthiness criteria, risk tolerance, and intended-use expectations before operational reliance or release.</p>
+        <p><strong>Description:</strong> Define, document, and execute AI verification and validation measures before release, including acceptance criteria, test data selection and representativeness, model/system performance, robustness, safety, bias/fairness, security/resilience where applicable, limitation handling, anomaly resolution, release criteria, and approval evidence.</p>
+      </div>
+    </div></div>
+    <div class="row"><div class="label">Applicable control audit procedure</div><div>
+      <div class="audit-procedure-preview">
+        <h3>Validate AI verification, validation, and release acceptance control</h3>
+        <p>Trace the control for AI verification, validation, and release acceptance control from the event, decision, or cadence that triggers it through execution, review, exception handling, and retained evidence. Use the control objective as the reference point.</p>
+        <p><a class="detail-link" href="../explore/control-info.html?controlId=ctl-ai-verification-validation-release-acceptance&riskId=demo-risk-05">Open full Applicable Control Details</a></p>
+      </div>
+    </div></div>
+
+
     <div class="row"><div class="label">Discovery questions</div><div>Is this risk relevant to the ACME Finance AI-enabled reporting workflow? Who owns the related control or decision? What evidence would show that the expected control is designed and operating? What exceptions, incidents, or open decisions should be followed up?</div></div>
     <div class="row"><div class="label">Evidence to request</div><div>Validation plan, test results, acceptance criteria, release approval, limitation statement, monitoring evidence, and model/change documentation.</div></div>
     <div class="row"><div class="label">Source basis</div><div>ISO/IEC 5338 (Verification); ISO/IEC 42001 (Control A.6.2.4); MITRE: Test &amp; Evaluation; NIST AI RMF: MEASURE 1.1, MEASURE 2.6</div></div>
@@ -161,6 +246,22 @@
     <div class="row"><div class="label">Why this appears</div><div>The demo selection includes this risk because it is part of the same 10-risk source-backed subset used on the Explore page and can be tested against the fictional Finance AI-enabled reporting workflow during pre-discovery.</div></div>
     <div class="row"><div class="label">Expected controls</div><div><strong>Prompt-injection and input-manipulation defense control:</strong> Test and mitigate prompt injection and malicious input scenarios using input validation, instruction hierarchy, retrieval/tool isolation, output constraints, monitoring, and user education.</div></div>
     <div class="row"><div class="label">Control objective</div><div>Reduce the likelihood that hostile inputs override AI instructions, expose data, or trigger unauthorized actions.</div></div>
+    <div class="row"><div class="label">Control summary</div><div>
+      <div class="control-summary-box">
+        <h3>Adversarial input and prompt-injection defense control</h3>
+        <p><strong>Objective:</strong> Reduce the likelihood and impact of hostile or manipulated inputs overriding AI instructions, bypassing safeguards, exposing data, misclassifying content, or triggering unauthorized actions.</p>
+        <p><strong>Description:</strong> Design, test, monitor, and improve defenses against prompt injection and input manipulation, including input/output validation, instruction hierarchy hardening, untrusted-content segregation, retrieval/tool isolation, least-privilege tool execution, human approval for high-risk actions, adversarial/stress testing, monitoring, and response procedures.</p>
+      </div>
+    </div></div>
+    <div class="row"><div class="label">Applicable control audit procedure</div><div>
+      <div class="audit-procedure-preview">
+        <h3>Validate Adversarial input and prompt-injection defense control</h3>
+        <p>Trace the control for Adversarial input and prompt-injection defense control from the event, decision, or cadence that triggers it through execution, review, exception handling, and retained evidence. Use the control objective as the reference point.</p>
+        <p><a class="detail-link" href="../explore/control-info.html?controlId=ctl-ai-adversarial-input-and-prompt-injection-defense&riskId=demo-risk-06">Open full Applicable Control Details</a></p>
+      </div>
+    </div></div>
+
+
     <div class="row"><div class="label">Discovery questions</div><div>Is this risk relevant to the ACME Finance AI-enabled reporting workflow? Who owns the related control or decision? What evidence would show that the expected control is designed and operating? What exceptions, incidents, or open decisions should be followed up?</div></div>
     <div class="row"><div class="label">Evidence to request</div><div>Security test evidence, prompt/input handling controls, monitoring logs, incident procedure, access configuration, and exception handling records.</div></div>
     <div class="row"><div class="label">Source basis</div><div>OWASP LLM Top 10: LLM01; OWASP ML Top 10: ML01; Gartner; NIST AI RMF: MANAGE 2.5, MEASURE 2.6</div></div>
@@ -174,6 +275,22 @@
     <div class="row"><div class="label">Why this appears</div><div>The demo selection includes this risk because it is part of the same 10-risk source-backed subset used on the Explore page and can be tested against the fictional Finance AI-enabled reporting workflow during pre-discovery.</div></div>
     <div class="row"><div class="label">Expected controls</div><div><strong>AI governance framework control:</strong> Establish and periodically review an AI governance framework covering policy, roles, risk appetite, lifecycle controls, inventory, classification, monitoring, incidents, and reporting.</div></div>
     <div class="row"><div class="label">Control objective</div><div>Provide a coherent management system for governing AI risks across the organization.</div></div>
+    <div class="row"><div class="label">Control summary</div><div>
+      <div class="control-summary-box">
+        <h3>AI governance framework and management system</h3>
+        <p><strong>Objective:</strong> Provide a coherent, documented, accountable, risk-based management system for governing AI obligations, risks, controls, lifecycle activities, and reporting across the organization.</p>
+        <p><strong>Description:</strong> Establish, implement, maintain, periodically review, and continually improve an AI governance framework covering mandate and scope, AI policy, roles and decision rights, risk appetite/tolerance, AI inventory and classification, lifecycle controls, legal/regulatory obligation management, impact/risk assessment, third-party responsibilities, monitoring, incidents/concerns, exceptions, and management/governance reporting.</p>
+      </div>
+    </div></div>
+    <div class="row"><div class="label">Applicable control audit procedure</div><div>
+      <div class="audit-procedure-preview">
+        <h3>Evaluate AI governance framework and management system</h3>
+        <p>Trace the control for AI governance framework and management system from the event, decision, or cadence that triggers it through execution, review, exception handling, and retained evidence. Use the control objective as the reference point.</p>
+        <p><a class="detail-link" href="../explore/control-info.html?controlId=ctl-ai-governance-framework-management-system&riskId=demo-risk-07">Open full Applicable Control Details</a></p>
+      </div>
+    </div></div>
+
+
     <div class="row"><div class="label">Discovery questions</div><div>Is this risk relevant to the ACME Finance AI-enabled reporting workflow? Who owns the related control or decision? What evidence would show that the expected control is designed and operating? What exceptions, incidents, or open decisions should be followed up?</div></div>
     <div class="row"><div class="label">Evidence to request</div><div>AI governance framework, AI inventory extract, vendor/control assessment, policy mapping, ownership record, and review forum minutes.</div></div>
     <div class="row"><div class="label">Source basis</div><div>Gartner; MITRE: Governance; ISO/IEC 42001 (Clause 4.4, A.2); NIST AI RMF: GOVERN 1.1, GOVERN 2.1</div></div>
@@ -187,6 +304,22 @@
     <div class="row"><div class="label">Why this appears</div><div>The demo selection includes this risk because it is part of the same 10-risk source-backed subset used on the Explore page and can be tested against the fictional Finance AI-enabled reporting workflow during pre-discovery.</div></div>
     <div class="row"><div class="label">Expected controls</div><div><strong>AI third-party risk management control:</strong> Assess AI vendors, models, datasets, plugins, APIs, and service providers for security, privacy, resilience, transparency, contractual, and monitoring requirements before and during use.</div></div>
     <div class="row"><div class="label">Control objective</div><div>Control AI-related dependencies and supplier risks across the lifecycle.</div></div>
+    <div class="row"><div class="label">Control summary</div><div>
+      <div class="control-summary-box">
+        <h3>AI supplier and external-component due diligence</h3>
+        <p><strong>Objective:</strong> Assess AI vendors, external models, datasets, APIs, plugins, and service providers before and during use.</p>
+        <p><strong>Description:</strong> Apply a standalone control for the third-party/vendor branch of unmanaged acquisition risk; do not make it the primary control because unmanaged use also includes internal builds, pilots, embedded features, and end-user tools outside procurement.</p>
+      </div>
+    </div></div>
+    <div class="row"><div class="label">Applicable control audit procedure</div><div>
+      <div class="audit-procedure-preview">
+        <h3>Analyze AI supplier and external-component due diligence</h3>
+        <p>Trace the control for AI supplier and external-component due diligence from the event, decision, or cadence that triggers it through execution, review, exception handling, and retained evidence. Use the control objective as the reference point.</p>
+        <p><a class="detail-link" href="../explore/control-info.html?controlId=ctl-ai-supplier-due-diligence&riskId=demo-risk-08">Open full Applicable Control Details</a></p>
+      </div>
+    </div></div>
+
+
     <div class="row"><div class="label">Discovery questions</div><div>Is this risk relevant to the ACME Finance AI-enabled reporting workflow? Who owns the related control or decision? What evidence would show that the expected control is designed and operating? What exceptions, incidents, or open decisions should be followed up?</div></div>
     <div class="row"><div class="label">Evidence to request</div><div>AI governance framework, AI inventory extract, vendor/control assessment, policy mapping, ownership record, and review forum minutes.</div></div>
     <div class="row"><div class="label">Source basis</div><div>OWASP LLM Top 10: LLM05; OWASP ML Top 10: ML06; ISO/IEC 42001 (Suppliers A.10.3); NIST AI RMF: MANAGE 1.3, MAP 2.3</div></div>
@@ -200,6 +333,22 @@
     <div class="row"><div class="label">Why this appears</div><div>The demo selection includes this risk because it is part of the same 10-risk source-backed subset used on the Explore page and can be tested against the fictional Finance AI-enabled reporting workflow during pre-discovery.</div></div>
     <div class="row"><div class="label">Expected controls</div><div><strong>Data lineage and provenance control:</strong> Capture and maintain data origin, transformations, ownership, quality checks, access history, and lineage for datasets used in material AI systems.</div></div>
     <div class="row"><div class="label">Control objective</div><div>Make AI data traceable, explainable, and auditable across collection, preparation, use, and change.</div></div>
+    <div class="row"><div class="label">Control summary</div><div>
+      <div class="control-summary-box">
+        <h3>AI data lineage, provenance, and metadata control</h3>
+        <p><strong>Objective:</strong> Make data used by material AI systems traceable, explainable, reproducible, and auditable across collection, preparation, use, change, and retirement.</p>
+        <p><strong>Description:</strong> Define and operate a lifecycle process to record data origin, acquisition/selection rationale, transformations, ownership, data quality checks, labels/enrichment, update/retirement status, lineage flows, dependencies, and metadata for datasets used to develop, test, validate, deploy, or operate material AI systems.</p>
+      </div>
+    </div></div>
+    <div class="row"><div class="label">Applicable control audit procedure</div><div>
+      <div class="audit-procedure-preview">
+        <h3>Analyze AI data lineage, provenance, and metadata control</h3>
+        <p>Trace the control for AI data lineage, provenance, and metadata control from the event, decision, or cadence that triggers it through execution, review, exception handling, and retained evidence. Use the control objective as the reference point.</p>
+        <p><a class="detail-link" href="../explore/control-info.html?controlId=ctl-ai-data-lineage-provenance-metadata&riskId=demo-risk-09">Open full Applicable Control Details</a></p>
+      </div>
+    </div></div>
+
+
     <div class="row"><div class="label">Discovery questions</div><div>Is this risk relevant to the ACME Finance AI-enabled reporting workflow? Who owns the related control or decision? What evidence would show that the expected control is designed and operating? What exceptions, incidents, or open decisions should be followed up?</div></div>
     <div class="row"><div class="label">Evidence to request</div><div>Data lineage diagram, data-quality checks, source-system owner confirmation, access/retention settings, AI input/output handling evidence, and exception reports.</div></div>
     <div class="row"><div class="label">Source basis</div><div>Gartner; ISO/IEC 5338; ISO/IEC 42001 (Provenance A.7.5); NIST AI RMF: MAP 2.3</div></div>
@@ -213,6 +362,22 @@
     <div class="row"><div class="label">Why this appears</div><div>The demo selection includes this risk because it is part of the same 10-risk source-backed subset used on the Explore page and can be tested against the fictional Finance AI-enabled reporting workflow during pre-discovery.</div></div>
     <div class="row"><div class="label">Expected controls</div><div><strong>AI output accuracy and grounding control:</strong> Require grounding, source citation where feasible, confidence/limitation disclosure, human review for material outputs, and testing of hallucination-prone workflows.</div></div>
     <div class="row"><div class="label">Control objective</div><div>Reduce reliance on fabricated, inaccurate, or unsupported AI outputs.</div></div>
+    <div class="row"><div class="label">Control summary</div><div>
+      <div class="control-summary-box">
+        <h3>AI output accuracy, grounding, and validation control</h3>
+        <p><strong>Objective:</strong> Reduce reliance on fabricated, inaccurate, or unsupported AI outputs in material workflows.</p>
+        <p><strong>Description:</strong> For hallucination-prone or material AI outputs, define expected accuracy/assurance criteria, ground outputs in approved sources where feasible, disclose known limitations, require human or expert review for material decisions, test outputs under deployment-like conditions, and monitor accuracy/performance issues after deployment.</p>
+      </div>
+    </div></div>
+    <div class="row"><div class="label">Applicable control audit procedure</div><div>
+      <div class="audit-procedure-preview">
+        <h3>Evaluate AI output accuracy, grounding, and validation control</h3>
+        <p>Trace the control for AI output accuracy, grounding, and validation control from the event, decision, or cadence that triggers it through execution, review, exception handling, and retained evidence. Use the control objective as the reference point.</p>
+        <p><a class="detail-link" href="../explore/control-info.html?controlId=ctl-ai-output-accuracy-grounding-validation&riskId=demo-risk-10">Open full Applicable Control Details</a></p>
+      </div>
+    </div></div>
+
+
     <div class="row"><div class="label">Discovery questions</div><div>Is this risk relevant to the ACME Finance AI-enabled reporting workflow? Who owns the related control or decision? What evidence would show that the expected control is designed and operating? What exceptions, incidents, or open decisions should be followed up?</div></div>
     <div class="row"><div class="label">Evidence to request</div><div>Output review checklist, source-grounding evidence, rejected-output examples, reviewer sign-off, incident/quality log, and user guidance.</div></div>
     <div class="row"><div class="label">Source basis</div><div>Gartner; MITRE: Robust &amp; Reliable; MIT AI Risk Rep: 3.1; NIST AI RMF: MEASURE 2.3</div></div>

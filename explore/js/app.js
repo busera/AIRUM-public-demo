@@ -1,4 +1,5 @@
 const DATA_URL = 'data/demo-risk-universe.json';
+const CONTROL_DETAILS_VERSION = '20260525-applicable-control-details';
 const MAX_RESULTS = 9;
 const HEX_WIDTH = 146;
 const HEX_HEIGHT = 126;
@@ -60,6 +61,21 @@ export function selectCandidateRisks(risks, answers, limit = MAX_RESULTS) {
     .slice(0, limit);
 }
 
+function hydrateRisks(data) {
+  const controlsById = new Map((data.controls || []).map((control) => [control.controlId, control]));
+  return (data.risks || []).map((risk) => ({
+    ...risk,
+    applicableControls: (risk.applicableControlIds || [])
+      .map((controlId) => controlsById.get(controlId))
+      .filter(Boolean)
+  }));
+}
+
+function controlHref(controlId, risk) {
+  const params = new URLSearchParams({ controlId: String(controlId || ''), riskId: String(risk?.id || '') });
+  return `control-info.html?${params.toString()}&v=${CONTROL_DETAILS_VERSION}`;
+}
+
 export function createHoneycombNodes(risks, columns = HONEYCOMB_COLUMNS) {
   const families = [...new Set(risks.map((risk) => risk.family))].sort((left, right) => left.localeCompare(right));
   return risks.map((risk, index) => {
@@ -111,7 +127,7 @@ function riskUniverseCardHtml(risk) {
       <p class="family-label">${escapeHtml(risk.processName)} / ${escapeHtml(risk.subProcessName)}</p>
       <p>${escapeHtml(risk.description)}</p>
       <details>
-        <summary>Show original control text and sources</summary>
+        <summary>Show applicable controls and sources</summary>
         ${sourceBackedRiskSectionsHtml(risk)}
       </details>
     </article>`;
@@ -145,20 +161,18 @@ function candidateCardHtml(item, index) {
           <p>${escapeHtml(discoveryFocusText(item.risk, reasonText))}</p>
         </div>
         <div>
-          <h4>Expected-control conversation</h4>
-          <p><strong>${escapeHtml(item.risk.expectedControlName)}:</strong> ${escapeHtml(item.risk.expectedControlObjective)}</p>
+          <h4>Applicable controls</h4>
+          ${compactControlsHtml(item.risk)}
         </div>
       </div>
       <dl class="candidate-facts">
         <dt>Lifecycle stage</dt><dd>${escapeHtml(item.risk.nistLifecycleStage)}</dd>
         <dt>Why shown</dt><dd>${escapeHtml(reasonText)}.</dd>
-        <dt>Source basis</dt><dd>${escapeHtml(item.risk.sourcesAndReferences)}</dd>
+        <dt>Applicable controls</dt><dd>${String(item.risk.applicableControls.length)}</dd>
       </dl>
       <details>
-        <summary>Show control description, audit procedure, and source links</summary>
-        <p><strong>Control description:</strong> ${escapeHtml(item.risk.expectedControlDescription)}</p>
-        <p><strong>Control source basis:</strong> ${escapeHtml(item.risk.controlSourceBasis)}</p>
-        ${auditProcedureSectionsHtml(item.risk)}
+        <summary>Show applicable control details and source links</summary>
+        ${applicableControlsHtml(item.risk)}
         ${sourceLinksHtml(item.risk.sourceLinks)}
       </details>
     </article>`;
@@ -168,33 +182,101 @@ function sourceBackedRiskSectionsHtml(risk) {
   return `
     <dl class="source-backed-fields">
       <dt>Risk ID</dt><dd>${escapeHtml(risk.originalRiskId)}</dd>
-      <dt>Expected Control Name</dt><dd>${escapeHtml(risk.expectedControlName)}</dd>
-      <dt>Expected Control Description</dt><dd>${escapeHtml(risk.expectedControlDescription)}</dd>
-      <dt>Expected Control Objective</dt><dd>${escapeHtml(risk.expectedControlObjective)}</dd>
-      <dt>Control Source Basis</dt><dd>${escapeHtml(risk.controlSourceBasis)}</dd>
-      <dt>Audit Procedure Name</dt><dd>${escapeHtml(risk.auditProcedureName)}</dd>
-      <dt>Audit Procedure Description</dt><dd>${escapeHtml(risk.auditProcedureDescription)}</dd>
+      <dt>Applicable Controls</dt><dd>${String(risk.applicableControls.length)}</dd>
+      <dt>Representative Control</dt><dd>${escapeHtml(risk.expectedControlName)}</dd>
+      <dt>Representative Control Objective</dt><dd>${escapeHtml(risk.expectedControlObjective)}</dd>
       <dt>Sources and References</dt><dd>${escapeHtml(risk.sourcesAndReferences)}</dd>
       <dt>NIST AI Lifecycle Stage</dt><dd>${escapeHtml(risk.nistLifecycleStage)}</dd>
     </dl>
     ${auditProcedureSectionsHtml(risk)}
+    ${applicableControlsHtml(risk)}
     ${sourceLinksHtml(risk.sourceLinks)}`;
 }
 
+function compactControlsHtml(risk) {
+  const controls = Array.isArray(risk.applicableControls) ? risk.applicableControls : [];
+  if (!controls.length) {
+    return '<p class="muted">No applicable controls included in this reduced demo entry.</p>';
+  }
+  return `
+    <ul class="compact-control-list">
+      ${controls.slice(0, 3).map((control) => `
+        <li><a href="${escapeHtml(controlHref(control.controlId, risk))}">${escapeHtml(control.title)}</a></li>
+      `).join('')}
+      ${controls.length > 3 ? `<li>${controls.length - 3} additional applicable controls shown in the expanded view.</li>` : ''}
+    </ul>`;
+}
+
+function sourceLabelListHtml(labels = []) {
+  const values = Array.isArray(labels) ? labels.filter(Boolean) : [];
+  if (!values.length) return '<p class="muted">No public source labels included.</p>';
+  return `<ul class="control-source-list">${values.map((label) => `<li>${escapeHtml(label)}</li>`).join('')}</ul>`;
+}
+
+function applicableControlsHtml(risk) {
+  const controls = Array.isArray(risk.applicableControls) ? risk.applicableControls : [];
+  if (!controls.length) {
+    return '<p class="muted">No applicable controls included in this reduced demo entry.</p>';
+  }
+  return `
+    <div class="applicable-control-list">
+      ${controls.map((control, index) => `
+        <article class="applicable-control-card">
+          <div class="applicable-control-topline">
+            <span class="rank-badge">C${String(index + 1).padStart(2, '0')}</span>
+            <span class="posture">${escapeHtml(control.controlFamily || 'Control')}</span>
+          </div>
+          <h4>${escapeHtml(control.title)}</h4>
+          <p><strong>Objective</strong></p>
+          <p>${escapeHtml(control.objective)}</p>
+          <p><strong>Description</strong></p>
+          <p>${escapeHtml(control.description)}</p>
+          <details class="control-source-details">
+            <summary>Control Sources</summary>
+            ${sourceLabelListHtml(control.sourceLabels)}
+          </details>
+          <p><a class="control-details-link" href="${escapeHtml(controlHref(control.controlId, risk))}">Open Applicable Control Details</a></p>
+        </article>
+      `).join('')}
+    </div>`;
+}
+
 function procedureTextHtml(value) {
-  return String(value || '')
-    .split('\n')
-    .map((line) => {
-      const trimmed = line.trim();
-      if (/^(Overall test objective\/purpose|Recommended Sampling Strategy|Recommended Sample Size|Detailed Test Steps|Recommended Artifacts):$/.test(trimmed)) {
-        const sectionBreakClass = /^(Recommended Sampling Strategy|Recommended Sample Size|Detailed Test Steps|Recommended Artifacts):$/.test(trimmed)
-          ? ' audit-procedure-section-break'
-          : '';
-        return `<div class="audit-procedure-line${sectionBreakClass}"><strong>${escapeHtml(trimmed)}</strong></div>`;
-      }
-      return `<div class="audit-procedure-line">${escapeHtml(line || ' ' )}</div>`;
-    })
-    .join('');
+  const sectionHeadingPattern = /^(Overall test objective\/purpose|Recommended Sampling Strategy|Recommended Sample Size|Detailed Test Steps|Recommended Artifacts):$/;
+  const sectionBreakPattern = /^(Recommended Sampling Strategy|Recommended Sample Size|Detailed Test Steps|Recommended Artifacts):$/;
+  const html = [];
+  let detailedStepItems = [];
+  let inDetailedSteps = false;
+
+  const flushDetailedSteps = () => {
+    if (!detailedStepItems.length) return;
+    html.push(`<ol class="audit-procedure-numbered-list">${detailedStepItems.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ol>`);
+    detailedStepItems = [];
+  };
+
+  for (const line of String(value || '').split('\n')) {
+    const trimmed = line.trim();
+    if (sectionHeadingPattern.test(trimmed)) {
+      flushDetailedSteps();
+      inDetailedSteps = trimmed === 'Detailed Test Steps:';
+      const sectionBreakClass = sectionBreakPattern.test(trimmed)
+        ? ' audit-procedure-section-break'
+        : '';
+      html.push(`<div class="audit-procedure-line${sectionBreakClass}"><strong>${escapeHtml(trimmed)}</strong></div>`);
+      continue;
+    }
+
+    if (inDetailedSteps) {
+      if (!trimmed) continue;
+      detailedStepItems.push(trimmed.replace(/^\d+\.\s*/, ''));
+      continue;
+    }
+
+    html.push(`<div class="audit-procedure-line">${escapeHtml(line || ' ' )}</div>`);
+  }
+
+  flushDetailedSteps();
+  return html.join('');
 }
 
 function auditProcedureSectionsHtml(risk) {
@@ -423,8 +505,8 @@ function honeycombDetailHtml(risk) {
     <h3>${escapeHtml(risk.name)}</h3>
     <p class="family-label">${escapeHtml(risk.processName)} / ${escapeHtml(risk.subProcessName)}</p>
     <p>${escapeHtml(risk.description)}</p>
-    <p><strong>Expected control name:</strong> ${escapeHtml(risk.expectedControlName)}</p>
-    <p><strong>Sources:</strong> ${escapeHtml(risk.sourcesAndReferences)}</p>`;
+    <p><strong>Applicable controls:</strong> ${String(risk.applicableControls.length)}</p>
+    ${compactControlsHtml(risk)}`;
 }
 
 function renderLoadError(error) {
@@ -444,21 +526,26 @@ async function loadDemo() {
     throw new Error(`data request returned ${response.status}`);
   }
   const data = await response.json();
-  document.querySelector('#risk-count').textContent = String(data.risks.length);
-  document.querySelector('#universe-visible-count').textContent = String(data.risks.length);
-  renderFamilyOptions(data.risks);
-  renderUniverse(data.risks);
-  renderResults(data.risks);
+  const risks = hydrateRisks(data);
+  document.querySelector('#risk-count').textContent = String(risks.length);
+  document.querySelector('#universe-visible-count').textContent = String(risks.length);
+  const controlCountEl = document.querySelector('#applicable-control-count');
+  if (controlCountEl) {
+    controlCountEl.textContent = String(data.controls?.length || 0);
+  }
+  renderFamilyOptions(risks);
+  renderUniverse(risks);
+  renderResults(risks);
 
   for (const selector of ['#risk-search', '#family-filter']) {
-    document.querySelector(selector).addEventListener('input', () => renderUniverse(data.risks));
+    document.querySelector(selector).addEventListener('input', () => renderUniverse(risks));
   }
   for (const selector of ['#audit-context', '#main-concern', '#lifecycle-stage']) {
-    document.querySelector(selector).addEventListener('input', () => renderResults(data.risks));
+    document.querySelector(selector).addEventListener('input', () => renderResults(risks));
   }
   document.querySelector('#demo-form').addEventListener('submit', (event) => {
     event.preventDefault();
-    renderResults(data.risks);
+    renderResults(risks);
   });
 }
 
