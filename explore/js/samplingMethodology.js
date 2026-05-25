@@ -23,6 +23,10 @@ function renderSamplingMethodology() {
       <a aria-current="page" href="sampling-methodology.html">Sampling methodology</a>
       <a href="../">AIRUM overview</a>
     </nav>
+    <section class="panel public-boundary-panel" aria-label="Reduced public demo boundary">
+      <h2>Reduced public demo</h2>
+      <p>No private audit material. This page shows public demo sampling guidance only and does not publish full AIRUM methodology, source mappings, internal scoring, or private audit material.</p>
+    </section>
     <section class="panel detail-hero">
       <p class="section-kicker">Sampling Methodology</p>
       <h1>Frequency and Risk Matrix</h1>

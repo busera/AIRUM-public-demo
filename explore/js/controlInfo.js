@@ -32,6 +32,14 @@ function backHref(riskId) {
   return `./${suffix}`;
 }
 
+function publicBoundaryHtml() {
+  return `
+    <section class="panel public-boundary-panel" aria-label="Reduced public demo boundary">
+      <h2>Reduced public demo</h2>
+      <p>No private audit material. This page shows public demo control guidance only and does not publish full AIRUM methodology, source mappings, internal scoring, or private audit material.</p>
+    </section>`;
+}
+
 function topbarHtml(riskId) {
   return `
     <nav class="demo-nav detail-nav" aria-label="AIRUM demo pages">
@@ -99,6 +107,7 @@ function riskContextHtml(risk) {
 function renderControlInfo({ control, risk }) {
   document.querySelector('#control-info-root').innerHTML = `
     ${topbarHtml(risk?.id)}
+    ${publicBoundaryHtml()}
     <section class="panel detail-hero">
       <p class="section-kicker">Applicable Control Details</p>
       <h1>${escapeHtml(valueText(control.title, 'Applicable Control'))}</h1>

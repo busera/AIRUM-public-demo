@@ -6,15 +6,20 @@ import { test } from 'node:test';
 const repoRoot = new URL('../', import.meta.url);
 const read = (path) => readFileSync(new URL(path, repoRoot), 'utf8');
 
-const publicText = [
-  read('README.md'),
-  read('index.html'),
-  read('explore/index.html'),
-  read('explore/control-info.html'),
-  read('explore/sampling-methodology.html'),
-  read('explore/data/demo-risk-universe.json'),
-  read('examples/reduced-discovery-working-paper.html'),
-].join('\n');
+function walk(relativePath = '.') {
+  const absolutePath = new URL(relativePath, repoRoot).pathname;
+  return readdirSync(absolutePath).flatMap((entry) => {
+    if (entry === '.git') return [];
+    const childRelative = relativePath === '.' ? entry : join(relativePath, entry);
+    const childAbsolute = new URL(childRelative, repoRoot).pathname;
+    return statSync(childAbsolute).isDirectory() ? walk(childRelative) : [childRelative];
+  });
+}
+
+const publicText = walk()
+  .filter((file) => /\.(md|html|js|json|mjs|css|svg|txt)$/i.test(file))
+  .map((file) => `${file}\n${read(file)}`)
+  .join('\n');
 
 const htmlText = [
   read('index.html'),
@@ -33,18 +38,22 @@ const cssText = [
   read('examples/reduced-discovery-working-paper.html'),
 ].join('\n');
 
-function walk(relativePath = '.') {
-  const absolutePath = new URL(relativePath, repoRoot).pathname;
-  return readdirSync(absolutePath).flatMap((entry) => {
-    if (entry === '.git') return [];
-    const childRelative = relativePath === '.' ? entry : join(relativePath, entry);
-    const childAbsolute = new URL(childRelative, repoRoot).pathname;
-    return statSync(childAbsolute).isDirectory() ? walk(childRelative) : [childRelative];
-  });
-}
 
 test('public files disclose only the approved v3.2 public count, not internal file paths or unpublished row artifacts', () => {
   assert.match(publicText, /complete AIRUM v3\.2 risk universe contains 67 source-backed AI Risks/i);
+  const stalePublicPatterns = [
+    /AIRUM v3\.1/i,
+    /\bv3\.1\b/i,
+    /\b65[-\s]?risk\b/i,
+    /\b65 AI Risks\b/i,
+    /\b65 risks\b/i,
+    /\b206\b[^\n]{0,80}\bmappings?\b/i,
+    /\b206 risk-control mappings\b/i,
+    /airum-v3\.1-isaca-aaia-2026-05-23/i
+  ];
+  for (const pattern of stalePublicPatterns) {
+    assert.doesNotMatch(publicText, pattern, `stale public AIRUM wording matched ${pattern}`);
+  }
   assert.doesNotMatch(publicText, /\b\d+[-\s]?row AIRUM Risk Universe/i);
   assert.doesNotMatch(publicText, /\b\d+ AI Risks across \d+ families/i);
 
@@ -164,6 +173,34 @@ test('explore page links applicable controls and sampling methodology detail sur
   assert.match(controlJs, /Open sampling methodology matrix/);
   assert.match(samplingHtml, /Sampling Methodology Matrix/);
   assert.match(samplingJs, /Frequency and Risk Matrix/);
+});
+
+test('public demo has npm test entry point', () => {
+  const packageJson = JSON.parse(read('package.json'));
+  assert.equal(packageJson.type, 'module');
+  assert.equal(packageJson.scripts.test, 'node --test tests/public-demo-boundary-check.mjs');
+});
+
+test('direct detail pages repeat the reduced public boundary', () => {
+  const controlInfo = read('explore/js/controlInfo.js');
+  const sampling = read('explore/js/samplingMethodology.js');
+  assert.match(controlInfo, /Reduced public demo/);
+  assert.match(controlInfo, /No private audit material/);
+  assert.match(controlInfo, /does not publish full AIRUM methodology/);
+  assert.match(sampling, /Reduced public demo/);
+  assert.match(sampling, /No private audit material/);
+  assert.match(sampling, /does not publish full AIRUM methodology/);
+});
+
+test('back-to-explore hash links are consumed by the explorer', () => {
+  const controlInfo = read('explore/js/controlInfo.js');
+  const exploreJs = read('explore/js/app.js');
+  const styles = read('explore/css/styles.css');
+  assert.match(controlInfo, /#\$\{encodeURIComponent\(riskId\)\}/);
+  assert.match(exploreJs, /window\.location\.hash/);
+  assert.match(exploreJs, /scrollIntoView/);
+  assert.match(exploreJs, /hashchange/);
+  assert.match(styles, /\.universe-card\.hash-highlight/);
 });
 
 test('AIRUM design context files exist for future design passes', () => {

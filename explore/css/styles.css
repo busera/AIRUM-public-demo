@@ -656,3 +656,18 @@ summary {
   margin: 0.35rem 0;
   padding-left: 0.2rem;
 }
+
+
+.public-boundary-panel {
+  border-left: 6px solid var(--blue-700);
+  background: var(--blue-050);
+}
+
+.public-boundary-panel h2 {
+  margin-top: 0;
+}
+
+.universe-card.hash-highlight {
+  outline: 4px solid var(--gold-500);
+  box-shadow: 0 0 0 6px rgba(218, 165, 32, 0.18), 0 16px 42px rgba(18, 32, 51, 0.14);
+}

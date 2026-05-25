@@ -122,7 +122,7 @@ function wrapRiskLabel(name) {
 
 function riskUniverseCardHtml(risk) {
   return `
-    <article class="universe-card full-detail" data-family="${escapeHtml(risk.family)}" data-detail="full">
+    <article class="universe-card full-detail" data-family="${escapeHtml(risk.family)}" data-detail="full" data-risk-id="${escapeHtml(risk.id)}">
       <h3>${escapeHtml(risk.name)}</h3>
       <p class="family-label">${escapeHtml(risk.processName)} / ${escapeHtml(risk.subProcessName)}</p>
       <p>${escapeHtml(risk.description)}</p>
@@ -346,12 +346,27 @@ function matchesUniverseFilters(risk, filters) {
     && (!filters.family || risk.family === filters.family);
 }
 
+
+function focusRiskFromHash() {
+  const rawHash = window.location.hash ? window.location.hash.slice(1) : '';
+  const riskId = decodeURIComponent(rawHash || '').trim();
+  if (!riskId) return;
+  const card = document.querySelector(`.universe-card[data-risk-id="${CSS.escape(riskId)}"]`);
+  if (!card) return;
+  card.classList.add('hash-highlight');
+  card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  const details = card.querySelector('details');
+  if (details) details.open = true;
+  setTimeout(() => card.classList.remove('hash-highlight'), 2400);
+}
+
 function renderUniverse(risks) {
   const filters = getUniverseFilters();
   const visibleRisks = risks.filter((risk) => matchesUniverseFilters(risk, filters));
   document.querySelector('#universe-results').innerHTML = visibleRisks.map(riskUniverseCardHtml).join('');
   document.querySelector('#universe-visible-count').textContent = String(visibleRisks.length);
   renderHoneycomb(risks, visibleRisks);
+  focusRiskFromHash();
 }
 
 function renderFamilyOptions(risks) {
@@ -547,6 +562,7 @@ async function loadDemo() {
     event.preventDefault();
     renderResults(risks);
   });
+  window.addEventListener('hashchange', () => focusRiskFromHash());
 }
 
 if (typeof document !== 'undefined') {
