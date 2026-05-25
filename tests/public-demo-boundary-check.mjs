@@ -76,6 +76,14 @@ test('interactive navigation and disclosure controls meet minimum touch target s
   assert.match(cssText, /\.button\s*\{[^}]*min-height\s*:\s*44px/is);
 });
 
+test('browse risk examples renders one risk per row', () => {
+  const exploreHtml = read('explore/index.html');
+  const styles = read('explore/css/styles.css');
+  assert.match(exploreHtml, /styles\.css\?v=20260525-one-risk-row/);
+  assert.match(styles, /\.universe-grid\s*\{[^}]*grid-template-columns\s*:\s*1fr\s*;/is);
+  assert.doesNotMatch(styles, /\.universe-grid\s*\{[^}]*repeat\(2,\s*minmax\(0,\s*1fr\)\)/is);
+});
+
 test('AIRUM design context files exist for future design passes', () => {
   assert.ok(existsSync(new URL('PRODUCT.md', repoRoot)), 'PRODUCT.md missing');
   assert.ok(existsSync(new URL('DESIGN.md', repoRoot)), 'DESIGN.md missing');
