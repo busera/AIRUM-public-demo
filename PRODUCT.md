@@ -18,18 +18,18 @@ AIRUM prepares a better first AI audit discovery conversation. It does not autom
 
 The demo may show:
 - Conceptual AIRUM workflow.
-- A reduced source-backed risk subset.
+- A reduced source-backed risk subset using disclosure-safe source labels.
 - Example candidate discovery-preparation output.
 - Public narrative about deterministic, reviewable scoping.
 
 The demo must not show:
 - The full AIRUM working dataset or row-level universe.
-- Complete source mappings.
+- Full internal source mapping detail or source-to-control rationale.
 - Internal scoring or selection logic.
 - Private audit, employer, or client material.
 - Operational implementation details that would allow reconstruction of the private method.
 
-Approved public wording may state high-level validated AIRUM v3.2 counts (67 AI Risks, 75 consolidated controls, and 212 risk-control mappings) when needed to explain the reduced-demo boundary, but it must not expose the full data core, private locators, internal source extracts, scoring logic, or private methodology mechanics.
+Approved public wording may state high-level validated AIRUM v3.2 counts (67 AI Risks, 75 consolidated controls, and 212 risk-control mappings) when needed to explain the reduced-demo boundary, but it must not expose the full data core, licensed-source locators, local vault paths, internal source extracts, scoring logic, or private methodology mechanics.
 
 ## Success criteria
 
@@ -38,3 +38,7 @@ Approved public wording may state high-level validated AIRUM v3.2 counts (67 AI 
 - Navigation and controls work on narrow screens and touch devices.
 - The demo remains static, low-maintenance, and easy to review before publication.
 - Future design QA can use this file plus DESIGN.md as context.
+
+## Release status
+
+Current public-demo communication status: AIRUM Public Demo v3.2.1 - PASS WITH CAVEATS. The demo is a pre-discovery preparation aid and must not be positioned as source-perfect validation, legal advice, audit assurance, or final audit workpaper material without engagement-specific tailoring.

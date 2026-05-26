@@ -35,6 +35,8 @@ const htmlText = [
   read('examples/reduced-discovery-working-paper.html'),
 ].join('\n');
 
+const approvedOverclaimCaveatPattern = /not source-perfect|not legally validated|not final audit workpaper|does not provide legal advice|does not provide audit assurance|does not publish internal source evidence/i;
+
 const cssText = [
   read('index.html'),
   read('explore/index.html'),
@@ -208,6 +210,57 @@ test('direct detail pages repeat the reduced public boundary', () => {
   assert.match(sampling, /Reduced public demo/);
   assert.match(sampling, /No private audit material/);
   assert.match(sampling, /does not publish full AIRUM methodology/);
+});
+
+
+test('public disclaimer surfaces block overclaim interpretations at point of use', () => {
+  assert.match(read('index.html'), /AIRUM Public Demo: v3\.2\.1 reduced public demo - PASS WITH CAVEATS/i);
+  for (const [file, text] of [
+    ['index.html', read('index.html')],
+    ['explore/index.html', read('explore/index.html')],
+    ['explore/control-info.html', read('explore/control-info.html')],
+    ['explore/sampling-methodology.html', read('explore/sampling-methodology.html')],
+    ['examples/reduced-discovery-working-paper.html', read('examples/reduced-discovery-working-paper.html')],
+  ]) {
+    assert.match(text, /Assurance Boundary|Reduced public demo/i, `${file} lacks a visible boundary box`);
+    assert.match(text, /pre-discovery preparation aid/i, `${file} lacks preparation-aid framing`);
+    assert.match(text, /does not provide legal advice|legal\/compliance review/i, `${file} lacks legal caveat`);
+    assert.match(text, /does not provide audit assurance|not audit assurance/i, `${file} lacks assurance caveat`);
+  }
+
+  const dangerousClaims = [
+    /\bEvery source and control rationale is fully verified\b/i,
+    /\bis source-perfect\b/i,
+    /\bis legally validated\b/i,
+    /\bReady as final audit workpapers without tailoring\b/i,
+    /\bprovides audit assurance\b/i,
+    /\bcomplete source mappings\b/i,
+    /\bpublishes licensed-source locator\b/i,
+  ];
+  for (const pattern of dangerousClaims) {
+    assert.doesNotMatch(publicArtifactText, pattern, `public artifact has unsafe overclaim wording: ${pattern}`);
+  }
+  assert.match(publicArtifactText, approvedOverclaimCaveatPattern);
+});
+
+test('publication boundary defines private versus public provenance decisions', () => {
+  const boundary = read('PUBLICATION_BOUNDARY.md');
+  assert.match(boundary, /Public\/private provenance decision table/i);
+  assert.match(boundary, /Licensed-source locator[\s\S]*Yes[\s\S]*No/i);
+  assert.match(boundary, /Local vault path[\s\S]*Yes[\s\S]*No/i);
+  assert.match(boundary, /Source-to-control rationale[\s\S]*Yes[\s\S]*Summary only/i);
+  assert.match(boundary, /Legal interpretation[\s\S]*Contextual only[\s\S]*No legal conclusion/i);
+});
+
+test('interpretation guide explains output use and challenge workflow', () => {
+  assert.ok(existsSync(new URL('docs/how-to-interpret-airum-output.md', repoRoot)), 'interpretation guide missing');
+  const guide = read('docs/how-to-interpret-airum-output.md');
+  assert.match(guide, /What AIRUM can support/i);
+  assert.match(guide, /What AIRUM cannot conclude/i);
+  assert.match(guide, /How to challenge an AIRUM output/i);
+  assert.match(guide, /What evidence would remove it/i);
+  assert.match(guide, /legal\/compliance review/i);
+  assert.match(read('explore/index.html'), /Challenge this output/i);
 });
 
 test('back-to-explore hash links are consumed by the explorer', () => {

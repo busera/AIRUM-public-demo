@@ -9,6 +9,7 @@ This public repository is a reduced public introduction to the idea. It explains
 - AIRUM overview: <https://busera.github.io/AIRUM-public-demo/>
 - Explore and select: <https://busera.github.io/AIRUM-public-demo/explore/>
 - Sampling methodology: <https://busera.github.io/AIRUM-public-demo/explore/sampling-methodology.html>
+- How to interpret AIRUM output: `docs/how-to-interpret-airum-output.md`
 - Example export: <https://busera.github.io/AIRUM-public-demo/examples/reduced-discovery-working-paper.html>
 - GitHub source - secondary source-code view: <https://github.com/busera/AIRUM-public-demo/tree/main>
 
@@ -121,7 +122,7 @@ Possible research use:
 
 AIRUM is a working preparation concept and methodology prototype.
 
-The public demo uses disclosure-safe summaries. It intentionally does not expose AIRUM's internal source captures, local vault paths, licensed-source locators, detailed source-to-control rationale, or private extraction trails. Those internal provenance details may support the private AIRUM working version, but they are not published here and should not be interpreted as public-source-perfect evidence.
+The public demo uses disclosure-safe summaries and source labels. It intentionally does not expose AIRUM's internal source captures, local vault paths, licensed-source locators, detailed source-to-control rationale, or private extraction trails. Those internal provenance details may support the private AIRUM working version, but they are not published here and should not be interpreted as public-source-perfect evidence.
 
 It does not:
 

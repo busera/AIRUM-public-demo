@@ -10,7 +10,7 @@
 <body>
   <header class="hero">
     <div class="hero-inner">
-      <nav class="demo-nav" aria-label="AIRUM demo pages"><a href="../">AIRUM overview</a><a aria-current="page" href="./">Explore and select</a><a href="sampling-methodology.html">Sampling methodology</a><a href="../examples/reduced-discovery-working-paper.html">Example export</a></nav>
+      <nav class="demo-nav" aria-label="AIRUM demo pages"><a href="../">AIRUM overview</a><a aria-current="page" href="./">Explore and select</a><a href="sampling-methodology.html">Sampling methodology</a><a href="../docs/how-to-interpret-airum-output.md">Interpret output</a><a href="../examples/reduced-discovery-working-paper.html">Example export</a></nav>
       <p class="eyebrow">AIRUM demo</p>
       <h1>Explore AI risks, applicable controls, and audit procedure guidance</h1>
       <p class="lede">This reduced interactive page shows how AIRUM can be used first as a risk-universe explorer, then as a deterministic pre-discovery selection aid, and finally as a starting point for applicable-control audit procedure planning.</p>
@@ -18,11 +18,17 @@
   </header>
 
   <main>
+    <section class="panel public-boundary-panel assurance-boundary" aria-labelledby="assurance-boundary-title">
+      <p class="status-badge">AIRUM Public Demo: v3.2.1 reduced public demo - PASS WITH CAVEATS</p>
+      <h2 id="assurance-boundary-title">Assurance Boundary</h2>
+      <p>No private audit material. AIRUM is a pre-discovery preparation aid. It does not provide legal advice, does not provide audit assurance, does not provide source-perfect validation, and does not provide final workpapers. The public demo uses disclosure-safe source labels and summaries and does not publish internal source evidence, licensed-source locators, local vault paths, or private source-to-control rationale.</p>
+    </section>
+
     <section class="panel two-column" aria-labelledby="universe-title">
       <div>
         <p class="section-kicker">Part 1 - AI Risk Universe</p>
         <h2 id="universe-title">Explore the reduced AI risk universe</h2>
-        <p>AIRUM starts as a curated universe of AI risks. This public version intentionally shows a reduced source-backed subset, using the original risk text for the visible sections while withholding the complete data core and selection methodology.</p>
+        <p>AIRUM starts as a curated universe of AI risks. This public version intentionally shows a reduced source-backed subset with disclosure-safe source labels, using the original risk text for the visible sections while withholding the complete data core and selection methodology.</p>
       </div>
       <div class="stat-grid" aria-label="Demo risk counts">
         <div class="stat-card">
@@ -132,9 +138,14 @@
       </div>
     </section>
 
+    <section class="panel" aria-labelledby="challenge-title">
+      <h2 id="challenge-title">Challenge this output</h2>
+      <p class="muted">For each candidate topic, ask: why did this risk appear; which assumption caused it; what evidence would remove it; what evidence would escalate it; what specialist or legal/compliance review is needed; and which disclosure-safe source family supports the expected control?</p>
+    </section>
+
     <section class="panel" aria-labelledby="results-title">
       <h2 id="results-title">Candidate discovery-preparation topics</h2>
-      <p class="muted">The demo pack now mirrors the newer AIRUM planning shape more closely: prioritized candidate topics, why they were selected, discovery focus, applicable controls, control-level audit procedure links, lifecycle context, and source basis. It remains a reduced demo, not the full AIRUM method.</p>
+      <p class="muted">The demo pack now mirrors the newer AIRUM planning shape more closely: prioritized candidate topics, why they were selected, discovery focus, applicable controls, control-level audit procedure links, lifecycle context, and disclosure-safe source labels. It remains a reduced demo, not the full AIRUM method.</p>
       <div id="results-summary" class="results-summary" aria-live="polite"></div>
       <div id="results" class="cards candidate-cards" aria-live="polite"></div>
     </section>
@@ -142,6 +153,9 @@
     <section class="panel" aria-labelledby="boundary-title">
       <h2 id="boundary-title">What the demo is not</h2>
       <ul class="boundary-list">
+        <li>Not source-perfect validation or publication of internal source evidence.</li>
+        <li>Not legally validated; regulatory references are risk prompts requiring legal/compliance review.</li>
+        <li>Not final audit workpaper material without engagement-specific tailoring.</li>
         <li>Not the complete AIRUM data core.</li>
         <li>Not a final audit-scope decision.</li>
         <li>Not a residual-risk rating.</li>

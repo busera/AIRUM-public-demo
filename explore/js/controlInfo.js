@@ -35,8 +35,9 @@ function backHref(riskId) {
 function publicBoundaryHtml() {
   return `
     <section class="panel public-boundary-panel" aria-label="Reduced public demo boundary">
-      <h2>Reduced public demo</h2>
-      <p>No private audit material. This page shows public demo control guidance only and does not publish full AIRUM methodology, source mappings, internal scoring, source captures, licensed-source locators, local vault paths, or private extraction trails. It is not source-perfect, legally validated, or final audit workpaper material without engagement-specific tailoring.</p>
+      <p class="status-badge">AIRUM Public Demo: v3.2.1 reduced public demo - PASS WITH CAVEATS</p>
+      <h2>Assurance Boundary</h2>
+      <p>No private audit material. AIRUM is a pre-discovery preparation aid. This page shows public demo control guidance only and does not publish full AIRUM methodology, internal scoring, source captures, licensed-source locators, local vault paths, or private extraction trails. It uses disclosure-safe source labels; it is not source-perfect, not legally validated, and not final audit workpaper material without engagement-specific tailoring.</p>
     </section>`;
 }
 
