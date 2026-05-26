@@ -121,6 +121,8 @@ Possible research use:
 
 AIRUM is a working preparation concept and methodology prototype.
 
+The public demo uses disclosure-safe summaries. It intentionally does not expose AIRUM's internal source captures, local vault paths, licensed-source locators, detailed source-to-control rationale, or private extraction trails. Those internal provenance details may support the private AIRUM working version, but they are not published here and should not be interpreted as public-source-perfect evidence.
+
 It does not:
 
 - decide final audit scope;
@@ -128,7 +130,10 @@ It does not:
 - calculate residual risk;
 - provide legal or compliance conclusions;
 - validate that an AI system is safe, fair, secure, compliant, or well governed;
-- provide audit assurance.
+- provide audit assurance;
+- verify every source and control rationale end-to-end for public release;
+- provide legally validated conclusions;
+- provide final audit workpapers ready for use without engagement-specific tailoring.
 
 Those decisions belong to auditors, specialists, management, and governance bodies after the facts are understood.
 

@@ -2,6 +2,10 @@
 
 This repository is intentionally a reduced public introduction. It does not contain the private AIRUM implementation, full risk matrix, internal rules, scoring logic, private mappings, source captures, build database, operational exports, or audit working material.
 
+The public demo uses disclosure-safe source labels and summaries only. It must not expose licensed excerpts, internal extraction paths, local vault paths, private Obsidian references, or detailed source-to-control rationale from the internal AIRUM working version.
+
+Do not describe this repository as source-perfect, legally validated, or ready-to-use final audit workpapers. The correct public framing is that AIRUM is a pre-discovery preparation aid: internally source-supported where private provenance is retained, but not a publication of every underlying source, rationale, legal interpretation, or engagement-specific workpaper conclusion.
+
 Use this repository for:
 
 - public project introduction;
