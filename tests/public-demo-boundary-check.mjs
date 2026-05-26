@@ -21,6 +21,12 @@ const publicText = walk()
   .map((file) => `${file}\n${read(file)}`)
   .join('\n');
 
+const publicArtifactText = walk()
+  .filter((file) => /\.(md|html|js|json|css|svg|txt)$/i.test(file))
+  .filter((file) => !file.startsWith('tests/'))
+  .map((file) => `${file}\n${read(file)}`)
+  .join('\n');
+
 const htmlText = [
   read('index.html'),
   read('explore/index.html'),
@@ -56,6 +62,13 @@ test('public files disclose only the approved v3.2 public count, not internal fi
   }
   assert.doesNotMatch(publicText, /\b\d+[-\s]?row AIRUM Risk Universe/i);
   assert.doesNotMatch(publicText, /\b\d+ AI Risks across \d+ families/i);
+  assert.doesNotMatch(publicArtifactText, /Gartner ID\s+G\d+/i);
+  assert.doesNotMatch(publicArtifactText, /licensed Gartner source/i);
+  assert.doesNotMatch(publicArtifactText, /internal locator retained/i);
+  assert.doesNotMatch(publicArtifactText, /private catalog/i);
+  assert.doesNotMatch(publicArtifactText, /gartner\.com\/document-reader/i);
+  assert.doesNotMatch(publicArtifactText, /platform\.virdocs\.com/i);
+  assert.doesNotMatch(publicArtifactText, /\(internal\)/i);
 
   const publicFileList = walk().join('\n');
   assert.doesNotMatch(publicFileList, /airum_\d+_row_risk_universe_summary/i);
@@ -82,7 +95,7 @@ test('reduced risk data includes structured audit procedure planning fields and 
   assert.ok(Array.isArray(data.controls), 'controls collection missing');
   assert.ok(Array.isArray(data.riskControlMappings), 'risk-control mapping collection missing');
   const controlsById = new Map(data.controls.map((control) => [control.controlId, control]));
-  const sourceLocatorPattern = /\b(Gartner|ISO\/IEC|NIST|ISACA|AAIA|OWASP|MITRE|EU AI Act|Hiroshima)\b/i;
+  const sourceFamilyPattern = /\b(Gartner|ISO\/IEC|NIST|ISACA|AAIA|OWASP|MITRE|EU AI Act|Hiroshima)\b/i;
   for (const risk of data.risks) {
     assert.match(risk.auditProcedureName, /^(Evaluate|Review|Validate|Test|Examine|Analyze)\b/);
     assert.doesNotMatch(risk.auditProcedureDescription, /Assess whether the organization has designed|Assess whether the organization has defined/i);
@@ -98,8 +111,8 @@ test('reduced risk data includes structured audit procedure planning fields and 
     assert.match(control.auditProcedure.auditProcedureName, /^(Evaluate|Review|Validate|Test|Examine|Analyze|Trace)\b/);
     assert.ok(Array.isArray(control.auditProcedure.testOfDesign.detailedTestSteps));
     assert.ok(Array.isArray(control.auditProcedure.testOfEffectiveness.detailedTestSteps));
-    assert.doesNotMatch(control.auditProcedure.testOfDesign.detailedTestSteps.join('\n'), sourceLocatorPattern);
-    assert.doesNotMatch(control.auditProcedure.testOfEffectiveness.detailedTestSteps.join('\n'), sourceLocatorPattern);
+    assert.doesNotMatch(control.auditProcedure.testOfDesign.detailedTestSteps.join('\n'), sourceFamilyPattern);
+    assert.doesNotMatch(control.auditProcedure.testOfEffectiveness.detailedTestSteps.join('\n'), sourceFamilyPattern);
   }
 });
 
@@ -113,7 +126,12 @@ test('browse risk examples renders one risk per row', () => {
   const exploreHtml = read('explore/index.html');
   const styles = read('explore/css/styles.css');
   assert.match(exploreHtml, /styles\.css\?v=20260525-numbered-test-steps/);
-  assert.match(exploreHtml, /app\.js\?v=20260525-numbered-test-steps/);
+  assert.match(exploreHtml, /app\.js\?v=20260526-v32-final-validation-closeout/);
+  assert.match(exploreHtml, /demo-risk-universe\.json\?v=20260526-v32-final-validation-closeout/);
+  assert.match(read('explore/control-info.html'), /controlInfo\.js\?v=20260526-v32-final-validation-closeout/);
+  assert.match(read('explore/js/app.js'), /demo-risk-universe\.json\?v=20260526-v32-final-validation-closeout/);
+  assert.match(read('explore/js/app.js'), /CONTROL_DETAILS_VERSION = '20260526-v32-final-validation-closeout'/);
+  assert.match(read('explore/js/controlInfo.js'), /demo-risk-universe\.json\?v=20260526-v32-final-validation-closeout/);
   assert.match(styles, /\.universe-grid\s*\{[^}]*grid-template-columns\s*:\s*1fr\s*;/is);
   assert.doesNotMatch(styles, /\.universe-grid\s*\{[^}]*repeat\(2,\s*minmax\(0,\s*1fr\)\)/is);
 });

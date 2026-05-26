@@ -1,5 +1,5 @@
-const DATA_URL = 'data/demo-risk-universe.json';
-const CONTROL_DETAILS_VERSION = '20260525-applicable-control-details';
+const DATA_URL = 'data/demo-risk-universe.json?v=20260526-v32-final-validation-closeout';
+const CONTROL_DETAILS_VERSION = '20260526-v32-final-validation-closeout';
 const MAX_RESULTS = 9;
 const HEX_WIDTH = 146;
 const HEX_HEIGHT = 126;

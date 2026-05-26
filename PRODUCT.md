@@ -23,11 +23,13 @@ The demo may show:
 - Public narrative about deterministic, reviewable scoping.
 
 The demo must not show:
-- Full AIRUM working risk counts.
+- The full AIRUM working dataset or row-level universe.
 - Complete source mappings.
 - Internal scoring or selection logic.
 - Private audit, employer, or client material.
 - Operational implementation details that would allow reconstruction of the private method.
+
+Approved public wording may state high-level validated AIRUM v3.2 counts (67 AI Risks, 75 consolidated controls, and 212 risk-control mappings) when needed to explain the reduced-demo boundary, but it must not expose the full data core, private locators, internal source extracts, scoring logic, or private methodology mechanics.
 
 ## Success criteria
 

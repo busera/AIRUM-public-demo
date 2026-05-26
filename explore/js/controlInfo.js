@@ -1,4 +1,4 @@
-const DATA_URL = 'data/demo-risk-universe.json';
+const DATA_URL = 'data/demo-risk-universe.json?v=20260526-v32-final-validation-closeout';
 
 function escapeHtml(value) {
   return String(value ?? '')
