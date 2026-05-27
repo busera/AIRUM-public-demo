@@ -165,10 +165,20 @@ test('every page exposes a symbol-only dark-mode toggle', () => {
   assert.match(cssText, /\[data-theme="dark"\]/);
 });
 
+test('explore header remains readable in dark mode', () => {
+  const exploreHtml = read('explore/index.html');
+  const styles = read('explore/css/styles.css');
+  assert.match(exploreHtml, /styles\.css\?v=20260527-dark-hero-readability/);
+  assert.match(styles, /\[data-theme="dark"\]\s+\.hero\s*\{[^}]*color\s*:\s*#ffffff/is);
+  assert.match(styles, /\[data-theme="dark"\]\s+\.hero\s+h1\s*\{[^}]*color\s*:\s*#ffffff/is);
+  assert.match(styles, /\[data-theme="dark"\]\s+\.hero\s+\.demo-nav\s+a\s*\{[^}]*color\s*:\s*#ffffff/is);
+  assert.match(styles, /\[data-theme="dark"\]\s+\.hero\s+\.demo-nav\s+a\[aria-current="page"\]\s*\{[^}]*background\s*:\s*#edf4ff[^}]*color\s*:\s*#102848/is);
+});
+
 test('browse risk examples renders one risk per row', () => {
   const exploreHtml = read('explore/index.html');
   const styles = read('explore/css/styles.css');
-  assert.match(exploreHtml, /styles\.css\?v=20260527-svg-theme-toggle/);
+  assert.match(exploreHtml, /styles\.css\?v=20260527-dark-hero-readability/);
   assert.match(exploreHtml, /app\.js\?v=20260527-risk-detail-simplified/);
   assert.match(exploreHtml, /demo-risk-universe\.json\?v=20260527-representative-controls/);
   assert.match(read('explore/control-info.html'), /controlInfo\.js\?v=20260527-representative-controls/);

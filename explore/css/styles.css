@@ -778,7 +778,21 @@ summary {
 [data-theme="dark"] .detail-nav a {
   box-shadow: 0 14px 32px rgba(0,0,0,.28);
 }
-[data-theme="dark"] .hero { background: linear-gradient(135deg, #050a13, #102848); }
+[data-theme="dark"] .hero {
+  background: linear-gradient(135deg, #050a13, #102848);
+  color: #ffffff;
+}
+[data-theme="dark"] .hero h1 {
+  color: #ffffff;
+}
+[data-theme="dark"] .hero .demo-nav a {
+  color: #ffffff;
+}
+[data-theme="dark"] .hero .demo-nav a[aria-current="page"] {
+  background: #edf4ff;
+  color: #102848;
+  border-color: #edf4ff;
+}
 [data-theme="dark"] .assurance-boundary { background: #0f1b2b; border-color: #365170; }
 [data-theme="dark"] .reference-link,
 [data-theme="dark"] .legend,
