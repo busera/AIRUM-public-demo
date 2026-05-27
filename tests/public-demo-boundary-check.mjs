@@ -256,14 +256,10 @@ test('publication boundary defines private versus public provenance decisions', 
   assert.match(boundary, /Legal interpretation[\s\S]*Contextual only[\s\S]*No legal conclusion/i);
 });
 
-test('interpretation guide explains output use and challenge workflow', () => {
-  assert.ok(existsSync(new URL('docs/how-to-interpret-airum-output.md', repoRoot)), 'interpretation guide missing');
-  const guide = read('docs/how-to-interpret-airum-output.md');
-  assert.match(guide, /What AIRUM can support/i);
-  assert.match(guide, /What AIRUM cannot conclude/i);
-  assert.match(guide, /How to challenge an AIRUM output/i);
-  assert.match(guide, /What evidence would remove it/i);
-  assert.match(guide, /legal\/compliance review/i);
+test('interpret output menu and standalone guide are removed', () => {
+  assert.equal(existsSync(new URL('docs/how-to-interpret-airum-output.md', repoRoot)), false);
+  assert.doesNotMatch(read('README.md'), /how-to-interpret-airum-output|How to interpret AIRUM output/i);
+  assert.doesNotMatch(read('explore/index.html'), /how-to-interpret-airum-output|Interpret output/i);
   assert.match(read('explore/index.html'), /Challenge this output/i);
 });
 

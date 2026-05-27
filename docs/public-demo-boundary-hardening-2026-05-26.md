@@ -17,9 +17,9 @@ No AIRUM data-core counts changed:
 1. Added visible Assurance Boundary boxes to the public overview, Explore page, control detail loading/detail path, sampling methodology path, and example export.
 2. Added a v3.2.1 public status line.
 3. Added a public/private provenance decision table to `PUBLICATION_BOUNDARY.md`.
-4. Added regression tests for disclaimer visibility, banned overclaim wording, private-marker leakage, and interpretation-guide coverage.
+4. Added regression tests for disclaimer visibility, banned overclaim wording, private-marker leakage, and boundary coverage.
 5. Standardized public-facing wording toward disclosure-safe source labels/source families rather than full source evidence.
-6. Added `docs/how-to-interpret-airum-output.md` to explain how AIRUM output should and should not be used.
+6. Added user-facing guidance to explain how AIRUM output should and should not be used.
 7. Clarified that source-backed means internal AIRUM provenance support, not source-perfect public validation.
 8. Framed legal/regulatory references as risk prompts that require legal/compliance review.
 9. Added user-facing Challenge this output guidance on the overview and Explore surfaces.
