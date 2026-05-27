@@ -35,7 +35,7 @@ const htmlText = [
   read('examples/reduced-discovery-working-paper.html'),
 ].join('\n');
 
-const approvedOverclaimCaveatPattern = /not source-perfect|not legally validated|not final audit workpaper|does not provide legal advice|does not provide audit assurance|does not publish internal source evidence/i;
+const approvedOverclaimCaveatPattern = /not source-perfect|not legally validated|not final audit workpaper|does not provide legal advice|does not provide audit assurance|not the full AIRUM method or evidence base|does not include the full AIRUM data core/i;
 
 const cssText = [
   read('index.html'),
@@ -86,7 +86,7 @@ test('overview exposes the reduced-demo public boundary above the first explanat
   const intro = index.slice(mainStart, firstWhat);
   assert.match(intro, /Reduced AIRUM Public Demo: v3\.2\.1/i);
   assert.match(intro, /No private audit material/i);
-  assert.match(intro, /does not publish the full AIRUM methodology/i);
+  assert.match(intro, /does not include the full AIRUM data core, methodology, evidence base, scoring logic, or private audit material/i);
 });
 
 test('reduced risk data includes structured audit procedure planning fields and applicable controls', () => {
@@ -265,10 +265,10 @@ test('direct detail pages repeat the reduced public boundary', () => {
   const sampling = read('explore/js/samplingMethodology.js');
   assert.match(controlInfo, /Reduced AIRUM Public Demo: v3\.2\.1/);
   assert.match(controlInfo, /No private audit material/);
-  assert.match(controlInfo, /does not publish full AIRUM methodology/);
+  assert.match(controlInfo, /not the full AIRUM method or evidence base/);
   assert.match(sampling, /Reduced AIRUM Public Demo: v3\.2\.1/);
   assert.match(sampling, /No private audit material/);
-  assert.match(sampling, /does not publish full AIRUM methodology/);
+  assert.match(sampling, /not the full AIRUM method or evidence base/);
 });
 
 

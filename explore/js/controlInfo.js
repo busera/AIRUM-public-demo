@@ -37,7 +37,7 @@ function publicBoundaryHtml() {
     <section class="panel public-boundary-panel" aria-label="Reduced public demo boundary">
       <p class="status-badge">Reduced AIRUM Public Demo: v3.2.1</p>
       <h2>Assurance Boundary</h2>
-      <p>No private audit material. AIRUM is a pre-discovery preparation aid. This page shows public demo control guidance only and does not publish full AIRUM methodology, internal scoring, source captures, licensed-source locators, local vault paths, or private extraction trails. It uses disclosure-safe source labels; it is not source-perfect, not legally validated, and not final audit workpaper material without engagement-specific tailoring.</p>
+      <p>No private audit material. AIRUM is a pre-discovery preparation aid. This reduced public demo shows representative control guidance and summarized source references only. It is not the full AIRUM method or evidence base, not legally validated, and not final audit workpaper material without engagement-specific tailoring.</p>
     </section>`;
 }
 

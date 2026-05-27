@@ -121,7 +121,7 @@ Possible research use:
 
 AIRUM is a working preparation concept and methodology prototype.
 
-The public demo uses disclosure-safe summaries and source labels. It intentionally does not expose AIRUM's internal source captures, local vault paths, licensed-source locators, detailed source-to-control rationale, or private extraction trails. Those internal provenance details may support the private AIRUM working version, but they are not published here and should not be interpreted as public-source-perfect evidence.
+The public demo shows selected risks, representative controls, and summarized source references only. It is reduced: it does not include the full AIRUM data core, methodology, evidence base, scoring logic, or private audit material. Those private AIRUM details may support the internal working version, but they are not published here and should not be interpreted as public-source-perfect evidence.
 
 It does not:
 

@@ -29,7 +29,7 @@ No AIRUM data-core counts changed:
 
 Use:
 
-> Reduced AIRUM Public Demo: v3.2.1 is a public demo and pre-discovery preparation aid. It passed public-boundary checks with caveats: it does not provide legal advice, audit assurance, source-perfect validation, or final workpapers, and it does not publish internal source evidence, licensed-source locators, local vault paths, or private source-to-control rationale.
+> Reduced AIRUM Public Demo: v3.2.1 is a public demo and pre-discovery preparation aid. It shows selected risks, representative controls, and summarized source references only. It does not include the full AIRUM data core, methodology, evidence base, scoring logic, or private audit material, and it does not provide legal advice, does not provide audit assurance, source-perfect validation, or final workpapers.
 
 Do not use:
 
