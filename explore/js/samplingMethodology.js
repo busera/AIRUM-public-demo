@@ -31,9 +31,14 @@ function renderSamplingMethodology() {
     <section class="panel detail-hero">
       <p class="section-kicker">Sampling Methodology</p>
       <h1>Frequency and Risk Matrix</h1>
-      <p class="lede dark-text">Use this reference after population completeness, control frequency, and assessed control risk are confirmed. Applicable Control Details pages show a minimum starting suggestion so the full matrix is not repeated on every control page.</p>
+      <p class="lede dark-text">Use this reference after population completeness, control frequency, and assessed control risk are confirmed. Applicable Control Details pages show a minimum starting suggestion and point here for the public demo reference.</p>
     </section>
     <section class="detail-stack">
+      <article class="panel">
+        <h2>Methodology Boundary</h2>
+        <p>Use the organization's internal audit sampling methodology where one exists. Where no internal standard applies, use accepted internal-audit sampling practice, tailor the sample to population completeness, control frequency, assessed risk, and evidence quality, and document the professional judgment used.</p>
+        <p class="muted">Public IIA material explains audit sampling concepts, including how to think about sample size and methodology selection, but it does not prescribe a universal AIRUM sample-size table. This public demo matrix is an illustrative starting reference, not an authoritative standard.</p>
+      </article>
       <article class="panel">
         <h2>Sample Size Matrix</h2>
         <div class="table-wrap">

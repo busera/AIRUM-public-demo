@@ -190,9 +190,13 @@ test('explore page links applicable controls and sampling methodology detail sur
   assert.match(controlHtml, /Applicable Control Details/);
   assert.match(controlJs, /Test of Design \(ToD\)/);
   assert.match(controlJs, /Test of Effectiveness \(ToE\)/);
-  assert.match(controlJs, /Open sampling methodology matrix/);
+  assert.match(controlJs, /Open public demo sampling reference/);
+  assert.match(controlJs, /internal audit sampling methodology/);
+  assert.match(controlJs, /does not prescribe a universal AIRUM sample-size table/);
   assert.match(samplingHtml, /Sampling Methodology Matrix/);
   assert.match(samplingJs, /Frequency and Risk Matrix/);
+  assert.match(samplingJs, /Methodology Boundary/);
+  assert.match(samplingJs, /internal audit sampling methodology/);
 });
 
 test('public demo has npm test entry point', () => {
