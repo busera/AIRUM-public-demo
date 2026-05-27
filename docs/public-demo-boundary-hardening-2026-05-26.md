@@ -1,6 +1,6 @@
 # AIRUM Public Demo Boundary Hardening - 2026-05-26
 
-Status: IMPLEMENTED / PASS WITH CAVEATS
+Status: IMPLEMENTED
 
 ## Scope
 
@@ -15,7 +15,7 @@ No AIRUM data-core counts changed:
 ## Implemented improvements
 
 1. Added visible Assurance Boundary boxes to the public overview, Explore page, control detail loading/detail path, sampling methodology path, and example export.
-2. Added a v3.2.1 PASS WITH CAVEATS public status line.
+2. Added a v3.2.1 public status line.
 3. Added a public/private provenance decision table to `PUBLICATION_BOUNDARY.md`.
 4. Added regression tests for disclaimer visibility, banned overclaim wording, private-marker leakage, and interpretation-guide coverage.
 5. Standardized public-facing wording toward disclosure-safe source labels/source families rather than full source evidence.

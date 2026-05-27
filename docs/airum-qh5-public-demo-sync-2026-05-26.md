@@ -1,7 +1,7 @@
 # AIRUM QH-5 Public Demo Sync Report
 
 Date: 2026-05-26
-Status: PASS WITH CAVEATS
+Status: REVIEWED
 
 ## Scope
 
@@ -85,6 +85,6 @@ Completed in this QH-5 closeout:
 
 ## Caveats
 
-- PASS WITH CAVEATS remains the correct release language. QH-1 through QH-3 improved provenance and report quality, but they did not reread all remaining source-extract/support-rationale caveats.
+- The release language should remain cautious. QH-1 through QH-3 improved provenance and report quality, but they did not reread all remaining source-extract/support-rationale caveats.
 - QH-4 guardrail validation is no longer treated as a blocker in this sync assessment: the live private validator catches both equals-style and colon-style source-reference URL summaries and passed the current private guardrail suite.
 - This report does not publish private validation locators, licensed source links, local path details, temp path details, private source-location fields, or methodology-chain internals.

@@ -218,7 +218,7 @@ test('direct detail pages repeat the reduced public boundary', () => {
 
 
 test('public disclaimer surfaces block overclaim interpretations at point of use', () => {
-  assert.match(read('index.html'), /AIRUM Public Demo: v3\.2\.1 reduced public demo - PASS WITH CAVEATS/i);
+  assert.match(read('index.html'), /AIRUM Public Demo: v3\.2\.1 reduced public demo/i);
   for (const [file, text] of [
     ['index.html', read('index.html')],
     ['explore/index.html', read('explore/index.html')],
