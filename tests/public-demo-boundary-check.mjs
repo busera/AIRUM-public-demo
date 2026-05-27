@@ -174,6 +174,7 @@ test('main explorer avoids duplicate Scoping Sector and Scoping AU controls', ()
 
 test('reduced working paper includes applicable control summary and audit procedure previews', () => {
   const workingPaper = read('examples/reduced-discovery-working-paper.html');
+  assert.match(workingPaper, /Reduced AIRUM Public Demo: v3\.2\.1/);
   assert.match(workingPaper, /Control summary/);
   assert.match(workingPaper, /Applicable control audit procedure/);
   assert.match(workingPaper, /Open full Applicable Control Details/);
