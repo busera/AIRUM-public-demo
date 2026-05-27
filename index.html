@@ -47,10 +47,21 @@
     .boundary p, .boundary li { color:#dce8ff; }
     footer { color:var(--muted); border-top:1px solid var(--line); padding:20px 22px 34px; }
     @media (max-width:900px) { .grid4, .method-strip { grid-template-columns:repeat(2,1fr); } }
+
+    [data-theme="dark"] { color-scheme:dark; --ink:#edf4ff; --muted:#a9b8cc; --line:#2d405c; --blue:#7ea6ff; --soft:#132238; --bg:#07111f; --paper:#0f1b2b; }
+    [data-theme="dark"] header { background:linear-gradient(135deg,#050a13,#102848); }
+    [data-theme="dark"] .card, [data-theme="dark"] .panel, [data-theme="dark"] .risk-card, [data-theme="dark"] .metric, [data-theme="dark"] .method-step, [data-theme="dark"] .figure, [data-theme="dark"] .scope-item, [data-theme="dark"] .control-summary-box, [data-theme="dark"] .audit-procedure-preview { background:#0f1b2b; border-color:#2d405c; box-shadow:0 14px 32px rgba(0,0,0,.28); }
+    [data-theme="dark"] .boundary-note, [data-theme="dark"] .boundary, [data-theme="dark"] .banner { background:#050a13; border-color:#2d405c; }
+    [data-theme="dark"] .tag { background:#132238; border-color:#365170; color:#dce8ff; }
+    [data-theme="dark"] a, [data-theme="dark"] .detail-link { color:#9fc2ff; }
+    [data-theme="dark"] .metric strong, [data-theme="dark"] .control-summary-box h3, [data-theme="dark"] .audit-procedure-preview h3 { color:#dce8ff; }
+    .theme-toggle { position:fixed; top:14px; right:14px; z-index:20; display:inline-grid; place-items:center; width:44px; min-height:44px; border:1px solid rgba(255,255,255,.55); border-radius:999px; background:rgba(16,31,51,.76); color:#fff; font-size:1.25rem; font-weight:900; line-height:1; cursor:pointer; box-shadow:0 10px 24px rgba(0,0,0,.22); backdrop-filter:blur(10px); }
+    .theme-toggle:hover, .theme-toggle:focus-visible { background:rgba(31,94,255,.85); outline:3px solid rgba(159,194,255,.55); outline-offset:2px; }
     @media (max-width:760px) { h1 { font-size:36px; } .grid, .grid3, .grid4, .method-strip { grid-template-columns:1fr; } }
   </style>
 </head>
 <body>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">☾</button>
   <header>
     <div class="wrap">
       <nav class="demo-nav" aria-label="AIRUM demo pages"><a aria-current="page" href="./">AIRUM overview</a><a href="explore/">Explore and select</a><a href="examples/reduced-discovery-working-paper.html">Example export</a><a href="https://github.com/busera/AIRUM-public-demo/tree/main">GitHub</a></nav>
@@ -161,5 +172,6 @@
   <footer>
     <div class="wrap">Andre Buser. Views are my own. This repository describes conceptual design patterns and lessons from personal project work.</div>
   </footer>
+  <script type="module" src="explore/js/theme.js?v=20260527-dark-mode"></script>
 </body>
 </html>

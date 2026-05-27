@@ -135,10 +135,34 @@ test('interactive navigation and disclosure controls meet minimum touch target s
   assert.match(cssText, /\.button\s*\{[^}]*min-height\s*:\s*44px/is);
 });
 
+test('every page exposes a symbol-only dark-mode toggle', () => {
+  const htmlFiles = [
+    'index.html',
+    'explore/index.html',
+    'explore/control-info.html',
+    'explore/sampling-methodology.html',
+    'examples/reduced-discovery-working-paper.html',
+  ];
+  for (const file of htmlFiles) {
+    const text = read(file);
+    assert.match(text, /<button[^>]+class="theme-toggle"[^>]+aria-label="Toggle dark mode"[^>]*>[☾☀]<\/button>/, `${file} lacks a symbol-only theme toggle`);
+    assert.match(text, /theme\.js\?v=20260527-dark-mode/, `${file} does not load the shared theme toggle script`);
+    assert.doesNotMatch(text, /<button[^>]+class="theme-toggle"[^>]*>\s*Dark\s*<\/button>/i, `${file} exposes visible dark-mode text`);
+  }
+
+  const themeJs = read('explore/js/theme.js');
+  assert.match(themeJs, /localStorage\.setItem\('airum-theme'/);
+  assert.match(themeJs, /document\.documentElement\.dataset\.theme = theme/);
+  assert.match(themeJs, /button\.textContent = theme === 'dark' \? '☀' : '☾'/);
+
+  assert.match(cssText, /\.theme-toggle\s*\{[^}]*min-height\s*:\s*44px/is);
+  assert.match(cssText, /\[data-theme="dark"\]/);
+});
+
 test('browse risk examples renders one risk per row', () => {
   const exploreHtml = read('explore/index.html');
   const styles = read('explore/css/styles.css');
-  assert.match(exploreHtml, /styles\.css\?v=20260525-numbered-test-steps/);
+  assert.match(exploreHtml, /styles\.css\?v=20260527-dark-mode/);
   assert.match(exploreHtml, /app\.js\?v=20260527-representative-controls/);
   assert.match(exploreHtml, /demo-risk-universe\.json\?v=20260527-representative-controls/);
   assert.match(read('explore/control-info.html'), /controlInfo\.js\?v=20260527-representative-controls/);
