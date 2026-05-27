@@ -18,7 +18,8 @@ function preferredTheme() {
 function applyTheme(theme) {
   document.documentElement.dataset.theme = theme;
   document.querySelectorAll('.theme-toggle').forEach((button) => {
-    button.textContent = theme === 'dark' ? '☀' : '☾';
+    const symbol = theme === 'dark' ? '☀' : '☾';
+    button.innerHTML = `<span class="theme-toggle-symbol" aria-hidden="true">${symbol}</span>`;
     button.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
   });
 }

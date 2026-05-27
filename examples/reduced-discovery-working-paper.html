@@ -56,8 +56,9 @@
     [data-theme="dark"] .tag { background:#132238; border-color:#365170; color:#dce8ff; }
     [data-theme="dark"] a, [data-theme="dark"] .detail-link { color:#9fc2ff; }
     [data-theme="dark"] .metric strong, [data-theme="dark"] .control-summary-box h3, [data-theme="dark"] .audit-procedure-preview h3 { color:#dce8ff; }
-    .theme-toggle { position:fixed; top:14px; right:14px; z-index:20; display:inline-grid; place-items:center; width:44px; min-height:44px; border:1px solid rgba(255,255,255,.55); border-radius:999px; background:rgba(16,31,51,.76); color:#fff; font-size:1.25rem; font-weight:900; line-height:1; cursor:pointer; box-shadow:0 10px 24px rgba(0,0,0,.22); backdrop-filter:blur(10px); }
+    .theme-toggle { position:fixed; top:14px; right:14px; z-index:20; display:inline-flex; align-items:center; justify-content:center; width:44px; height:44px; min-height:44px; padding:0; border:1px solid rgba(255,255,255,.55); border-radius:999px; background:rgba(16,31,51,.76); color:#fff; font-size:1.2rem; font-weight:900; line-height:1; text-align:center; cursor:pointer; box-shadow:0 10px 24px rgba(0,0,0,.22); backdrop-filter:blur(10px); }
     .theme-toggle:hover, .theme-toggle:focus-visible { background:rgba(31,94,255,.85); outline:3px solid rgba(159,194,255,.55); outline-offset:2px; }
+    .theme-toggle-symbol { display:inline-flex; align-items:center; justify-content:center; width:1em; height:1em; line-height:1; transform:translateY(0.02em); }
     @media (max-width:760px) { h1 { font-size:36px; } .grid, .grid3 { grid-template-columns:1fr; } .row { grid-template-columns:1fr; } }
   </style>
 </head>
@@ -404,6 +405,6 @@
   <footer>
     <div class="wrap">Andre Buser. Views are my own. This repository describes conceptual design patterns and lessons from personal project work.</div>
   </footer>
-  <script type="module" src="../explore/js/theme.js?v=20260527-dark-mode"></script>
+  <script type="module" src="../explore/js/theme.js?v=20260527-fixed-theme-toggle"></script>
 </body>
 </html>

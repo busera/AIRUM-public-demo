@@ -107,17 +107,21 @@ footer a { color: var(--blue-700); font-weight: 800; }
   top: 14px;
   right: 14px;
   z-index: 20;
-  display: inline-grid;
-  place-items: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 44px;
+  height: 44px;
   min-height: 44px;
+  padding: 0;
   border: 1px solid rgba(255,255,255,.55);
   border-radius: 999px;
   background: rgba(16,31,51,.76);
   color: #ffffff;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 900;
   line-height: 1;
+  text-align: center;
   cursor: pointer;
   box-shadow: 0 10px 24px rgba(0,0,0,.22);
   backdrop-filter: blur(10px);
@@ -126,6 +130,16 @@ footer a { color: var(--blue-700); font-weight: 800; }
   background: rgba(31,94,255,.85);
   outline: 3px solid rgba(159,194,255,.55);
   outline-offset: 2px;
+}
+
+.theme-toggle-symbol {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  transform: translateY(0.02em);
 }
 
 
