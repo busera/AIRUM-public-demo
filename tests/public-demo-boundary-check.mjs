@@ -146,7 +146,7 @@ test('every page exposes a symbol-only dark-mode toggle', () => {
   for (const file of htmlFiles) {
     const text = read(file);
     assert.match(text, /<button[^>]+class="theme-toggle"[^>]+aria-label="Toggle dark mode"[^>]*>[☾☀]<\/button>/, `${file} lacks a symbol-only theme toggle`);
-    assert.match(text, /theme\.js\?v=20260527-fixed-theme-toggle/, `${file} does not load the shared theme toggle script`);
+    assert.match(text, /theme\.js\?v=20260527-svg-theme-toggle/, `${file} does not load the shared theme toggle script`);
     assert.doesNotMatch(text, /<button[^>]+class="theme-toggle"[^>]*>\s*Dark\s*<\/button>/i, `${file} exposes visible dark-mode text`);
   }
 
@@ -168,7 +168,7 @@ test('every page exposes a symbol-only dark-mode toggle', () => {
 test('browse risk examples renders one risk per row', () => {
   const exploreHtml = read('explore/index.html');
   const styles = read('explore/css/styles.css');
-  assert.match(exploreHtml, /styles\.css\?v=20260527-fixed-theme-toggle/);
+  assert.match(exploreHtml, /styles\.css\?v=20260527-svg-theme-toggle/);
   assert.match(exploreHtml, /app\.js\?v=20260527-representative-controls/);
   assert.match(exploreHtml, /demo-risk-universe\.json\?v=20260527-representative-controls/);
   assert.match(read('explore/control-info.html'), /controlInfo\.js\?v=20260527-representative-controls/);
