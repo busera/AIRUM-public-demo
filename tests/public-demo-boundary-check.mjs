@@ -153,13 +153,15 @@ test('every page exposes a symbol-only dark-mode toggle', () => {
   const themeJs = read('explore/js/theme.js');
   assert.match(themeJs, /localStorage\.setItem\('airum-theme'/);
   assert.match(themeJs, /document\.documentElement\.dataset\.theme = theme/);
-  assert.match(themeJs, /button\.innerHTML = `<span class="theme-toggle-symbol" aria-hidden="true">\$\{symbol\}<\/span>`/);
+  assert.match(themeJs, /const SUN_ICON = '<span class="theme-toggle-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"/);
+  assert.match(themeJs, /button\.innerHTML = theme === 'dark' \? SUN_ICON : MOON_ICON/);
 
   assert.match(cssText, /\.theme-toggle\s*\{[^}]*position\s*:\s*fixed[^}]*top\s*:\s*14px/is);
   assert.match(cssText, /\.theme-toggle\s*\{[^}]*display\s*:\s*inline-flex[^}]*align-items\s*:\s*center[^}]*justify-content\s*:\s*center/is);
   assert.match(cssText, /\.theme-toggle\s*\{[^}]*width\s*:\s*44px[^}]*height\s*:\s*44px[^}]*padding\s*:\s*0/is);
   assert.match(cssText, /\.theme-toggle-symbol\s*\{[^}]*display\s*:\s*inline-flex[^}]*align-items\s*:\s*center[^}]*justify-content\s*:\s*center/is);
-  assert.match(cssText, /\.theme-toggle-symbol\s*\{[^}]*width\s*:\s*1em[^}]*height\s*:\s*1em[^}]*line-height\s*:\s*1/is);
+  assert.match(cssText, /\.theme-toggle-symbol\s*\{[^}]*width\s*:\s*1\.18em[^}]*height\s*:\s*1\.18em[^}]*line-height\s*:\s*1/is);
+  assert.match(cssText, /\.theme-toggle-symbol\s+svg\s*\{[^}]*width\s*:\s*100%[^}]*height\s*:\s*100%/is);
   assert.match(cssText, /\[data-theme="dark"\]/);
 });
 
