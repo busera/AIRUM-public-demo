@@ -188,7 +188,6 @@ function sourceBackedRiskSectionsHtml(risk) {
       <dt>Sources and References</dt><dd>${escapeHtml(risk.sourcesAndReferences)}</dd>
       <dt>NIST AI Lifecycle Stage</dt><dd>${escapeHtml(risk.nistLifecycleStage)}</dd>
     </dl>
-    ${auditProcedureSectionsHtml(risk)}
     ${applicableControlsHtml(risk)}
     ${sourceLinksHtml(risk.sourceLinks)}`;
 }
@@ -236,66 +235,6 @@ function applicableControlsHtml(risk) {
           <p><a class="control-details-link" href="${escapeHtml(controlHref(control.controlId, risk))}">Open Applicable Control Details</a></p>
         </article>
       `).join('')}
-    </div>`;
-}
-
-function procedureTextHtml(value) {
-  const sectionHeadingPattern = /^(Overall test objective\/purpose|Recommended Sampling Strategy|Recommended Sample Size|Detailed Test Steps|Recommended Artifacts):$/;
-  const sectionBreakPattern = /^(Recommended Sampling Strategy|Recommended Sample Size|Detailed Test Steps|Recommended Artifacts):$/;
-  const html = [];
-  let detailedStepItems = [];
-  let inDetailedSteps = false;
-
-  const flushDetailedSteps = () => {
-    if (!detailedStepItems.length) return;
-    html.push(`<ol class="audit-procedure-numbered-list">${detailedStepItems.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ol>`);
-    detailedStepItems = [];
-  };
-
-  for (const line of String(value || '').split('\n')) {
-    const trimmed = line.trim();
-    if (sectionHeadingPattern.test(trimmed)) {
-      flushDetailedSteps();
-      inDetailedSteps = trimmed === 'Detailed Test Steps:';
-      const sectionBreakClass = sectionBreakPattern.test(trimmed)
-        ? ' audit-procedure-section-break'
-        : '';
-      html.push(`<div class="audit-procedure-line${sectionBreakClass}"><strong>${escapeHtml(trimmed)}</strong></div>`);
-      continue;
-    }
-
-    if (inDetailedSteps) {
-      if (!trimmed) continue;
-      detailedStepItems.push(trimmed.replace(/^\d+\.\s*/, ''));
-      continue;
-    }
-
-    html.push(`<div class="audit-procedure-line">${escapeHtml(line || ' ' )}</div>`);
-  }
-
-  flushDetailedSteps();
-  return html.join('');
-}
-
-function auditProcedureSectionsHtml(risk) {
-  if (!risk.auditProcedureName && !risk.auditProcedureDescription && !risk.testOfDesign && !risk.testOfEffectiveness) {
-    return '';
-  }
-  return `
-    <div class="audit-procedure-fields">
-      <details class="audit-procedure-box audit-procedure-summary">
-        <summary>Audit Procedure</summary>
-        <p><strong>Name:</strong> ${escapeHtml(risk.auditProcedureName)}</p>
-        <p><strong>Description:</strong> ${escapeHtml(risk.auditProcedureDescription)}</p>
-      </details>
-      <details class="audit-procedure-box audit-procedure-tod">
-        <summary>Test of Design (ToD)</summary>
-        <div class="audit-procedure-text">${procedureTextHtml(risk.testOfDesign)}</div>
-      </details>
-      <details class="audit-procedure-box audit-procedure-toe">
-        <summary>Test of Effectiveness (ToE)</summary>
-        <div class="audit-procedure-text">${procedureTextHtml(risk.testOfEffectiveness)}</div>
-      </details>
     </div>`;
 }
 

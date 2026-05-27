@@ -169,7 +169,7 @@ test('browse risk examples renders one risk per row', () => {
   const exploreHtml = read('explore/index.html');
   const styles = read('explore/css/styles.css');
   assert.match(exploreHtml, /styles\.css\?v=20260527-svg-theme-toggle/);
-  assert.match(exploreHtml, /app\.js\?v=20260527-representative-controls/);
+  assert.match(exploreHtml, /app\.js\?v=20260527-risk-detail-simplified/);
   assert.match(exploreHtml, /demo-risk-universe\.json\?v=20260527-representative-controls/);
   assert.match(read('explore/control-info.html'), /controlInfo\.js\?v=20260527-representative-controls/);
   assert.match(read('explore/js/app.js'), /demo-risk-universe\.json\?v=20260527-representative-controls/);
@@ -179,19 +179,21 @@ test('browse risk examples renders one risk per row', () => {
   assert.doesNotMatch(styles, /\.universe-grid\s*\{[^}]*repeat\(2,\s*minmax\(0,\s*1fr\)\)/is);
 });
 
-test('browse risk examples keeps risk audit guidance collapsed with spaced procedure subsections', () => {
+test('explorer AI risk details omit risk-level audit procedure, ToD, and ToE sections', () => {
   const exploreJs = read('explore/js/app.js');
-  const styles = read('explore/css/styles.css');
-  assert.match(exploreJs, /<details class="audit-procedure-box audit-procedure-summary">[\s\S]*<summary>Audit Procedure<\/summary>/);
-  assert.match(exploreJs, /<details class="audit-procedure-box audit-procedure-tod">[\s\S]*<summary>Test of Design \(ToD\)<\/summary>/);
-  assert.match(exploreJs, /<details class="audit-procedure-box audit-procedure-toe">[\s\S]*<summary>Test of Effectiveness \(ToE\)<\/summary>/);
-  assert.doesNotMatch(exploreJs, /<details class="audit-procedure-box audit-procedure-(summary|tod|toe)"\s+open/);
-  assert.match(exploreJs, /audit-procedure-section-break/);
-  assert.match(exploreJs, /<ol class=\"audit-procedure-numbered-list\">/);
-  assert.ok(exploreJs.includes("trimmed.replace(/^\\d+\\.\\s*/, '')"));
-  assert.match(styles, /\.audit-procedure-section-break\s*\{[^}]*margin-top\s*:\s*0\.9rem\s*;/is);
-  assert.match(styles, /\.audit-procedure-numbered-list\s*\{[^}]*list-style-position|\.audit-procedure-numbered-list\s*\{/is);
-  assert.match(styles, /\.audit-procedure-box\s+summary\s*\{[^}]*font-weight\s*:\s*850\s*;/is);
+  assert.doesNotMatch(exploreJs, /\$\{auditProcedureSectionsHtml\(risk\)\}/);
+  assert.doesNotMatch(exploreJs, /<summary>Audit Procedure<\/summary>/);
+  assert.doesNotMatch(exploreJs, /<summary>Test of Design \(ToD\)<\/summary>/);
+  assert.doesNotMatch(exploreJs, /<summary>Test of Effectiveness \(ToE\)<\/summary>/);
+  assert.doesNotMatch(exploreJs, /function auditProcedureSectionsHtml/);
+});
+
+test('applicable control details keep audit procedure, ToD, and ToE sections', () => {
+  const controlJs = read('explore/js/controlInfo.js');
+  assert.match(controlJs, /<h2>Audit Procedure<\/h2>/);
+  assert.match(controlJs, /<h2>Test of Design \(ToD\)<\/h2>/);
+  assert.match(controlJs, /<h2>Test of Effectiveness \(ToE\)<\/h2>/);
+  assert.match(controlJs, /controlProcedureHtml\(control\.auditProcedure\)/);
 });
 
 test('main explorer avoids duplicate Scoping Sector and Scoping AU controls', () => {
