@@ -181,7 +181,7 @@ test('browse risk examples renders one risk per row', () => {
   assert.match(exploreHtml, /styles\.css\?v=20260527-dark-hero-readability/);
   assert.match(exploreHtml, /app\.js\?v=20260527-risk-detail-simplified/);
   assert.match(exploreHtml, /demo-risk-universe\.json\?v=20260527-representative-controls/);
-  assert.match(read('explore/control-info.html'), /controlInfo\.js\?v=20260527-representative-controls/);
+  assert.match(read('explore/control-info.html'), /controlInfo\.js\?v=20260527-remove-sampling-box/);
   assert.match(read('explore/js/app.js'), /demo-risk-universe\.json\?v=20260527-representative-controls/);
   assert.match(read('explore/js/app.js'), /CONTROL_DETAILS_VERSION = '20260527-representative-controls'/);
   assert.match(read('explore/js/controlInfo.js'), /demo-risk-universe\.json\?v=20260527-representative-controls/);
@@ -244,9 +244,10 @@ test('explore page links applicable controls and sampling methodology detail sur
   assert.match(controlHtml, /Applicable Control Details/);
   assert.match(controlJs, /Test of Design \(ToD\)/);
   assert.match(controlJs, /Test of Effectiveness \(ToE\)/);
-  assert.match(controlJs, /Open public demo sampling reference/);
-  assert.match(controlJs, /internal audit sampling methodology/);
-  assert.match(controlJs, /does not prescribe a universal AIRUM sample-size table/);
+  assert.doesNotMatch(controlJs, /function samplingMethodologyNoteHtml/);
+  assert.doesNotMatch(controlJs, /Open public demo sampling reference/);
+  assert.doesNotMatch(controlJs, /<strong>Sampling Methodology<\/strong>/);
+  assert.doesNotMatch(controlJs, /does not prescribe a universal AIRUM sample-size table/);
   assert.match(samplingHtml, /Sampling Methodology Matrix/);
   assert.match(samplingJs, /Frequency and Risk Matrix/);
   assert.match(samplingJs, /Methodology Boundary/);

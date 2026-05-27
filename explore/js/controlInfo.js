@@ -49,16 +49,6 @@ function topbarHtml(riskId) {
     </nav>`;
 }
 
-function samplingMethodologyNoteHtml() {
-  return `
-    <div class="sampling-guidance">
-      <strong>Sampling Methodology</strong>
-      <p>Use the organization's internal audit sampling methodology where one exists. Where no internal standard applies, use accepted internal-audit sampling practice, tailor the sample to population completeness, frequency, risk, and evidence quality, and document the professional judgment used.</p>
-      <p class="muted">Public IIA material explains audit sampling concepts, including sample size and methodology selection, but does not prescribe a universal AIRUM sample-size table.</p>
-      <p><a class="control-details-link" href="sampling-methodology.html">Open public demo sampling reference</a></p>
-    </div>`;
-}
-
 function controlProcedureHtml(procedure = {}) {
   const tod = procedure.testOfDesign || {};
   const toe = procedure.testOfEffectiveness || {};
@@ -93,7 +83,6 @@ function controlProcedureHtml(procedure = {}) {
             <strong>Recommended Sample Size</strong>
             <p>${escapeHtml(valueText(toe.recommendedSampleSize))}</p>
           </div>
-          ${samplingMethodologyNoteHtml()}
           <h3>Detailed Test Steps</h3>
           ${procedureListHtml(toe.detailedTestSteps, true)}
           <h3>Recommended Artifacts</h3>
