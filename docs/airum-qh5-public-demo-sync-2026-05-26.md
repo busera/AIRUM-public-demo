@@ -27,8 +27,8 @@ No public demo data, product copy, or visible version label update is required f
 
 Reason:
 
-- The public demo is already aligned to the approved AIRUM v3.2 public baseline: 67 private AI Risks, 75 private consolidated controls, 212 private risk-control mappings, and a reduced public subset of 10 risks / 25 controls / 30 mappings.
-- QH-1 through QH-3 hardening changed private provenance metadata, source-registry rationale, runtime control-catalog provenance quality, and private review reports. Those changes do not create a public-safe demo data change beyond the already published v3.2 counts.
+- The public demo is already aligned to the approved AIRUM v3.2 public baseline: 67 private AI Risks, 75 private consolidated controls, 212 private risk-control mappings, and a reduced public subset of 10 risks / 10 representative controls / 10 mappings.
+- QH-1 through QH-3 hardening changed private provenance metadata, source-registry rationale, runtime control-catalog provenance quality, and private review reports. Those changes do not create an additional public demo data change beyond the already published v3.2 counts.
 - QH-4 introduced and re-reviewed the automated guardrail validator surface. The live private validator now catches both `source_url=` and `url:` source-reference summary syntax and passed its current guardrail suite. This report still avoids an uncaveated public release claim because QH-1 through QH-3 intentionally left broader source-extract/support-rationale caveats unresolved.
 - The public demo intentionally does not mirror private workbook `URL Sources` verbatim. It redacts licensed/private source URLs and keeps reduced-demo public fallback wording. Raw equality to the private workbook would be a boundary failure, not a sync objective.
 
@@ -73,7 +73,7 @@ No public runtime/demo data files were changed.
 
 Completed in this QH-5 closeout:
 
-- Private/public comparison script: PASS; 67 private workbook risks, 75 private runtime controls, 212 private risk-control mappings, 10 public risks, 25 public controls, 30 public mappings, and 10 expected URL-source redactions.
+- Private/public comparison script: PASS; 67 private workbook risks, 75 private runtime controls, 212 private risk-control mappings, 10 public risks, 10 representative public controls, 10 public mappings, and 10 expected URL-source redactions.
 - Private QH-4 guardrail validation: `npm run validate:qh-guardrails --silent`: PASS; 688 source refs, 187 local/private-locator justifications, 73 caveated mappings, 67 risk reports, 0 private-marker hits.
 - `node --check explore/js/app.js`: PASS
 - `node --check explore/js/controlInfo.js`: PASS

@@ -157,7 +157,7 @@ It shows two AIRUM purposes clearly:
 
 1. AI Risk Universe exploration with search and family filtering only, without separate Scoping Sector or Scoping AU controls on the main explorer page.
 2. Deterministic Risk Scoping for pre-discovery preparation using reduced public demo data.
-3. Applicable Control Details pages that show control summary, control sources, Audit Procedure, Test of Design, Test of Effectiveness, and a link to the sampling methodology matrix.
+3. Applicable Control Details pages that show one representative control per AI Risk, including control summary, control sources, Audit Procedure, Test of Design, Test of Effectiveness, and a link to the sampling methodology matrix.
 
 The public demo remains intentionally reduced. It does not publish the full 67-risk data core, normalized control mappings, internal rules, scoring logic, source captures, private mappings, or operational build details.
 

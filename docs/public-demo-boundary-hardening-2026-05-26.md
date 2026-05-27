@@ -9,7 +9,7 @@ This public-demo patch implements the post-QH disclaimer and interpretation impr
 No AIRUM data-core counts changed:
 
 - Private AIRUM baseline remains 67 AI Risks, 75 consolidated controls, and 212 risk-control mappings.
-- Public demo remains a reduced public showcase with 10 visible demo risks and 25 applicable controls.
+- Public demo remains a reduced public showcase with 10 visible demo risks and one representative applicable control per AI Risk.
 - No private workbook, scoring model, source registry, or internal control-catalog semantics changed.
 
 ## Implemented improvements
@@ -29,7 +29,7 @@ No AIRUM data-core counts changed:
 
 Use:
 
-> AIRUM Public Demo v3.2.1 is a reduced public demo and pre-discovery preparation aid. It passed public-boundary checks with caveats: it does not provide legal advice, audit assurance, source-perfect validation, or final workpapers, and it does not publish internal source evidence, licensed-source locators, local vault paths, or private source-to-control rationale.
+> Reduced AIRUM Public Demo: v3.2.1 is a public demo and pre-discovery preparation aid. It passed public-boundary checks with caveats: it does not provide legal advice, audit assurance, source-perfect validation, or final workpapers, and it does not publish internal source evidence, licensed-source locators, local vault paths, or private source-to-control rationale.
 
 Do not use:
 

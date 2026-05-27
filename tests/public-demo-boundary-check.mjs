@@ -84,7 +84,7 @@ test('overview exposes the reduced-demo public boundary above the first explanat
   assert.ok(mainStart > -1, 'overview has a main element');
   assert.ok(firstWhat > mainStart, 'overview has the What AIRUM is section');
   const intro = index.slice(mainStart, firstWhat);
-  assert.match(intro, /Reduced public demo/i);
+  assert.match(intro, /Reduced AIRUM Public Demo: v3\.2\.1/i);
   assert.match(intro, /No private audit material/i);
   assert.match(intro, /does not publish the full AIRUM methodology/i);
 });
@@ -92,8 +92,8 @@ test('overview exposes the reduced-demo public boundary above the first explanat
 test('reduced risk data includes structured audit procedure planning fields and applicable controls', () => {
   const data = JSON.parse(read('explore/data/demo-risk-universe.json'));
   assert.equal(data.riskUniverse.documentedCount, 10);
-  assert.equal(data.riskUniverse.applicableControlCount, 25);
-  assert.equal(data.riskUniverse.riskControlMappingCount, 30);
+  assert.equal(data.riskUniverse.applicableControlCount, 10);
+  assert.equal(data.riskUniverse.riskControlMappingCount, 10);
   assert.ok(Array.isArray(data.controls), 'controls collection missing');
   assert.ok(Array.isArray(data.riskControlMappings), 'risk-control mapping collection missing');
   const controlsById = new Map(data.controls.map((control) => [control.controlId, control]));
@@ -104,11 +104,22 @@ test('reduced risk data includes structured audit procedure planning fields and 
     assert.notEqual(risk.auditProcedureDescription.trim(), '');
     assert.match(risk.testOfDesign, /Overall test objective\/purpose:[\s\S]*Detailed Test Steps:[\s\S]*Recommended Artifacts:/);
     assert.match(risk.testOfEffectiveness, /Overall test objective\/purpose:[\s\S]*Recommended Sampling Strategy:[\s\S]*Recommended Sample Size:[\s\S]*Detailed Test Steps:[\s\S]*Recommended Artifacts:/);
-    assert.ok(risk.applicableControlIds.length >= 1, `${risk.id} has no applicable controls`);
+    assert.equal(risk.applicableControlIds.length, 1, `${risk.id} should expose one representative applicable control`);
     for (const controlId of risk.applicableControlIds) {
       assert.ok(controlsById.has(controlId), `${risk.id} references missing control ${controlId}`);
     }
   }
+  assert.equal(data.controls.length, 10);
+  assert.equal(data.riskControlMappings.length, 10);
+  const exposedControlIds = new Set(data.risks.map((risk) => risk.applicableControlIds[0]));
+  assert.equal(exposedControlIds.size, 10);
+  assert.deepEqual(new Set(data.controls.map((control) => control.controlId)), exposedControlIds);
+  for (const mapping of data.riskControlMappings) {
+    const risk = data.risks.find((candidate) => candidate.id === mapping.riskId || candidate.originalRiskId === mapping.riskId);
+    assert.ok(risk, `mapping references missing risk ${mapping.riskId}`);
+    assert.equal(mapping.controlId, risk.applicableControlIds[0], `${risk.id} has non-representative mapping exposed`);
+  }
+
   for (const control of data.controls) {
     assert.match(control.auditProcedure.auditProcedureName, /^(Evaluate|Review|Validate|Test|Examine|Analyze|Trace)\b/);
     assert.ok(Array.isArray(control.auditProcedure.testOfDesign.detailedTestSteps));
@@ -128,12 +139,12 @@ test('browse risk examples renders one risk per row', () => {
   const exploreHtml = read('explore/index.html');
   const styles = read('explore/css/styles.css');
   assert.match(exploreHtml, /styles\.css\?v=20260525-numbered-test-steps/);
-  assert.match(exploreHtml, /app\.js\?v=20260526-v32-final-validation-closeout/);
-  assert.match(exploreHtml, /demo-risk-universe\.json\?v=20260526-v32-final-validation-closeout/);
-  assert.match(read('explore/control-info.html'), /controlInfo\.js\?v=20260526-v32-final-validation-closeout/);
-  assert.match(read('explore/js/app.js'), /demo-risk-universe\.json\?v=20260526-v32-final-validation-closeout/);
-  assert.match(read('explore/js/app.js'), /CONTROL_DETAILS_VERSION = '20260526-v32-final-validation-closeout'/);
-  assert.match(read('explore/js/controlInfo.js'), /demo-risk-universe\.json\?v=20260526-v32-final-validation-closeout/);
+  assert.match(exploreHtml, /app\.js\?v=20260527-representative-controls/);
+  assert.match(exploreHtml, /demo-risk-universe\.json\?v=20260527-representative-controls/);
+  assert.match(read('explore/control-info.html'), /controlInfo\.js\?v=20260527-representative-controls/);
+  assert.match(read('explore/js/app.js'), /demo-risk-universe\.json\?v=20260527-representative-controls/);
+  assert.match(read('explore/js/app.js'), /CONTROL_DETAILS_VERSION = '20260527-representative-controls'/);
+  assert.match(read('explore/js/controlInfo.js'), /demo-risk-universe\.json\?v=20260527-representative-controls/);
   assert.match(styles, /\.universe-grid\s*\{[^}]*grid-template-columns\s*:\s*1fr\s*;/is);
   assert.doesNotMatch(styles, /\.universe-grid\s*\{[^}]*repeat\(2,\s*minmax\(0,\s*1fr\)\)/is);
 });
@@ -208,17 +219,17 @@ test('public demo has npm test entry point', () => {
 test('direct detail pages repeat the reduced public boundary', () => {
   const controlInfo = read('explore/js/controlInfo.js');
   const sampling = read('explore/js/samplingMethodology.js');
-  assert.match(controlInfo, /Reduced public demo/);
+  assert.match(controlInfo, /Reduced AIRUM Public Demo: v3\.2\.1/);
   assert.match(controlInfo, /No private audit material/);
   assert.match(controlInfo, /does not publish full AIRUM methodology/);
-  assert.match(sampling, /Reduced public demo/);
+  assert.match(sampling, /Reduced AIRUM Public Demo: v3\.2\.1/);
   assert.match(sampling, /No private audit material/);
   assert.match(sampling, /does not publish full AIRUM methodology/);
 });
 
 
 test('public disclaimer surfaces block overclaim interpretations at point of use', () => {
-  assert.match(read('index.html'), /AIRUM Public Demo: v3\.2\.1 reduced public demo/i);
+  assert.match(read('index.html'), /Reduced AIRUM Public Demo: v3\.2\.1/i);
   for (const [file, text] of [
     ['index.html', read('index.html')],
     ['explore/index.html', read('explore/index.html')],
@@ -226,7 +237,7 @@ test('public disclaimer surfaces block overclaim interpretations at point of use
     ['explore/sampling-methodology.html', read('explore/sampling-methodology.html')],
     ['examples/reduced-discovery-working-paper.html', read('examples/reduced-discovery-working-paper.html')],
   ]) {
-    assert.match(text, /Assurance Boundary|Reduced public demo/i, `${file} lacks a visible boundary box`);
+    assert.match(text, /Assurance Boundary|Reduced AIRUM Public Demo/i, `${file} lacks a visible boundary box`);
     assert.match(text, /pre-discovery preparation aid/i, `${file} lacks preparation-aid framing`);
     assert.match(text, /does not provide legal advice|legal\/compliance review/i, `${file} lacks legal caveat`);
     assert.match(text, /does not provide audit assurance|not audit assurance/i, `${file} lacks assurance caveat`);

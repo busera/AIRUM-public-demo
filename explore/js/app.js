@@ -1,5 +1,5 @@
-const DATA_URL = 'data/demo-risk-universe.json?v=20260526-v32-final-validation-closeout';
-const CONTROL_DETAILS_VERSION = '20260526-v32-final-validation-closeout';
+const DATA_URL = 'data/demo-risk-universe.json?v=20260527-representative-controls';
+const CONTROL_DETAILS_VERSION = '20260527-representative-controls';
 const MAX_RESULTS = 9;
 const HEX_WIDTH = 146;
 const HEX_HEIGHT = 126;
@@ -198,12 +198,10 @@ function compactControlsHtml(risk) {
   if (!controls.length) {
     return '<p class="muted">No applicable controls included in this reduced demo entry.</p>';
   }
+  const control = controls[0];
   return `
     <ul class="compact-control-list">
-      ${controls.slice(0, 3).map((control) => `
-        <li><a href="${escapeHtml(controlHref(control.controlId, risk))}">${escapeHtml(control.title)}</a></li>
-      `).join('')}
-      ${controls.length > 3 ? `<li>${controls.length - 3} additional applicable controls shown in the expanded view.</li>` : ''}
+      <li><a href="${escapeHtml(controlHref(control.controlId, risk))}">${escapeHtml(control.title)}</a></li>
     </ul>`;
 }
 

@@ -24,7 +24,7 @@ function renderSamplingMethodology() {
       <a href="../">AIRUM overview</a>
     </nav>
     <section class="panel public-boundary-panel" aria-label="Reduced public demo boundary">
-      <p class="status-badge">AIRUM Public Demo: v3.2.1 reduced public demo</p>
+      <p class="status-badge">Reduced AIRUM Public Demo: v3.2.1</p>
       <h2>Assurance Boundary</h2>
       <p>No private audit material. AIRUM is a pre-discovery preparation aid. This page shows public demo sampling guidance only and does not publish full AIRUM methodology, internal source evidence, source mappings, internal scoring, or private audit material. It does not provide legal advice, does not provide audit assurance, source-perfect validation, or final workpapers.</p>
     </section>

@@ -41,4 +41,4 @@ Approved public wording may state high-level validated AIRUM v3.2 counts (67 AI 
 
 ## Release status
 
-Current public-demo communication status: AIRUM Public Demo v3.2.1. The demo is a pre-discovery preparation aid and must not be positioned as source-perfect validation, legal advice, audit assurance, or final audit workpaper material without engagement-specific tailoring.
+Current public-demo communication status: Reduced AIRUM Public Demo: v3.2.1. The demo is a pre-discovery preparation aid and must not be positioned as source-perfect validation, legal advice, audit assurance, or final audit workpaper material without engagement-specific tailoring.
