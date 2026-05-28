@@ -69,6 +69,7 @@ test('public files disclose only the approved v3.2 public count, not internal fi
   assert.doesNotMatch(publicArtifactText, /gartner\.com\/document-reader/i);
   assert.doesNotMatch(publicArtifactText, /platform\.virdocs\.com/i);
   assert.doesNotMatch(publicArtifactText, /\(internal\)/i);
+  assert.doesNotMatch(publicArtifactText, /risk workbook: Sheet 1 - risk_matrix v3/i);
 
   const publicFileList = walk().join('\n');
   assert.doesNotMatch(publicFileList, /airum_\d+_row_risk_universe_summary/i);
@@ -176,12 +177,12 @@ test('browse risk examples renders one risk per row', () => {
   const exploreHtml = read('explore/index.html');
   const styles = read('explore/css/styles.css');
   assert.match(exploreHtml, /styles\.css\?v=20260527-dark-hero-readability/);
-  assert.match(exploreHtml, /app\.js\?v=20260528-browse-source-links-removed/);
-  assert.match(exploreHtml, /demo-risk-universe\.json\?v=20260527-representative-controls/);
-  assert.match(read('explore/control-info.html'), /controlInfo\.js\?v=20260527-remove-sampling-box/);
-  assert.match(read('explore/js/app.js'), /demo-risk-universe\.json\?v=20260527-representative-controls/);
-  assert.match(read('explore/js/app.js'), /CONTROL_DETAILS_VERSION = '20260527-representative-controls'/);
-  assert.match(read('explore/js/controlInfo.js'), /demo-risk-universe\.json\?v=20260527-representative-controls/);
+  assert.match(exploreHtml, /app\.js\?v=20260528-remove-risk-workbook-source/);
+  assert.match(exploreHtml, /demo-risk-universe\.json\?v=20260528-remove-risk-workbook-source/);
+  assert.match(read('explore/control-info.html'), /controlInfo\.js\?v=20260528-remove-risk-workbook-source/);
+  assert.match(read('explore/js/app.js'), /demo-risk-universe\.json\?v=20260528-remove-risk-workbook-source/);
+  assert.match(read('explore/js/app.js'), /CONTROL_DETAILS_VERSION = '20260528-remove-risk-workbook-source'/);
+  assert.match(read('explore/js/controlInfo.js'), /demo-risk-universe\.json\?v=20260528-remove-risk-workbook-source/);
   assert.match(styles, /\.universe-grid\s*\{[^}]*grid-template-columns\s*:\s*1fr\s*;/is);
   assert.doesNotMatch(styles, /\.universe-grid\s*\{[^}]*repeat\(2,\s*minmax\(0,\s*1fr\)\)/is);
 });

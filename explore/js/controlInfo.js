@@ -1,4 +1,4 @@
-const DATA_URL = 'data/demo-risk-universe.json?v=20260527-representative-controls';
+const DATA_URL = 'data/demo-risk-universe.json?v=20260528-remove-risk-workbook-source';
 
 function escapeHtml(value) {
   return String(value ?? '')

@@ -1,5 +1,5 @@
-const DATA_URL = 'data/demo-risk-universe.json?v=20260527-representative-controls';
-const CONTROL_DETAILS_VERSION = '20260527-representative-controls';
+const DATA_URL = 'data/demo-risk-universe.json?v=20260528-remove-risk-workbook-source';
+const CONTROL_DETAILS_VERSION = '20260528-remove-risk-workbook-source';
 const MAX_RESULTS = 9;
 const HEX_WIDTH = 146;
 const HEX_HEIGHT = 126;
