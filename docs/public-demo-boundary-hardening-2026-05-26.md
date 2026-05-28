@@ -14,7 +14,7 @@ No AIRUM data-core counts changed:
 
 ## Implemented improvements
 
-1. Added visible Assurance Boundary boxes to the public overview, Explore page, control detail loading/detail path, sampling methodology path, and example export.
+1. Added visible Assurance Boundary boxes to the public overview, Explore page, control detail loading/detail path, and example export.
 2. Added a v3.2.1 public status line.
 3. Added a public/private provenance decision table to `PUBLICATION_BOUNDARY.md`.
 4. Added regression tests for disclaimer visibility, banned overclaim wording, private-marker leakage, and boundary coverage.
@@ -44,7 +44,6 @@ Required checks before publication:
 
 - `node --check explore/js/app.js`
 - `node --check explore/js/controlInfo.js`
-- `node --check explore/js/samplingMethodology.js`
 - `node --check tests/public-demo-boundary-check.mjs`
 - `npm test`
 - private-marker scan for local paths, vault markers, source-data fields, and licensed/private locator leakage

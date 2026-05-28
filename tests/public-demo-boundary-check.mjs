@@ -31,7 +31,6 @@ const htmlText = [
   read('index.html'),
   read('explore/index.html'),
   read('explore/control-info.html'),
-  read('explore/sampling-methodology.html'),
   read('examples/reduced-discovery-working-paper.html'),
 ].join('\n');
 
@@ -41,7 +40,6 @@ const cssText = [
   read('index.html'),
   read('explore/index.html'),
   read('explore/control-info.html'),
-  read('explore/sampling-methodology.html'),
   read('explore/css/styles.css'),
   read('examples/reduced-discovery-working-paper.html'),
 ].join('\n');
@@ -140,7 +138,6 @@ test('every page exposes a symbol-only dark-mode toggle', () => {
     'index.html',
     'explore/index.html',
     'explore/control-info.html',
-    'explore/sampling-methodology.html',
     'examples/reduced-discovery-working-paper.html',
   ];
   for (const file of htmlFiles) {
@@ -226,17 +223,18 @@ test('reduced working paper includes applicable control summary and audit proced
   assert.equal((workingPaper.match(/<div class="label">Applicable control audit procedure<\/div>/g) || []).length, 10);
 });
 
-test('explore page links applicable controls and sampling methodology detail surfaces', () => {
+test('explore page links applicable control details and omits the retired sample-size reference page', () => {
   const exploreHtml = read('explore/index.html');
   const exploreJs = read('explore/js/app.js');
   const controlHtml = read('explore/control-info.html');
   const controlJs = read('explore/js/controlInfo.js');
-  const samplingHtml = read('explore/sampling-methodology.html');
-  const samplingJs = read('explore/js/samplingMethodology.js');
 
   assert.match(exploreHtml, /applicable-control audit procedure planning/i);
   assert.match(exploreHtml, /id="applicable-control-count"/);
-  assert.match(exploreHtml, /sampling-methodology\.html/);
+  const retiredPath = ['sampling', 'methodology'].join('-') + '.html';
+  const retiredLabel = ['Sampling', 'Methodology'].join(' ');
+  assert.doesNotMatch(exploreHtml, new RegExp(retiredPath));
+  assert.doesNotMatch(exploreHtml, new RegExp(retiredLabel));
   assert.match(exploreJs, /Open Applicable Control Details/);
   assert.match(exploreJs, /control-info\.html\?/);
   assert.doesNotMatch(exploreJs, /Expected-control conversation/);
@@ -244,14 +242,12 @@ test('explore page links applicable controls and sampling methodology detail sur
   assert.match(controlHtml, /Applicable Control Details/);
   assert.match(controlJs, /Test of Design \(ToD\)/);
   assert.match(controlJs, /Test of Effectiveness \(ToE\)/);
-  assert.doesNotMatch(controlJs, /function samplingMethodologyNoteHtml/);
+  assert.doesNotMatch(controlJs, new RegExp('function ' + ['sampling', 'Methodology'].join('') + 'NoteHtml'));
   assert.doesNotMatch(controlJs, /Open public demo sampling reference/);
-  assert.doesNotMatch(controlJs, /<strong>Sampling Methodology<\/strong>/);
+  assert.doesNotMatch(controlJs, new RegExp('<strong>' + retiredLabel + '<\\/strong>'));
   assert.doesNotMatch(controlJs, /does not prescribe a universal AIRUM sample-size table/);
-  assert.match(samplingHtml, /Sampling Methodology Matrix/);
-  assert.match(samplingJs, /Frequency and Risk Matrix/);
-  assert.match(samplingJs, /Methodology Boundary/);
-  assert.match(samplingJs, /internal audit sampling methodology/);
+  assert.equal(existsSync(new URL(retiredPath, new URL('explore/', repoRoot))), false);
+  assert.equal(existsSync(new URL('explore/js/' + ['sampling', 'Methodology'].join('') + '.js', repoRoot)), false);
 });
 
 test('public demo has npm test entry point', () => {
@@ -262,13 +258,9 @@ test('public demo has npm test entry point', () => {
 
 test('direct detail pages repeat the reduced public boundary', () => {
   const controlInfo = read('explore/js/controlInfo.js');
-  const sampling = read('explore/js/samplingMethodology.js');
   assert.match(controlInfo, /Reduced AIRUM Public Demo: v3\.2\.1/);
   assert.match(controlInfo, /No private audit material/);
   assert.match(controlInfo, /not the full AIRUM method or evidence base/);
-  assert.match(sampling, /Reduced AIRUM Public Demo: v3\.2\.1/);
-  assert.match(sampling, /No private audit material/);
-  assert.match(sampling, /not the full AIRUM method or evidence base/);
 });
 
 
@@ -278,7 +270,6 @@ test('public disclaimer surfaces block overclaim interpretations at point of use
     ['index.html', read('index.html')],
     ['explore/index.html', read('explore/index.html')],
     ['explore/control-info.html', read('explore/control-info.html')],
-    ['explore/sampling-methodology.html', read('explore/sampling-methodology.html')],
     ['examples/reduced-discovery-working-paper.html', read('examples/reduced-discovery-working-paper.html')],
   ]) {
     assert.match(text, /Assurance Boundary|Reduced AIRUM Public Demo/i, `${file} lacks a visible boundary box`);
@@ -316,6 +307,17 @@ test('interpret output menu and standalone guide are removed', () => {
   assert.doesNotMatch(read('README.md'), /how-to-interpret-airum-output|How to interpret AIRUM output/i);
   assert.doesNotMatch(read('explore/index.html'), /how-to-interpret-airum-output|Interpret output/i);
   assert.match(read('explore/index.html'), /Challenge this output/i);
+});
+
+
+
+test('retired sample-size reference page and links stay removed', () => {
+  const retiredPath = ['sampling', 'methodology'].join('-') + '.html';
+  const retiredLabel = ['Sampling', 'Methodology'].join(' ');
+  assert.equal(existsSync(new URL('explore/' + retiredPath, repoRoot)), false);
+  assert.equal(existsSync(new URL('explore/js/' + ['sampling', 'Methodology'].join('') + '.js', repoRoot)), false);
+  assert.doesNotMatch(publicArtifactText, new RegExp(retiredPath, 'i'));
+  assert.doesNotMatch(publicArtifactText, new RegExp(retiredLabel, 'i'));
 });
 
 test('back-to-explore hash links are consumed by the explorer', () => {

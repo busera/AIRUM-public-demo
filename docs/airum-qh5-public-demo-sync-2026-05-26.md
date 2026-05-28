@@ -14,11 +14,9 @@ Checked public demo surfaces:
 - `index.html`
 - `explore/index.html`
 - `explore/control-info.html`
-- `explore/sampling-methodology.html`
 - `explore/data/demo-risk-universe.json`
 - `explore/js/app.js`
 - `explore/js/controlInfo.js`
-- `explore/js/samplingMethodology.js`
 - `tests/public-demo-boundary-check.mjs`
 
 ## Decision
@@ -77,7 +75,6 @@ Completed in this QH-5 closeout:
 - Private QH-4 guardrail validation: `npm run validate:qh-guardrails --silent`: PASS; 688 source refs, 187 local/private-locator justifications, 73 caveated mappings, 67 risk reports, 0 private-marker hits.
 - `node --check explore/js/app.js`: PASS
 - `node --check explore/js/controlInfo.js`: PASS
-- `node --check explore/js/samplingMethodology.js`: PASS
 - `node --check tests/public-demo-boundary-check.mjs`: PASS
 - `npm test`: PASS, 13/13 Node tests passed
 - `git diff --check`: PASS

@@ -8,7 +8,6 @@ This public repository is a reduced public introduction to the idea. It explains
 
 - AIRUM overview: <https://busera.github.io/AIRUM-public-demo/>
 - Explore and select: <https://busera.github.io/AIRUM-public-demo/explore/>
-- Sampling methodology: <https://busera.github.io/AIRUM-public-demo/explore/sampling-methodology.html>
 - Example export: <https://busera.github.io/AIRUM-public-demo/examples/reduced-discovery-working-paper.html>
 - GitHub source - secondary source-code view: <https://github.com/busera/AIRUM-public-demo/tree/main>
 
@@ -42,7 +41,7 @@ Source families considered include:
 - LLM and machine-learning security threat taxonomies
 - Industry guidance on AI strategy, governance, trust, risk, and security management
 
-The public demo intentionally shows only a reduced version. It does not publish the full 67-risk data core, full normalized control mappings, source mapping, scoring logic, internal rules, or complete methodology package. The reduced explorer shows visible risk examples, mapped applicable controls, control-level audit procedure guidance, and a separate sampling methodology reference, but it does not provide engagement-specific workpapers, testing conclusions, or sample selections.
+The public demo intentionally shows only a reduced version. It does not publish the full 67-risk data core, full normalized control mappings, source mapping, scoring logic, internal rules, or complete methodology package. The reduced explorer shows visible risk examples, mapped applicable controls, and control-level audit procedure guidance, but it does not provide engagement-specific workpapers, testing conclusions, or sample selections.
 
 ## The problem AIRUM addresses
 
@@ -157,7 +156,7 @@ It shows two AIRUM purposes clearly:
 
 1. AI Risk Universe exploration with search and family filtering only, without separate Scoping Sector or Scoping AU controls on the main explorer page.
 2. Deterministic Risk Scoping for pre-discovery preparation using reduced public demo data.
-3. Applicable Control Details pages that show one representative control per AI Risk, including control summary, control sources, Audit Procedure, Test of Design, Test of Effectiveness, and a link to the sampling methodology matrix.
+3. Applicable Control Details pages that show one representative control per AI Risk, including control summary, control sources, Audit Procedure, Test of Design, and Test of Effectiveness.
 
 The public demo remains intentionally reduced. It does not publish the full 67-risk data core, normalized control mappings, internal rules, scoring logic, source captures, private mappings, or operational build details.
 
