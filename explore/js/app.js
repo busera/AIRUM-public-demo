@@ -127,7 +127,7 @@ function riskUniverseCardHtml(risk) {
       <p class="family-label">${escapeHtml(risk.processName)} / ${escapeHtml(risk.subProcessName)}</p>
       <p>${escapeHtml(risk.description)}</p>
       <details>
-        <summary>Show applicable controls and sources</summary>
+        <summary>Show applicable controls and source basis</summary>
         ${sourceBackedRiskSectionsHtml(risk)}
       </details>
     </article>`;
@@ -188,8 +188,7 @@ function sourceBackedRiskSectionsHtml(risk) {
       <dt>Sources and References</dt><dd>${escapeHtml(risk.sourcesAndReferences)}</dd>
       <dt>NIST AI Lifecycle Stage</dt><dd>${escapeHtml(risk.nistLifecycleStage)}</dd>
     </dl>
-    ${applicableControlsHtml(risk)}
-    ${sourceLinksHtml(risk.sourceLinks)}`;
+    ${applicableControlsHtml(risk)}`;
 }
 
 function compactControlsHtml(risk) {

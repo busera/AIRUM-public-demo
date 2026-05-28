@@ -176,7 +176,7 @@ test('browse risk examples renders one risk per row', () => {
   const exploreHtml = read('explore/index.html');
   const styles = read('explore/css/styles.css');
   assert.match(exploreHtml, /styles\.css\?v=20260527-dark-hero-readability/);
-  assert.match(exploreHtml, /app\.js\?v=20260527-risk-detail-simplified/);
+  assert.match(exploreHtml, /app\.js\?v=20260528-browse-source-links-removed/);
   assert.match(exploreHtml, /demo-risk-universe\.json\?v=20260527-representative-controls/);
   assert.match(read('explore/control-info.html'), /controlInfo\.js\?v=20260527-remove-sampling-box/);
   assert.match(read('explore/js/app.js'), /demo-risk-universe\.json\?v=20260527-representative-controls/);
@@ -248,6 +248,13 @@ test('explore page links applicable control details and omits the retired sample
   assert.doesNotMatch(controlJs, /does not prescribe a universal AIRUM sample-size table/);
   assert.equal(existsSync(new URL(retiredPath, new URL('explore/', repoRoot))), false);
   assert.equal(existsSync(new URL('explore/js/' + ['sampling', 'Methodology'].join('') + '.js', repoRoot)), false);
+});
+
+test('browse risk examples keeps source basis but omits source links', () => {
+  const exploreJs = read('explore/js/app.js');
+  assert.match(exploreJs, /Show applicable controls and source basis/);
+  assert.match(exploreJs, /<dt>Sources and References<\/dt>/);
+  assert.doesNotMatch(exploreJs, /function sourceBackedRiskSectionsHtml\(risk\) \{[\s\S]*sourceLinksHtml\(risk\.sourceLinks\)[\s\S]*?\n\}/);
 });
 
 test('public demo has npm test entry point', () => {
